@@ -1,0 +1,37 @@
+WhisperX FULL Word-Level Transcription Results
+============================================================
+
+SEGMENT 1: [0.03s - 1.82s]
+Text: "Hello guys, welcome back to video."
+Word-level timestamps:
+   1. "Hello" -> 0.03s - 0.37s
+   2. "guys," -> 0.41s - 0.72s
+   3. "welcome" -> 0.76s - 1.08s
+   4. "back" -> 1.12s - 1.30s
+   5. "to" -> 1.34s - 1.42s
+   6. "video." -> 1.46s - 1.82s
+
+--------------------------------------------------
+
+SEGMENT 2: [2.25s - 5.99s]
+Text: "In this video, we are going to learn how to make AI images with a diagram."
+Word-level timestamps:
+   1. "In" -> 2.25s - 2.31s
+   2. "this" -> 2.35s - 2.47s
+   3. "video," -> 2.53s - 2.89s
+   4. "we" -> 2.91s - 2.99s
+   5. "are" -> 3.03s - 3.09s
+   6. "going" -> 3.11s - 3.25s
+   7. "to" -> 3.29s - 3.33s
+   8. "learn" -> 3.39s - 3.62s
+   9. "how" -> 3.65s - 3.76s
+  10. "to" -> 3.80s - 3.84s
+  11. "make" -> 3.90s - 4.06s
+  12. "AI" -> 4.08s - 4.58s
+  13. "images" -> 4.60s - 5.04s
+  14. "with" -> 5.11s - 5.23s
+  15. "a" -> 5.25s - 5.27s
+  16. "diagram." -> 5.35s - 5.99s
+
+--------------------------------------------------
+

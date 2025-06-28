@@ -1,0 +1,284 @@
+{
+  "segments": [
+    {
+      "start": 0.031,
+      "end": 1.823,
+      "text": " Hello guys, welcome back to video.",
+      "words": [
+        {
+          "word": "Hello",
+          "start": 0.031,
+          "end": 0.373,
+          "score": 0.89
+        },
+        {
+          "word": "guys,",
+          "start": 0.414,
+          "end": 0.716,
+          "score": 0.883
+        },
+        {
+          "word": "welcome",
+          "start": 0.756,
+          "end": 1.078,
+          "score": 0.84
+        },
+        {
+          "word": "back",
+          "start": 1.118,
+          "end": 1.3,
+          "score": 0.986
+        },
+        {
+          "word": "to",
+          "start": 1.34,
+          "end": 1.42,
+          "score": 0.944
+        },
+        {
+          "word": "video.",
+          "start": 1.461,
+          "end": 1.823,
+          "score": 0.909
+        }
+      ]
+    },
+    {
+      "start": 2.246,
+      "end": 5.991,
+      "text": "In this video, we are going to learn how to make AI images with a diagram.",
+      "words": [
+        {
+          "word": "In",
+          "start": 2.246,
+          "end": 2.306,
+          "score": 0.972
+        },
+        {
+          "word": "this",
+          "start": 2.347,
+          "end": 2.467,
+          "score": 0.843
+        },
+        {
+          "word": "video,",
+          "start": 2.528,
+          "end": 2.89,
+          "score": 0.907
+        },
+        {
+          "word": "we",
+          "start": 2.91,
+          "end": 2.991,
+          "score": 0.928
+        },
+        {
+          "word": "are",
+          "start": 3.031,
+          "end": 3.092,
+          "score": 0.999
+        },
+        {
+          "word": "going",
+          "start": 3.112,
+          "end": 3.253,
+          "score": 0.759
+        },
+        {
+          "word": "to",
+          "start": 3.293,
+          "end": 3.333,
+          "score": 0.954
+        },
+        {
+          "word": "learn",
+          "start": 3.394,
+          "end": 3.615,
+          "score": 0.661
+        },
+        {
+          "word": "how",
+          "start": 3.655,
+          "end": 3.756,
+          "score": 0.973
+        },
+        {
+          "word": "to",
+          "start": 3.796,
+          "end": 3.837,
+          "score": 1.0
+        },
+        {
+          "word": "make",
+          "start": 3.897,
+          "end": 4.058,
+          "score": 0.881
+        },
+        {
+          "word": "AI",
+          "start": 4.078,
+          "end": 4.582,
+          "score": 0.79
+        },
+        {
+          "word": "images",
+          "start": 4.602,
+          "end": 5.045,
+          "score": 0.89
+        },
+        {
+          "word": "with",
+          "start": 5.105,
+          "end": 5.226,
+          "score": 0.75
+        },
+        {
+          "word": "a",
+          "start": 5.246,
+          "end": 5.266,
+          "score": 0.997
+        },
+        {
+          "word": "diagram.",
+          "start": 5.347,
+          "end": 5.991,
+          "score": 0.872
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Hello",
+      "start": 0.031,
+      "end": 0.373,
+      "score": 0.89
+    },
+    {
+      "word": "guys,",
+      "start": 0.414,
+      "end": 0.716,
+      "score": 0.883
+    },
+    {
+      "word": "welcome",
+      "start": 0.756,
+      "end": 1.078,
+      "score": 0.84
+    },
+    {
+      "word": "back",
+      "start": 1.118,
+      "end": 1.3,
+      "score": 0.986
+    },
+    {
+      "word": "to",
+      "start": 1.34,
+      "end": 1.42,
+      "score": 0.944
+    },
+    {
+      "word": "video.",
+      "start": 1.461,
+      "end": 1.823,
+      "score": 0.909
+    },
+    {
+      "word": "In",
+      "start": 2.246,
+      "end": 2.306,
+      "score": 0.972
+    },
+    {
+      "word": "this",
+      "start": 2.347,
+      "end": 2.467,
+      "score": 0.843
+    },
+    {
+      "word": "video,",
+      "start": 2.528,
+      "end": 2.89,
+      "score": 0.907
+    },
+    {
+      "word": "we",
+      "start": 2.91,
+      "end": 2.991,
+      "score": 0.928
+    },
+    {
+      "word": "are",
+      "start": 3.031,
+      "end": 3.092,
+      "score": 0.999
+    },
+    {
+      "word": "going",
+      "start": 3.112,
+      "end": 3.253,
+      "score": 0.759
+    },
+    {
+      "word": "to",
+      "start": 3.293,
+      "end": 3.333,
+      "score": 0.954
+    },
+    {
+      "word": "learn",
+      "start": 3.394,
+      "end": 3.615,
+      "score": 0.661
+    },
+    {
+      "word": "how",
+      "start": 3.655,
+      "end": 3.756,
+      "score": 0.973
+    },
+    {
+      "word": "to",
+      "start": 3.796,
+      "end": 3.837,
+      "score": 1.0
+    },
+    {
+      "word": "make",
+      "start": 3.897,
+      "end": 4.058,
+      "score": 0.881
+    },
+    {
+      "word": "AI",
+      "start": 4.078,
+      "end": 4.582,
+      "score": 0.79
+    },
+    {
+      "word": "images",
+      "start": 4.602,
+      "end": 5.045,
+      "score": 0.89
+    },
+    {
+      "word": "with",
+      "start": 5.105,
+      "end": 5.226,
+      "score": 0.75
+    },
+    {
+      "word": "a",
+      "start": 5.246,
+      "end": 5.266,
+      "score": 0.997
+    },
+    {
+      "word": "diagram.",
+      "start": 5.347,
+      "end": 5.991,
+      "score": 0.872
+    }
+  ]
+}
