@@ -1,0 +1,97 @@
+name: Generate Voiceover from Story
+
+on:
+  workflow_dispatch:
+    inputs:
+      number:
+        description: 'Enter the version number (e.g. 1, 2, 3)'
+        required: true
+        default: '1'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-voiceover:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python environment
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install edge-tts nest_asyncio
+
+    - name: Prepare file paths based on input
+      run: |
+        export VERSION=${{ github.event.inputs.number }}
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+    - name: Generate Voiceover with Edge TTS
+      run: |
+        INPUT_FILE_PATH="Script/s${VERSION}.txt"
+        OUTPUT_FILE_PATH="Audio/a${VERSION}.mp3"
+
+        echo "Looking for script: $INPUT_FILE_PATH"
+
+        if [ ! -f "$INPUT_FILE_PATH" ]; then
+          echo "Error: Input script file $INPUT_FILE_PATH not found!"
+          exit 1
+        fi
+
+        mkdir -p Audio
+
+        if [ -f "$OUTPUT_FILE_PATH" ]; then
+          echo "Replacing existing audio file: $OUTPUT_FILE_PATH"
+          rm "$OUTPUT_FILE_PATH"
+        fi
+
+        python3 - <<EOF
+        import nest_asyncio
+        import asyncio
+        import edge_tts
+        import os
+
+        VOICE = "ru-RU-DmitryNeural"
+        INPUT_FILE = "${INPUT_FILE_PATH}"
+        OUTPUT_FILE = "${OUTPUT_FILE_PATH}"
+
+        with open(INPUT_FILE, "r") as f:
+            TEXT = f.read()
+
+        async def amain():
+            communicate = edge_tts.Communicate(TEXT, VOICE)
+            await communicate.save(OUTPUT_FILE)
+
+        nest_asyncio.apply()
+        asyncio.run(amain())
+        EOF
+
+    - name: Write yt.txt with version number
+      run: |
+        echo "$VERSION" > yt.txt
+        echo "Created yt.txt with version: $VERSION"
+
+    - name: Set up Git identity
+      run: |
+        git config --global user.name "cowboycode9"
+        git config --global user.email "cowboycode9@outlook.com"
+
+    - name: Commit and push voiceover
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+      run: |
+        git stash --include-untracked
+        git pull origin main --rebase || echo "Warning: rebase skipped"
+        git stash pop || true
+
+        git add Audio/*.mp3 yt.txt
+        timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
+        git commit -m "Generated voiceover v${VERSION}: ${timestamp}" || echo "No changes to commit"
+        git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
