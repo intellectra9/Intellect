@@ -14,19 +14,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2) Set up Python
+      # 2) Install ffmpeg (required for Whisper)
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      # 3) Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      # 3) Install dependencies
+      # 4) Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install git+https://github.com/linto-ai/whisper-timestamped torch
 
-      # 4) Run word-level transcription inline
+      # 5) Run word-level transcription inline
       - name: Transcribe audio and save word timestamps
         run: |
           python <<EOF
@@ -49,7 +53,7 @@ jobs:
                       f.write(f"{word['word']}: {word['start']:.2f}s - {word['end']:.2f}s\\n")
           EOF
 
-      # 5) Commit and push the generated transcription file back to the repo
+      # 6) Commit and push the generated transcription file back to the repo
       - name: Commit transcription file
         run: |
           git config --global user.name 'github-actions[bot]'
