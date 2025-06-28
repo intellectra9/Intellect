@@ -33,8 +33,9 @@ jobs:
       # 5) Run word-level transcription inline
       - name: Transcribe audio and save word timestamps
         run: |
-          python <<EOF
+          python -c "
           import os
+          import json
           from whisper_timestamped import load_model, transcribe
 
           # Load the Whisper model
@@ -43,15 +44,40 @@ jobs:
           # Transcribe your TTS audio file in 'Audio/a1.mp3'
           result = transcribe(model, 'Audio/a1.mp3')
 
+          # Debug: Print the structure to understand the format
+          print('Result structure:')
+          print(json.dumps(result, indent=2, default=str)[:500] + '...')
+
           # Make sure 'Transcript' folder exists
           os.makedirs('Transcript', exist_ok=True)
 
           # Write word-level timestamps to 'Transcript/t1.txt'
           with open('Transcript/t1.txt', 'w') as f:
-              for segment in result['segments']:
-                  for word in segment['words']:
-                      f.write(f"{word['word']}: {word['start']:.2f}s - {word['end']:.2f}s\\n")
-          EOF
+              for segment in result.get('segments', []):
+                  # Check if words key exists in segment
+                  if 'words' in segment:
+                      for word_info in segment['words']:
+                          # Handle different possible key structures
+                          if isinstance(word_info, dict):
+                              # Try different possible keys for the word text
+                              word_text = word_info.get('text', word_info.get('word', ''))
+                              start_time = word_info.get('start', 0)
+                              end_time = word_info.get('end', 0)
+                              
+                              if word_text:
+                                  f.write(f'{word_text.strip()}: {start_time:.2f}s - {end_time:.2f}s\n')
+                          else:
+                              # If word_info is not a dict, handle as string
+                              f.write(f'{str(word_info)}\n')
+                  else:
+                      # Fallback: if no words key, use segment text with timestamps
+                      segment_text = segment.get('text', '')
+                      start_time = segment.get('start', 0)
+                      end_time = segment.get('end', 0)
+                      f.write(f'{segment_text.strip()}: {start_time:.2f}s - {end_time:.2f}s\n')
+
+          print('Transcription completed successfully!')
+          "
 
       # 6) Commit and push the generated transcription file back to the repo
       - name: Commit transcription file
@@ -59,5 +85,9 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add Transcript/t1.txt
-          git commit -m 'Add word-level transcription for a1.mp3'
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m 'Add word-level transcription for a1.mp3'
+            git push
+          fi
