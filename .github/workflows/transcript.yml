@@ -41,46 +41,53 @@ jobs:
           # Load the Whisper model
           model = load_model('base')
 
-          # Transcribe your TTS audio file in 'Audio/a1.mp3'
-          result = transcribe(model, 'Audio/a1.mp3')
+          # Transcribe your TTS audio file with word-level timestamps enabled
+          result = transcribe(model, 'Audio/a1.mp3', word_timestamps=True)
 
-          # Debug: Print the structure to understand the format
-          print('Result structure:')
-          print(json.dumps(result, indent=2, default=str)[:500] + '...')
+          # Debug: Print a sample of the structure
+          print('Sample segment structure:')
+          if result.get('segments') and len(result['segments']) > 0:
+              sample_segment = result['segments'][0]
+              print(json.dumps(sample_segment, indent=2, default=str))
 
           # Make sure 'Transcript' folder exists
           os.makedirs('Transcript', exist_ok=True)
 
           # Write word-level timestamps to 'Transcript/t1.txt'
-          with open('Transcript/t1.txt', 'w') as f:
+          with open('Transcript/t1.txt', 'w', encoding='utf-8') as f:
+              f.write('Word-Level Transcription with Timestamps\n')
+              f.write('=' * 50 + '\n\n')
+              
               for segment in result.get('segments', []):
                   # Check if words key exists in segment
-                  if 'words' in segment:
+                  if 'words' in segment and segment['words']:
                       for word_info in segment['words']:
-                          # Handle different possible key structures
                           if isinstance(word_info, dict):
-                              # Try different possible keys for the word text
+                              # Get word text and timestamps
                               word_text = word_info.get('text', word_info.get('word', ''))
                               start_time = word_info.get('start', 0)
                               end_time = word_info.get('end', 0)
+                              confidence = word_info.get('confidence', 'N/A')
                               
                               if word_text:
-                                  f.write(f'{word_text.strip()}: {start_time:.2f}s - {end_time:.2f}s\n')
-                          else:
-                              # If word_info is not a dict, handle as string
-                              f.write(f'{str(word_info)}\n')
+                                  word_text = word_text.strip()
+                                  f.write(f'{word_text:<15} | {start_time:>7.2f}s - {end_time:>7.2f}s | confidence: {confidence}\n')
                   else:
-                      # Fallback: if no words key, use segment text with timestamps
-                      segment_text = segment.get('text', '')
+                      # If no word-level data, fall back to segment level
+                      segment_text = segment.get('text', '').strip()
                       start_time = segment.get('start', 0)
                       end_time = segment.get('end', 0)
-                      f.write(f'{segment_text.strip()}: {start_time:.2f}s - {end_time:.2f}s\n')
+                      if segment_text:
+                          f.write(f'[SEGMENT] {segment_text} | {start_time:.2f}s - {end_time:.2f}s\n')
 
-          print('Transcription completed successfully!')
+          print('Word-level transcription completed successfully!')
+          print('Check Transcript/t1.txt for results')
           "
 
       # 6) Commit and push the generated transcription file back to the repo
       - name: Commit transcription file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
