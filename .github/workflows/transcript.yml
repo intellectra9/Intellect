@@ -8,11 +8,19 @@ on:
 jobs:
   transcribe:
     runs-on: ubuntu-latest
+    
+    # Add permissions for GITHUB_TOKEN
+    permissions:
+      contents: write
+      actions: read
 
     steps:
-      # 1) Checkout your repo
+      # 1) Checkout your repo with token
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       # 2) Install ffmpeg (required for WhisperX)
       - name: Install ffmpeg
@@ -62,10 +70,11 @@ jobs:
           result = whisperx.align(result['segments'], model_a, metadata, audio, device, return_char_alignments=False)
           print('Word-level alignment completed')
 
-          os.makedirs('Transcript', exist_ok=True)
+          # Create Trans folder as specified
+          os.makedirs('Trans', exist_ok=True)
 
           # Write detailed results to text file
-          with open('Transcript/t1.txt', 'w', encoding='utf-8') as f:
+          with open('Trans/t1.txt', 'w', encoding='utf-8') as f:
               f.write('WhisperX FULL Word-Level Transcription Results\\n')
               f.write('=' * 60 + '\\n\\n')
 
@@ -87,7 +96,7 @@ jobs:
                   f.write('\\n' + '-' * 50 + '\\n\\n')
 
           # Write CSV-friendly timestamps for all words
-          with open('Transcript/timestamps.txt', 'w', encoding='utf-8') as f:
+          with open('Trans/timestamps.txt', 'w', encoding='utf-8') as f:
               for segment in result['segments']:
                   if 'words' in segment and segment['words']:
                       for word in segment['words']:
@@ -97,7 +106,7 @@ jobs:
                           f.write(f'{word_text},{word_start:.2f},{word_end:.2f}\\n')
 
           # Write JSON output
-          with open('Transcript/transcription.json', 'w', encoding='utf-8') as f:
+          with open('Trans/transcription.json', 'w', encoding='utf-8') as f:
               json.dump(result, f, indent=2, ensure_ascii=False)
 
           print('✅ WhisperX transcription completed for FULL audio!')
@@ -106,18 +115,17 @@ jobs:
       # 6) Commit and push the generated transcription files back to the repo
       - name: Set up Git identity
         run: |
-          git config --global user.name "intellectra9"
-          git config --global user.email "intellectra9@outlook.com"
+          git config --local user.name "intellectra9"
+          git config --local user.email "intellectra9@outlook.com"
 
       - name: Commit and push transcription files
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git stash --include-untracked
-          git pull origin main --rebase || echo "Warning: rebase skipped"
-          git stash pop || true
-
-          git add Transcript/
-          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
-          git commit -m "Add WhisperX word-level transcription: ${timestamp}" || echo "No changes to commit"
-          git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
+          # Check if there are any changes
+          if [ -n "$(git status --porcelain)" ]; then
+            git add Trans/
+            timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
+            git commit -m "Add WhisperX word-level transcription: ${timestamp}"
+            git push
+          else
+            echo "No changes to commit"
+          fi
