@@ -1,4 +1,4 @@
-name: Sentence-Level Transcription
+name: Word-Level Transcription with Whisper
 
 on:
   push:
@@ -28,103 +28,113 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install git+https://github.com/linto-ai/whisper-timestamped torch difflib
+          pip install openai-whisper
 
-      # 5) Run sentence-level transcription and find target phrase
+      # 5) Run word-level transcription and find target sentence
       - name: Transcribe audio and find target sentence timestamps
         run: |
           python -c "
+          import whisper
+          import re
           import os
-          import json
-          import difflib
-          from whisper_timestamped import load_model, transcribe
 
           # Target sentence to find
           target_sentence = 'going to learn how to make ai images with ideogram'
-          
-          # Load the Whisper model
-          model = load_model('base')
 
-          # Transcribe your TTS audio file
-          result = transcribe(model, 'Audio/a1.mp3')
+          # Load Whisper model
+          model = whisper.load_model('base')
+
+          # Transcribe audio with word timestamps
+          transcript = model.transcribe(
+              audio='Audio/a1.mp3',
+              word_timestamps=True
+          )
+
+          # Extract word-level timestamps
+          word_timestamps = []
+          for segment in transcript['segments']:
+              if 'words' in segment:
+                  word_timestamps.extend(segment['words'])
+
+          # Function to find sentence timestamps
+          def find_sentence_timestamps(sentence, word_timestamps):
+              words = sentence.split()
+              num_words = len(words)
+              
+              for i in range(len(word_timestamps) - num_words + 1):
+                  match = True
+                  for j in range(num_words):
+                      # Clean and compare words
+                      word_from_transcript = re.sub(r'\W+', '', word_timestamps[i + j]['word'].lower())
+                      word_from_sentence = re.sub(r'\W+', '', words[j].lower())
+                      if word_from_transcript != word_from_sentence:
+                          match = False
+                          break
+                  
+                  if match:
+                      start_time = word_timestamps[i]['start']
+                      end_time = word_timestamps[i + num_words - 1]['end']
+                      return start_time, end_time
+              
+              return None, None
 
           # Make sure 'Transcript' folder exists
           os.makedirs('Transcript', exist_ok=True)
 
-          # Function to find best matching segment
-          def find_matching_segments(segments, target):
-              matches = []
-              target_lower = target.lower().strip()
-              
-              for segment in segments:
-                  segment_text = segment.get('text', '').lower().strip()
-                  
-                  # Calculate similarity ratio
-                  similarity = difflib.SequenceMatcher(None, target_lower, segment_text).ratio()
-                  
-                  # Check if target is contained in segment
-                  if target_lower in segment_text or similarity > 0.6:
-                      matches.append({
-                          'segment': segment,
-                          'similarity': similarity,
-                          'contains_target': target_lower in segment_text
-                      })
-              
-              return sorted(matches, key=lambda x: (x['contains_target'], x['similarity']), reverse=True)
+          # Find target sentence timestamps
+          start_time, end_time = find_sentence_timestamps(target_sentence, word_timestamps)
 
           # Write results to file
           with open('Transcript/t1.txt', 'w', encoding='utf-8') as f:
-              f.write('Audio Transcription with Sentence-Level Timestamps\n')
-              f.write('=' * 60 + '\n\n')
+              f.write('Audio Transcription Results\n')
+              f.write('=' * 50 + '\n\n')
               
               f.write(f'TARGET SENTENCE: \"{target_sentence}\"\n')
-              f.write('-' * 60 + '\n\n')
+              f.write('-' * 50 + '\n\n')
               
-              # Find matching segments
-              matches = find_matching_segments(result.get('segments', []), target_sentence)
-              
-              if matches:
-                  f.write('BEST MATCHES:\n')
-                  for i, match in enumerate(matches[:3]):  # Show top 3 matches
-                      segment = match['segment']
-                      f.write(f'\nMatch {i+1} (Similarity: {match[\"similarity\"]:.2f}):\n')
-                      f.write(f'Text: \"{segment.get(\"text\", \"\").strip()}\"\n')
-                      f.write(f'Time: {segment.get(\"start\", 0):.2f}s - {segment.get(\"end\", 0):.2f}s\n')
-                      f.write(f'Duration: {segment.get(\"end\", 0) - segment.get(\"start\", 0):.2f}s\n')
-                      if match['contains_target']:
-                          f.write('*** EXACT MATCH FOUND ***\n')
+              if start_time is not None and end_time is not None:
+                  f.write('*** TARGET SENTENCE FOUND ***\n')
+                  f.write(f'Start Time: {start_time:.2f} seconds\n')
+                  f.write(f'End Time: {end_time:.2f} seconds\n')
+                  f.write(f'Duration: {end_time - start_time:.2f} seconds\n\n')
+                  print(f'SUCCESS: Target sentence found at {start_time:.2f}s - {end_time:.2f}s')
               else:
-                  f.write('No close matches found for target sentence.\n')
+                  f.write('*** TARGET SENTENCE NOT FOUND ***\n')
+                  f.write('The exact sentence was not found in the transcription.\n\n')
+                  print('Target sentence not found in transcription')
               
-              f.write('\n' + '=' * 60 + '\n')
-              f.write('ALL SEGMENTS:\n\n')
+              f.write('FULL TRANSCRIPTION:\n')
+              f.write('-' * 50 + '\n\n')
               
-              # Write all segments for reference
-              for i, segment in enumerate(result.get('segments', [])):
+              # Write full transcription with segments
+              for i, segment in enumerate(transcript['segments']):
                   segment_text = segment.get('text', '').strip()
-                  start_time = segment.get('start', 0)
-                  end_time = segment.get('end', 0)
-                  duration = end_time - start_time
+                  segment_start = segment.get('start', 0)
+                  segment_end = segment.get('end', 0)
                   
-                  f.write(f'Segment {i+1}:\n')
-                  f.write(f'Text: \"{segment_text}\"\n')
-                  f.write(f'Time: {start_time:.2f}s - {end_time:.2f}s (Duration: {duration:.2f}s)\n')
-                  f.write('-' * 40 + '\n')
+                  f.write(f'Segment {i+1}: [{segment_start:.2f}s - {segment_end:.2f}s]\n')
+                  f.write(f'Text: \"{segment_text}\"\n\n')
+              
+              f.write('WORD-LEVEL TIMESTAMPS:\n')
+              f.write('-' * 50 + '\n\n')
+              
+              # Write all word timestamps
+              for i, word_info in enumerate(word_timestamps):
+                  word_text = word_info.get('word', '').strip()
+                  word_start = word_info.get('start', 0)
+                  word_end = word_info.get('end', 0)
+                  f.write(f'{i+1:3d}. \"{word_text}\" -> {word_start:.2f}s - {word_end:.2f}s\n')
 
-          # Also create a simple format file for easy parsing
+          # Create simple timestamp file for easy parsing
           with open('Transcript/timestamps.txt', 'w', encoding='utf-8') as f:
-              matches = find_matching_segments(result.get('segments', []), target_sentence)
-              if matches and matches[0]['contains_target']:
-                  best_match = matches[0]['segment']
-                  f.write(f'{best_match.get(\"start\", 0):.2f},{best_match.get(\"end\", 0):.2f}\n')
-                  print(f'FOUND TARGET SENTENCE: {best_match.get(\"start\", 0):.2f}s - {best_match.get(\"end\", 0):.2f}s')
+              if start_time is not None and end_time is not None:
+                  f.write(f'{start_time:.2f},{end_time:.2f}\n')
               else:
-                  f.write('0.00,0.00\n')
-                  print('Target sentence not found with high confidence')
+                  f.write('NOT_FOUND\n')
 
-          print('Sentence-level transcription completed successfully!')
+          print('Transcription completed successfully!')
           print('Check Transcript/t1.txt for detailed results')
-          print('Check Transcript/timestamps.txt for simple timestamp format')
+          print('Check Transcript/timestamps.txt for simple format')
           "
 
       # 6) Commit and push the generated transcription files back to the repo
@@ -138,6 +148,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m 'Add sentence-level transcription with target phrase timestamps'
+            git commit -m 'Add word-level transcription with target sentence timestamps'
             git push
           fi
