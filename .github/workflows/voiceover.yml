@@ -58,7 +58,7 @@ jobs:
         import edge_tts
         import os
 
-        VOICE = "ru-RU-DmitryNeural"
+        VOICE = "en-US-AndrewNeural - en-US (Male)"
         INPUT_FILE = "${INPUT_FILE_PATH}"
         OUTPUT_FILE = "${OUTPUT_FILE_PATH}"
 
