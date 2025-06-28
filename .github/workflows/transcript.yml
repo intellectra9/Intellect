@@ -1,4 +1,4 @@
-name: Word-Level Transcription with Whisper
+name: WhisperX Word-Level Transcription
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2) Install ffmpeg (required for Whisper)
+      # 2) Install ffmpeg (required for WhisperX)
       - name: Install ffmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
@@ -28,113 +28,79 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openai-whisper
+          pip install git+https://github.com/openai/whisper.git
+          pip install git+https://github.com/m-bain/whisperx.git
+          pip install torch
 
-      # 5) Run word-level transcription and find target sentence
-      - name: Transcribe audio and find target sentence timestamps
+      # 5) Run WhisperX word-level transcription for full audio
+      - name: Transcribe entire audio with WhisperX word-level timestamps
         run: |
           python -c "
-          import whisper
-          import re
+          import whisperx
           import os
+          import json
 
-          # Target sentence to find
-          target_sentence = 'going to learn how to make ai images with ideogram'
+          device = 'cpu'
+          compute_type = 'float32'
+          batch_size = 16
+          audio_file = 'Audio/a1.mp3'
 
-          # Load Whisper model
-          model = whisper.load_model('base')
+          print('Loading WhisperX model...')
+          model = whisperx.load_model('base', device, compute_type=compute_type, language='en')
 
-          # Transcribe audio with word timestamps
-          transcript = model.transcribe(
-              audio='Audio/a1.mp3',
-              word_timestamps=True
-          )
+          print('Loading audio...')
+          audio = whisperx.load_audio(audio_file, sr=16000)
 
-          # Extract word-level timestamps
-          word_timestamps = []
-          for segment in transcript['segments']:
-              if 'words' in segment:
-                  word_timestamps.extend(segment['words'])
+          print('Transcribing audio...')
+          result = model.transcribe(audio, batch_size=batch_size)
+          print('Initial transcription completed')
 
-          # Function to find sentence timestamps
-          def find_sentence_timestamps(sentence, word_timestamps):
-              words = sentence.split()
-              num_words = len(words)
-              
-              for i in range(len(word_timestamps) - num_words + 1):
-                  match = True
-                  for j in range(num_words):
-                      # Clean and compare words
-                      word_from_transcript = re.sub(r'\W+', '', word_timestamps[i + j]['word'].lower())
-                      word_from_sentence = re.sub(r'\W+', '', words[j].lower())
-                      if word_from_transcript != word_from_sentence:
-                          match = False
-                          break
-                  
-                  if match:
-                      start_time = word_timestamps[i]['start']
-                      end_time = word_timestamps[i + num_words - 1]['end']
-                      return start_time, end_time
-              
-              return None, None
+          print('Loading alignment model...')
+          model_a, metadata = whisperx.load_align_model(language_code=result['language'], device=device)
 
-          # Make sure 'Transcript' folder exists
+          print('Aligning for word-level timestamps...')
+          result = whisperx.align(result['segments'], model_a, metadata, audio, device, return_char_alignments=False)
+          print('Word-level alignment completed')
+
           os.makedirs('Transcript', exist_ok=True)
 
-          # Find target sentence timestamps
-          start_time, end_time = find_sentence_timestamps(target_sentence, word_timestamps)
-
-          # Write results to file
+          # Write detailed results to text file
           with open('Transcript/t1.txt', 'w', encoding='utf-8') as f:
-              f.write('Audio Transcription Results\n')
-              f.write('=' * 50 + '\n\n')
-              
-              f.write(f'TARGET SENTENCE: \"{target_sentence}\"\n')
-              f.write('-' * 50 + '\n\n')
-              
-              if start_time is not None and end_time is not None:
-                  f.write('*** TARGET SENTENCE FOUND ***\n')
-                  f.write(f'Start Time: {start_time:.2f} seconds\n')
-                  f.write(f'End Time: {end_time:.2f} seconds\n')
-                  f.write(f'Duration: {end_time - start_time:.2f} seconds\n\n')
-                  print(f'SUCCESS: Target sentence found at {start_time:.2f}s - {end_time:.2f}s')
-              else:
-                  f.write('*** TARGET SENTENCE NOT FOUND ***\n')
-                  f.write('The exact sentence was not found in the transcription.\n\n')
-                  print('Target sentence not found in transcription')
-              
-              f.write('FULL TRANSCRIPTION:\n')
-              f.write('-' * 50 + '\n\n')
-              
-              # Write full transcription with segments
-              for i, segment in enumerate(transcript['segments']):
+              f.write('WhisperX FULL Word-Level Transcription Results\\n')
+              f.write('=' * 60 + '\\n\\n')
+
+              for i, segment in enumerate(result['segments']):
                   segment_text = segment.get('text', '').strip()
                   segment_start = segment.get('start', 0)
                   segment_end = segment.get('end', 0)
-                  
-                  f.write(f'Segment {i+1}: [{segment_start:.2f}s - {segment_end:.2f}s]\n')
-                  f.write(f'Text: \"{segment_text}\"\n\n')
-              
-              f.write('WORD-LEVEL TIMESTAMPS:\n')
-              f.write('-' * 50 + '\n\n')
-              
-              # Write all word timestamps
-              for i, word_info in enumerate(word_timestamps):
-                  word_text = word_info.get('word', '').strip()
-                  word_start = word_info.get('start', 0)
-                  word_end = word_info.get('end', 0)
-                  f.write(f'{i+1:3d}. \"{word_text}\" -> {word_start:.2f}s - {word_end:.2f}s\n')
 
-          # Create simple timestamp file for easy parsing
+                  f.write(f'SEGMENT {i+1}: [{segment_start:.2f}s - {segment_end:.2f}s]\\n')
+                  f.write(f'Text: \"{segment_text}\"\\n')
+
+                  if 'words' in segment and segment['words']:
+                      f.write('Word-level timestamps:\\n')
+                      for j, word in enumerate(segment['words']):
+                          word_text = word.get('word', '').strip()
+                          word_start = word.get('start', 0)
+                          word_end = word.get('end', 0)
+                          f.write(f'  {j+1:2d}. \"{word_text}\" -> {word_start:.2f}s - {word_end:.2f}s\\n')
+                  f.write('\\n' + '-' * 50 + '\\n\\n')
+
+          # Write CSV-friendly timestamps for all words
           with open('Transcript/timestamps.txt', 'w', encoding='utf-8') as f:
-              if start_time is not None and end_time is not None:
-                  f.write(f'{start_time:.2f},{end_time:.2f}\n')
-              else:
-                  f.write('NOT_FOUND\n')
+              for segment in result['segments']:
+                  if 'words' in segment and segment['words']:
+                      for word in segment['words']:
+                          word_text = word.get('word', '').strip()
+                          word_start = word.get('start', 0)
+                          word_end = word.get('end', 0)
+                          f.write(f'{word_text},{word_start:.2f},{word_end:.2f}\\n')
 
-          print('Transcription completed successfully!')
-          print('Check Transcript/t1.txt for detailed results')
-          print('Check Transcript/timestamps.txt for simple format')
+          # Write JSON output
+          with open('Transcript/transcription.json', 'w', encoding='utf-8') as f:
+              json.dump(result, f, indent=2, ensure_ascii=False)
+
+          print('✅ WhisperX transcription completed for FULL audio!')
           "
 
       # 6) Commit and push the generated transcription files back to the repo
@@ -148,6 +114,5 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m 'Add word-level transcription with target sentence timestamps'
+            git commit -m 'Add WhisperX word-level transcription for full audio'
             git push
-          fi
