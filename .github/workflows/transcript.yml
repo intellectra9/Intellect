@@ -10,46 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Checkout repo
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2) Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      # 3) Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install git+https://github.com/linto-ai/whisper-timestamped torch
 
-      # 4) Run transcription inline with `run: |`  
       - name: Transcribe audio and save word timestamps
         run: |
-          python -c "
-import os
-from whisper_timestamped import WhisperTimestamped
+          python <<EOF
+          import os
+          from whisper_timestamped import WhisperTimestamped
 
-# Create model
-model = WhisperTimestamped('base')
+          model = WhisperTimestamped('base')
+          result = model.transcribe('Audio/a1.mp3')
 
-# Transcribe
-result = model.transcribe('Audio/a1.mp3')
+          os.makedirs('Transcript', exist_ok=True)
+          with open('Transcript/t1.txt', 'w') as f:
+              for segment in result['segments']:
+                  for word in segment['words']:
+                      f.write(f"{word['word']}: {word['start']:.2f}s - {word['end']:.2f}s\\n")
+          EOF
 
-# Make sure Transcript folder exists
-os.makedirs('Transcript', exist_ok=True)
-
-# Write word-level timestamps to Transcript/t1.txt
-with open('Transcript/t1.txt', 'w') as f:
-    for segment in result['segments']:
-        for word in segment['words']:
-            f.write(f\"{word['word']}: {word['start']:.2f}s - {word['end']:.2f}s\\n\")
-"
-      
-      # 5) Commit & push the new file back to main
       - name: Commit transcription file
         run: |
           git config --global user.name 'github-actions[bot]'
