@@ -1,0 +1,160 @@
+name: Generate Sentence Level Transcription
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [ main ]
+    paths: 
+      - 'Visuals/**'
+      - 'Trans/**'
+
+jobs:
+  generate-transcription:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          
+      - name: Process transcription files
+        run: |
+          python3 << 'EOF'
+          import json
+          import os
+          import re
+          from datetime import datetime
+          
+          def clean_word(word):
+              """Remove punctuation from word for matching"""
+              return re.sub(r'[^\w\s]', '', word.lower())
+          
+          def find_word_timing(word_segments, target_word):
+              """Find timing for a specific word in word segments"""
+              clean_target = clean_word(target_word)
+              
+              for segment in word_segments:
+                  clean_segment_word = clean_word(segment['word'])
+                  if clean_segment_word == clean_target:
+                      return segment['start'], segment['end']
+              return None, None
+          
+          def create_sentence_transcription():
+              # Load visual sentences
+              try:
+                  with open('Visuals/visuals.json', 'r', encoding='utf-8') as f:
+                      visual_data = json.load(f)
+                  print(f"Loaded {len(visual_data)} sentences from visuals.json")
+              except FileNotFoundError:
+                  print("Error: Visuals/visuals.json not found")
+                  return
+              except json.JSONDecodeError as e:
+                  print(f"Error parsing visuals.json: {e}")
+                  return
+          
+              # Load word-level transcription
+              try:
+                  with open('Trans/transcription.json', 'r', encoding='utf-8') as f:
+                      transcription_data = json.load(f)
+                  print(f"Loaded transcription data with {len(transcription_data.get('word_segments', []))} words")
+              except FileNotFoundError:
+                  print("Error: Trans/transcription.json not found")
+                  return
+              except json.JSONDecodeError as e:
+                  print(f"Error parsing transcription.json: {e}")
+                  return
+          
+              word_segments = transcription_data.get('word_segments', [])
+              if not word_segments:
+                  print("No word segments found in transcription data")
+                  return
+          
+              sentence_transcriptions = []
+              
+              for item in visual_data:
+                  sentence = item['sentence']
+                  sentence_number = item['number']
+                  
+                  print(f"\nProcessing sentence {sentence_number}: {sentence[:50]}...")
+                  
+                  # Split sentence into words
+                  words = sentence.split()
+                  
+                  if not words:
+                      print(f"Warning: Empty sentence for number {sentence_number}")
+                      continue
+                  
+                  # Find first word timing
+                  first_word = words[0]
+                  first_start, _ = find_word_timing(word_segments, first_word)
+                  
+                  # Find last word timing
+                  last_word = words[-1]
+                  _, last_end = find_word_timing(word_segments, last_word)
+                  
+                  if first_start is not None and last_end is not None:
+                      sentence_transcription = {
+                          "id": f"i{sentence_number}",
+                          "number": sentence_number,
+                          "sentence": sentence,
+                          "start": first_start,
+                          "end": last_end,
+                          "duration": round(last_end - first_start, 3)
+                      }
+                      sentence_transcriptions.append(sentence_transcription)
+                      print(f"✓ Created transcription: {first_start}s - {last_end}s")
+                  else:
+                      print(f"✗ Could not find timing for sentence {sentence_number}")
+                      print(f"  First word '{first_word}' found: {first_start is not None}")
+                      print(f"  Last word '{last_word}' found: {last_end is not None}")
+          
+              if sentence_transcriptions:
+                  # Create output directory if it doesn't exist
+                  os.makedirs('Edits', exist_ok=True)
+                  
+                  # Save sentence-level transcription
+                  output_data = {
+                      "metadata": {
+                          "created_at": datetime.utcnow().isoformat() + "Z",
+                          "total_sentences": len(sentence_transcriptions),
+                          "source_files": {
+                              "visuals": "Visuals/visuals.json",
+                              "transcription": "Trans/transcription.json"
+                          }
+                      },
+                      "sentence_transcriptions": sentence_transcriptions
+                  }
+                  
+                  output_file = 'Edits/sentence_transcription.json'
+                  with open(output_file, 'w', encoding='utf-8') as f:
+                      json.dump(output_data, f, indent=2, ensure_ascii=False)
+                  
+                  print(f"\n✅ Successfully created {output_file} with {len(sentence_transcriptions)} sentence transcriptions")
+                  
+                  # Print summary
+                  print("\n📊 Summary:")
+                  for trans in sentence_transcriptions:
+                      print(f"  {trans['id']}: {trans['start']}s - {trans['end']}s ({trans['duration']}s)")
+              else:
+                  print("\n❌ No sentence transcriptions were created")
+          
+          # Run the main function
+          create_sentence_transcription()
+          EOF
+          
+      - name: Set up Git user
+        run: |
+          git config --global user.name "intellectra9"
+          git config --global user.email "intellectra9@outlook.com"
+          
+      - name: Commit and push transcription file
+        run: |
+          git add Edits/sentence_transcription.json
+          timestamp=$(date -u)
+          git commit -m "Generated sentence transcription: ${timestamp}" || echo "No changes to commit"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/intellectra9/intellect.git
+          git push
