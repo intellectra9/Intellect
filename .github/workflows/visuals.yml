@@ -228,9 +228,14 @@ jobs:
         EOF
         
     - name: Commit and push results
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "intellectra9@outlook.com"
+        git config --local user.name "intellectra9"
+        
+        # Set up authentication
+        git remote set-url origin https://intellectra9:${{ secrets.GH_PAT }}@github.com/intellectra9/intellect.git
         
         if [[ -f "sentence_transcriptions.json" ]]; then
           git add sentence_transcriptions.json
@@ -244,7 +249,7 @@ jobs:
             - Processed $(jq '.total_sentences' sentence_transcriptions.json) sentences
             - Successfully matched $(jq '.successful_matches' sentence_transcriptions.json) sentences with timestamps"
             
-            git push
+            git push origin HEAD:${{ github.ref_name }}
             echo "✅ Sentence transcriptions committed and pushed!"
           fi
         else
@@ -252,3 +257,8 @@ jobs:
           exit 1
         fi
         
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: sentence-transcriptions
+        path: sentence_transcriptions.json
