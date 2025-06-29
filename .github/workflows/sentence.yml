@@ -8,6 +8,9 @@ on:
       - 'Visuals/**'
       - 'Trans/**'
 
+permissions:
+  contents: write
+
 jobs:
   generate-transcription:
     runs-on: ubuntu-latest
@@ -19,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.10'
           
       - name: Process transcription files
         run: |
@@ -129,7 +132,7 @@ jobs:
                       "sentence_transcriptions": sentence_transcriptions
                   }
                   
-                  output_file = 'Edits/sentence_transcription.json'
+                  output_file = 'Edits/edit.json'
                   with open(output_file, 'w', encoding='utf-8') as f:
                       json.dump(output_data, f, indent=2, ensure_ascii=False)
                   
@@ -146,15 +149,20 @@ jobs:
           create_sentence_transcription()
           EOF
           
-      - name: Set up Git user
+      - name: Set up Git identity
         run: |
           git config --global user.name "intellectra9"
           git config --global user.email "intellectra9@outlook.com"
           
       - name: Commit and push transcription file
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git add Edits/sentence_transcription.json
-          timestamp=$(date -u)
+          git stash --include-untracked
+          git pull origin main --rebase || echo "Warning: rebase skipped"
+          git stash pop || true
+
+          git add Edits/edit.json
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
           git commit -m "Generated sentence transcription: ${timestamp}" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/intellectra9/intellect.git
-          git push
+          git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
