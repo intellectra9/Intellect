@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.10'
           
-      - name: Process transcription files with sequential matching
+      - name: Process transcription files
         run: |
           python3 << 'EOF'
           import json
@@ -33,37 +33,55 @@ jobs:
           from datetime import datetime
 
           def clean_word(word):
+              """Clean word for matching"""
               return re.sub(r'[^\w\s]', '', word.lower().strip())
 
           def find_sentence_span(sentence_words, word_segments, start_idx):
+              """
+              Sequentially find first and last word positions for sentence.
+              Always moves forward so sentences don’t overlap or stall.
+              """
               current_idx = start_idx
               first_match = None
               last_match = None
+
               for sentence_word in sentence_words:
                   target = clean_word(sentence_word)
                   found = False
+
                   for idx in range(current_idx, len(word_segments)):
                       seg_word = clean_word(word_segments[idx]['word'])
                       if seg_word == target:
                           if first_match is None:
                               first_match = idx
                           last_match = idx
-                          current_idx = idx + 1  # advance for next word
+                          current_idx = idx + 1  # Move after match
                           found = True
                           break
+
                   if not found:
-                      continue  # skip missing word
+                      continue  # Allow partial matches
+
               if first_match is not None and last_match is not None:
-                  return first_match, last_match, last_match + 1
+                  next_idx = max(last_match + 1, start_idx + 1)
+                  return first_match, last_match, next_idx
               else:
-                  return -1, -1, current_idx
+                  # No match: skip ahead to avoid stalling
+                  print("⚠️ No match, skipping ahead by 5")
+                  next_idx = min(start_idx + 5, len(word_segments))
+                  return -1, -1, next_idx
 
           def main():
+              # Load visuals
               with open('Visuals/visuals.json', 'r', encoding='utf-8') as f:
                   visuals = json.load(f)
+              print(f"Loaded {len(visuals)} sentences")
+
+              # Load word-level transcription
               with open('Trans/transcription.json', 'r', encoding='utf-8') as f:
                   transcription = json.load(f)
               word_segments = transcription.get('word_segments', [])
+              print(f"Loaded {len(word_segments)} word segments")
 
               results = []
               current_start_idx = 0
@@ -71,27 +89,30 @@ jobs:
               for item in visuals:
                   sentence = item['sentence']
                   number = item['number']
-                  words = [w for w in sentence.split() if clean_word(w)]
+                  words = [w for w in sentence.split() if w]
+
                   if not words:
+                      print(f"⚠️ Sentence {number} is empty")
                       continue
 
                   s_idx, e_idx, next_idx = find_sentence_span(words, word_segments, current_start_idx)
+
                   if s_idx >= 0 and e_idx >= 0:
                       start_time = word_segments[s_idx]['start']
                       end_time = word_segments[e_idx]['end']
-                      duration = round(end_time - start_time, 3)
                       results.append({
                           "id": f"i{number}",
                           "number": number,
                           "sentence": sentence,
                           "start": start_time,
                           "end": end_time,
-                          "duration": duration
+                          "duration": round(end_time - start_time, 3)
                       })
-                      print(f"✓ {number}: {start_time}-{end_time} ({duration}s)")
-                      current_start_idx = next_idx
+                      print(f"✓ Sentence {number}: {start_time}-{end_time}s")
                   else:
                       print(f"✗ Could not match sentence {number}")
+                  
+                  current_start_idx = next_idx
 
               os.makedirs('Edits', exist_ok=True)
               output = {
@@ -107,9 +128,10 @@ jobs:
               }
               with open('Edits/edit.json', 'w', encoding='utf-8') as f:
                   json.dump(output, f, indent=2, ensure_ascii=False)
-              print(f"✅ Saved Edits/edit.json with {len(results)} sentences")
 
-          if __name__ == "__main__":
+              print(f"✅ Done. Saved Edits/edit.json with {len(results)} sentences.")
+
+          if __name__ == '__main__':
               main()
           EOF
           
