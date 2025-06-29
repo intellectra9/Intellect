@@ -161,10 +161,10 @@ jobs:
             # File paths
             visuals_file = "Visuals/visuals.json"
             transcription_file = "Trans/transcription.json"
-            output_file = "edits/edit.json"
+            output_file = "Edits/edit.json"
             
-            # Create edits directory if it doesn't exist
-            os.makedirs("edits", exist_ok=True)
+            # Create Edits directory if it doesn't exist
+            os.makedirs("Edits", exist_ok=True)
             
             # Load data files
             print("Loading visuals data...")
@@ -207,7 +207,6 @@ jobs:
                     total = output_data['total_sentences']
                     print(f"\n🎉 Successfully created {output_file}")
                     print(f"📊 Results: {successful}/{total} sentences matched with timestamps")
-                    print(f"📁 File saved to: edits/edit.json")
                     
                     # Print summary
                     print("\n📝 Summary:")
@@ -241,8 +240,8 @@ jobs:
         # Set up authentication
         git remote set-url origin https://intellectra9:${{ secrets.GH_PAT }}@github.com/intellectra9/intellect.git
         
-        if [[ -f "edits/edit.json" ]]; then
-          git add edits/edit.json
+        if [[ -f "sentence_transcriptions.json" ]]; then
+          git add sentence_transcriptions.json
           
           if git diff --staged --quiet; then
             echo "No changes to commit"
@@ -250,15 +249,14 @@ jobs:
             git commit -m "🤖 Auto-generate sentence transcriptions
             
             - Generated sentence-level timestamps from word-level transcription
-            - Processed $(jq '.total_sentences' edits/edit.json) sentences
-            - Successfully matched $(jq '.successful_matches' edits/edit.json) sentences with timestamps
-            - File saved to: edits/edit.json"
+            - Processed $(jq '.total_sentences' sentence_transcriptions.json) sentences
+            - Successfully matched $(jq '.successful_matches' sentence_transcriptions.json) sentences with timestamps"
             
             git push origin HEAD:${{ github.ref_name }}
-            echo "✅ Sentence transcriptions committed and pushed to edits/edit.json!"
+            echo "✅ Sentence transcriptions committed and pushed!"
           fi
         else
-          echo "❌ edits/edit.json was not created"
+          echo "❌ sentence_transcriptions.json was not created"
           exit 1
         fi
         
