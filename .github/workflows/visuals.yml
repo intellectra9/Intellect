@@ -3,7 +3,7 @@ name: Generate Sentence Transcriptions
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
     paths:
       - 'Visuals/visuals.json'
       - 'Trans/transcription.json'
@@ -13,9 +13,23 @@ jobs:
   generate-transcriptions:
     runs-on: ubuntu-latest
     
+    # Add permissions for GITHUB_TOKEN
+    permissions:
+      contents: write
+      actions: read
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+        
+    - name: Pull latest changes
+      run: |
+        git config --local user.name "intellectra9"
+        git config --local user.email "intellectra9@outlook.com"
+        git pull origin main --rebase || git pull origin main
       
     - name: Set up Python
       uses: actions/setup-python@v4
