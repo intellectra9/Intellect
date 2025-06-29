@@ -24,129 +24,93 @@ jobs:
         with:
           python-version: '3.10'
           
-      - name: Process transcription files
+      - name: Process transcription files with sequential matching
         run: |
           python3 << 'EOF'
           import json
           import os
           import re
           from datetime import datetime
-          
+
           def clean_word(word):
-              """Remove punctuation from word for matching"""
-              return re.sub(r'[^\w\s]', '', word.lower())
-          
-          def find_word_timing(word_segments, target_word):
-              """Find timing for a specific word in word segments"""
-              clean_target = clean_word(target_word)
-              
-              for segment in word_segments:
-                  clean_segment_word = clean_word(segment['word'])
-                  if clean_segment_word == clean_target:
-                      return segment['start'], segment['end']
-              return None, None
-          
-          def create_sentence_transcription():
-              # Load visual sentences
-              try:
-                  with open('Visuals/visuals.json', 'r', encoding='utf-8') as f:
-                      visual_data = json.load(f)
-                  print(f"Loaded {len(visual_data)} sentences from visuals.json")
-              except FileNotFoundError:
-                  print("Error: Visuals/visuals.json not found")
-                  return
-              except json.JSONDecodeError as e:
-                  print(f"Error parsing visuals.json: {e}")
-                  return
-          
-              # Load word-level transcription
-              try:
-                  with open('Trans/transcription.json', 'r', encoding='utf-8') as f:
-                      transcription_data = json.load(f)
-                  print(f"Loaded transcription data with {len(transcription_data.get('word_segments', []))} words")
-              except FileNotFoundError:
-                  print("Error: Trans/transcription.json not found")
-                  return
-              except json.JSONDecodeError as e:
-                  print(f"Error parsing transcription.json: {e}")
-                  return
-          
-              word_segments = transcription_data.get('word_segments', [])
-              if not word_segments:
-                  print("No word segments found in transcription data")
-                  return
-          
-              sentence_transcriptions = []
-              
-              for item in visual_data:
-                  sentence = item['sentence']
-                  sentence_number = item['number']
-                  
-                  print(f"\nProcessing sentence {sentence_number}: {sentence[:50]}...")
-                  
-                  # Split sentence into words
-                  words = sentence.split()
-                  
-                  if not words:
-                      print(f"Warning: Empty sentence for number {sentence_number}")
-                      continue
-                  
-                  # Find first word timing
-                  first_word = words[0]
-                  first_start, _ = find_word_timing(word_segments, first_word)
-                  
-                  # Find last word timing
-                  last_word = words[-1]
-                  _, last_end = find_word_timing(word_segments, last_word)
-                  
-                  if first_start is not None and last_end is not None:
-                      sentence_transcription = {
-                          "id": f"i{sentence_number}",
-                          "number": sentence_number,
-                          "sentence": sentence,
-                          "start": first_start,
-                          "end": last_end,
-                          "duration": round(last_end - first_start, 3)
-                      }
-                      sentence_transcriptions.append(sentence_transcription)
-                      print(f"✓ Created transcription: {first_start}s - {last_end}s")
-                  else:
-                      print(f"✗ Could not find timing for sentence {sentence_number}")
-                      print(f"  First word '{first_word}' found: {first_start is not None}")
-                      print(f"  Last word '{last_word}' found: {last_end is not None}")
-          
-              if sentence_transcriptions:
-                  # Create output directory if it doesn't exist
-                  os.makedirs('Edits', exist_ok=True)
-                  
-                  # Save sentence-level transcription
-                  output_data = {
-                      "metadata": {
-                          "created_at": datetime.utcnow().isoformat() + "Z",
-                          "total_sentences": len(sentence_transcriptions),
-                          "source_files": {
-                              "visuals": "Visuals/visuals.json",
-                              "transcription": "Trans/transcription.json"
-                          }
-                      },
-                      "sentence_transcriptions": sentence_transcriptions
-                  }
-                  
-                  output_file = 'Edits/edit.json'
-                  with open(output_file, 'w', encoding='utf-8') as f:
-                      json.dump(output_data, f, indent=2, ensure_ascii=False)
-                  
-                  print(f"\n✅ Successfully created {output_file} with {len(sentence_transcriptions)} sentence transcriptions")
-                  
-                  # Print summary
-                  print("\n📊 Summary:")
-                  for trans in sentence_transcriptions:
-                      print(f"  {trans['id']}: {trans['start']}s - {trans['end']}s ({trans['duration']}s)")
+              return re.sub(r'[^\w\s]', '', word.lower().strip())
+
+          def find_sentence_span(sentence_words, word_segments, start_idx):
+              current_idx = start_idx
+              first_match = None
+              last_match = None
+              for sentence_word in sentence_words:
+                  target = clean_word(sentence_word)
+                  found = False
+                  for idx in range(current_idx, len(word_segments)):
+                      seg_word = clean_word(word_segments[idx]['word'])
+                      if seg_word == target:
+                          if first_match is None:
+                              first_match = idx
+                          last_match = idx
+                          current_idx = idx + 1  # advance for next word
+                          found = True
+                          break
+                  if not found:
+                      continue  # skip missing word
+              if first_match is not None and last_match is not None:
+                  return first_match, last_match, last_match + 1
               else:
-                  print("\n❌ No sentence transcriptions were created")
-          
-          # Run the main function
-          create_sentence_transcription()
+                  return -1, -1, current_idx
+
+          def main():
+              with open('Visuals/visuals.json', 'r', encoding='utf-8') as f:
+                  visuals = json.load(f)
+              with open('Trans/transcription.json', 'r', encoding='utf-8') as f:
+                  transcription = json.load(f)
+              word_segments = transcription.get('word_segments', [])
+
+              results = []
+              current_start_idx = 0
+
+              for item in visuals:
+                  sentence = item['sentence']
+                  number = item['number']
+                  words = [w for w in sentence.split() if clean_word(w)]
+                  if not words:
+                      continue
+
+                  s_idx, e_idx, next_idx = find_sentence_span(words, word_segments, current_start_idx)
+                  if s_idx >= 0 and e_idx >= 0:
+                      start_time = word_segments[s_idx]['start']
+                      end_time = word_segments[e_idx]['end']
+                      duration = round(end_time - start_time, 3)
+                      results.append({
+                          "id": f"i{number}",
+                          "number": number,
+                          "sentence": sentence,
+                          "start": start_time,
+                          "end": end_time,
+                          "duration": duration
+                      })
+                      print(f"✓ {number}: {start_time}-{end_time} ({duration}s)")
+                      current_start_idx = next_idx
+                  else:
+                      print(f"✗ Could not match sentence {number}")
+
+              os.makedirs('Edits', exist_ok=True)
+              output = {
+                  "metadata": {
+                      "created_at": datetime.utcnow().isoformat() + "Z",
+                      "total_sentences": len(results),
+                      "source_files": {
+                          "visuals": "Visuals/visuals.json",
+                          "transcription": "Trans/transcription.json"
+                      }
+                  },
+                  "sentence_transcriptions": results
+              }
+              with open('Edits/edit.json', 'w', encoding='utf-8') as f:
+                  json.dump(output, f, indent=2, ensure_ascii=False)
+              print(f"✅ Saved Edits/edit.json with {len(results)} sentences")
+
+          if __name__ == "__main__":
+              main()
           EOF
           
       - name: Set up Git identity
