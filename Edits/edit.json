@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "created_at": "2025-06-29T09:11:26.296604Z",
-    "total_sentences": 5,
+    "created_at": "2025-06-29T09:14:33.893306Z",
+    "total_sentences": 42,
     "source_files": {
       "visuals": "Visuals/visuals.json",
       "transcription": "Trans/transcription.json"
@@ -45,8 +45,304 @@
       "number": 5,
       "sentence": "i'm here to teach you how to develop a crazy amount of boldness the kind of boldness that makes you walk down the street see a girl you barely know and have only spoken to once stand in front of her and say \"Seriously I'm breaking up with you.\"",
       "start": 25.9,
-      "end": 810.908,
-      "duration": 785.008
+      "end": 27.9,
+      "duration": 2.0
+    },
+    {
+      "id": "i6",
+      "number": 6,
+      "sentence": "Then walk away and leave her standing there shocked",
+      "start": 38.515,
+      "end": 40.858,
+      "duration": 2.343
+    },
+    {
+      "id": "i7",
+      "number": 7,
+      "sentence": "or to be in a movie theater stand up start yelling and act like a homeless man just to laugh",
+      "start": 41.078,
+      "end": 46.204,
+      "duration": 5.126
+    },
+    {
+      "id": "i8",
+      "number": 8,
+      "sentence": "if that kind of boldness seems hard to you or like something you shouldn't have I promise you that by the end of this video your perspective on it will completely change",
+      "start": 46.384,
+      "end": 54.199,
+      "duration": 7.815
+    },
+    {
+      "id": "i9",
+      "number": 9,
+      "sentence": "so welcome to the social skills series and let me first explain to you why boldness",
+      "start": 54.5,
+      "end": 58.869,
+      "duration": 4.369
+    },
+    {
+      "id": "i10",
+      "number": 10,
+      "sentence": "if we go back in time to an era when societies were made up of tribes the bold man was the strongest man",
+      "start": 59.05,
+      "end": 65.242,
+      "duration": 6.192
+    },
+    {
+      "id": "i11",
+      "number": 11,
+      "sentence": "if there was a strong man he was simply capable of doing anything he wanted and saying anything he wanted without fearing anything",
+      "start": 65.262,
+      "end": 72.571,
+      "duration": 7.309
+    },
+    {
+      "id": "i12",
+      "number": 12,
+      "sentence": "in other words he was bold",
+      "start": 72.631,
+      "end": 73.952,
+      "duration": 1.321
+    },
+    {
+      "id": "i13",
+      "number": 13,
+      "sentence": "this mindset despite thousands of years passing still exists within us to this day",
+      "start": 73.992,
+      "end": 78.638,
+      "duration": 4.646
+    },
+    {
+      "id": "i14",
+      "number": 14,
+      "sentence": "if there is a group of people sitting together and one of them does something bold everyone around him instinctively feels that he is the strongest person in that group",
+      "start": 78.678,
+      "end": 87.388,
+      "duration": 8.71
+    },
+    {
+      "id": "i15",
+      "number": 15,
+      "sentence": "and here I want to pause and give you a golden rule I want you to remember for the rest of your life",
+      "start": 87.728,
+      "end": 92.854,
+      "duration": 5.126
+    },
+    {
+      "id": "i16",
+      "number": 16,
+      "sentence": "the way you act is the way people see you",
+      "start": 92.914,
+      "end": 94.977,
+      "duration": 2.063
+    },
+    {
+      "id": "i17",
+      "number": 17,
+      "sentence": "when you act in a bold way you present yourself as if you're the strongest person in the group as if you're the leader of that group",
+      "start": 95.017,
+      "end": 101.667,
+      "duration": 6.65
+    },
+    {
+      "id": "i18",
+      "number": 18,
+      "sentence": "and when people see you behaving like that they naturally begin treating you the same way",
+      "start": 101.687,
+      "end": 106.134,
+      "duration": 4.447
+    },
+    {
+      "id": "i19",
+      "number": 19,
+      "sentence": "if you want people to trust your decision all you have to do is you trust that decision first",
+      "start": 106.194,
+      "end": 111.322,
+      "duration": 5.128
+    },
+    {
+      "id": "i20",
+      "number": 20,
+      "sentence": "this is human nature and that's why my dear friend when you finish this video and acquire with me the skill of boldness your entire life will change",
+      "start": 111.362,
+      "end": 119.654,
+      "duration": 8.292
+    },
+    {
+      "id": "i21",
+      "number": 21,
+      "sentence": "so now that you understand with me that boldness is something important and it's literally a cheat code for social power i'm going to explain to you how to become bold",
+      "start": 119.895,
+      "end": 128.368,
+      "duration": 8.473
+    },
+    {
+      "id": "i22",
+      "number": 22,
+      "sentence": "and here I need to explain to you what boldness really is from a psychological and deep perspective",
+      "start": 128.708,
+      "end": 133.696,
+      "duration": 4.988
+    },
+    {
+      "id": "i23",
+      "number": 23,
+      "sentence": "simply put a bold action is one that when you do it the result will either be a reward or a punishment",
+      "start": 133.776,
+      "end": 139.304,
+      "duration": 5.528
+    },
+    {
+      "id": "i24",
+      "number": 24,
+      "sentence": "if you like a girl and go approach her there are two possible outcomes either you get a reward her number or she rejects you and the punishment will be embarrassment",
+      "start": 139.625,
+      "end": 148.578,
+      "duration": 8.953
+    },
+    {
+      "id": "i25",
+      "number": 25,
+      "sentence": "and I want you to focus on this word embarrassment because we'll come back to it later",
+      "start": 148.939,
+      "end": 152.885,
+      "duration": 3.946
+    },
+    {
+      "id": "i26",
+      "number": 26,
+      "sentence": "so to become someone who takes bold actions this element of punishment must disappear",
+      "start": 153.165,
+      "end": 157.692,
+      "duration": 4.527
+    },
+    {
+      "id": "i27",
+      "number": 27,
+      "sentence": "and you can achieve that by letting me rewire your brain so that this punishment no longer appears to you and no longer affects you",
+      "start": 157.732,
+      "end": 165.163,
+      "duration": 7.431
+    },
+    {
+      "id": "i28",
+      "number": 28,
+      "sentence": "once you reach that point it means you'll have a crazy level of confidence and power and you'll become able to do and say anything you want without caring what anyone around you thinks",
+      "start": 165.263,
+      "end": 175.278,
+      "duration": 10.015
+    },
+    {
+      "id": "i29",
+      "number": 29,
+      "sentence": "so let's go back to our rule the bold action has two possible outcomes: reward or punishment",
+      "start": 175.298,
+      "end": 177.298,
+      "duration": 2.0
+    },
+    {
+      "id": "i30",
+      "number": 30,
+      "sentence": "let's start with punishment and since we're now in the social skills series it makes sense that our goal is to apply boldness in social life",
+      "start": 175.479,
+      "end": 187.839,
+      "duration": 12.36
+    },
+    {
+      "id": "i31",
+      "number": 31,
+      "sentence": "so what is the punishment in social life of course it's embarrassment",
+      "start": 188.18,
+      "end": 191.305,
+      "duration": 3.125
+    },
+    {
+      "id": "i32",
+      "number": 32,
+      "sentence": "so let me explain to you what this embarrassment actually is and how you can overcome it",
+      "start": 191.625,
+      "end": 196.073,
+      "duration": 4.448
+    },
+    {
+      "id": "i33",
+      "number": 33,
+      "sentence": "now when you're in a social situation like going out on a date for example people around you place you inside a certain frame",
+      "start": 196.133,
+      "end": 202.842,
+      "duration": 6.709
+    },
+    {
+      "id": "i34",
+      "number": 34,
+      "sentence": "that frame is what they expect you to do eat laugh reply to a message on your phone",
+      "start": 202.882,
+      "end": 207.167,
+      "duration": 4.285
+    },
+    {
+      "id": "i35",
+      "number": 35,
+      "sentence": "but it's impossible for them to expect you to suddenly stand up and start singing or doing push-ups or dancing",
+      "start": 207.467,
+      "end": 213.514,
+      "duration": 6.047
+    },
+    {
+      "id": "i36",
+      "number": 36,
+      "sentence": "the problem that happens here is that the frame others put you in you also put yourself in it",
+      "start": 213.554,
+      "end": 215.554,
+      "duration": 2.0
+    },
+    {
+      "id": "i37",
+      "number": 37,
+      "sentence": "so when your brain sees you trying to do something outside of that frame it tries its best to stop you to avoid embarrassment",
+      "start": 218.36,
+      "end": 224.927,
+      "duration": 6.567
+    },
+    {
+      "id": "i38",
+      "number": 38,
+      "sentence": "and of course your brain thinks it's doing this for your own good because ever since you were a child you've been conditioned to believe that embarrassment is something you must escape",
+      "start": 224.907,
+      "end": 233.418,
+      "duration": 8.511
+    },
+    {
+      "id": "i39",
+      "number": 39,
+      "sentence": "and that you should care about what people think",
+      "start": 233.759,
+      "end": 235.802,
+      "duration": 2.043
+    },
+    {
+      "id": "i40",
+      "number": 40,
+      "sentence": "what I want to explain to you now is this embarrassment and people have nothing to do with each other",
+      "start": 235.842,
+      "end": 240.728,
+      "duration": 4.886
+    },
+    {
+      "id": "i41",
+      "number": 41,
+      "sentence": "for example let's say you walk up to a girl and she rejects you your brain sends a signal to your kidneys to release adrenaline and cortisol",
+      "start": 240.768,
+      "end": 248.519,
+      "duration": 7.751
+    },
+    {
+      "id": "i42",
+      "number": 42,
+      "sentence": "and these two hormones are what make you feel embarrassed",
+      "start": 248.759,
+      "end": 251.843,
+      "duration": 3.084
     }
   ]
 }
