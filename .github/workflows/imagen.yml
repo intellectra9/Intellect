@@ -105,7 +105,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "intellect9"
+          git config --global user.name "intellectra9"
           git config --global user.email "intellectra9@outlook.com"
 
       - name: Commit and push generated images
