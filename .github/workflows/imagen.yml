@@ -8,33 +8,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests
+      - name: Install dependencies
+        run: |
+          pip install requests
 
-    - name: Generate images inline
-      env:
-        TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
-      run: |
-        echo "📸 Running inline image generation script..."
-
-        python - <<EOF
+      - name: Generate images inline
+        env:
+          TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+        run: |
+          python - <<EOF
 import os
 import re
 import json
 import requests
 import time
 
-# === [1] Config ===
 API_KEY = os.getenv("TOGETHER_API_KEY")
 API_URL = "https://api.together.xyz/v1/images/generations"
 HEADERS = {
@@ -48,7 +44,6 @@ NUM_IMAGES = 30
 
 os.makedirs(IMAGES_DIR, exist_ok=True)
 
-# === [2] Find highest iN ===
 def find_highest_image_number():
     pattern = re.compile(r"i(\\d+)\\.png$")
     max_num = 0
@@ -61,29 +56,23 @@ def find_highest_image_number():
 
 last_image_num = find_highest_image_number()
 next_image_num = last_image_num + 1
-print(f"📁 Last image: i{last_image_num}. Next will be i{next_image_num}.")
+print(f"Last image: i{last_image_num}. Next: i{next_image_num}")
 
-# === [3] Load visuals.json ===
 with open(VISUALS_JSON, "r") as f:
     visuals = json.load(f)
 
 available_prompts = sorted(visuals, key=lambda x: x["number"])
-prompts_to_generate = [
-    item for item in available_prompts if item["number"] >= next_image_num
-]
+prompts_to_generate = [item for item in available_prompts if item["number"] >= next_image_num][:NUM_IMAGES]
 
 if not prompts_to_generate:
-    print(f"✅ No new prompts found for number >= {next_image_num}. Exiting.")
+    print("No new prompts to generate.")
     exit(0)
 
-prompts_to_generate = prompts_to_generate[:NUM_IMAGES]
-
-# === [4] Generate images ===
 for item in prompts_to_generate:
     number = item["number"]
     prompt = item["prompt"]
 
-    print(f"🔄 Generating i{number}: {prompt}")
+    print(f"Generating i{number}...")
 
     payload = {
         "model": "black-forest-labs/FLUX.1-schnell-Free",
@@ -102,33 +91,32 @@ for item in prompts_to_generate:
             filename = os.path.join(IMAGES_DIR, f"i{number}.png")
             with open(filename, "wb") as f:
                 f.write(img_data)
-            print(f"✅ Saved: {filename}")
+            print(f"Saved: {filename}")
         else:
-            print(f"❌ API response missing data: {data}")
+            print(f"API error: {data}")
 
     except Exception as e:
-        print(f"⚠️ Error generating i{number}: {e}")
+        print(f"Error generating i{number}: {e}")
 
     time.sleep(1)
 
-print(f"🎉 Finished generating {len(prompts_to_generate)} images!")
+print(f"Done. Generated {len(prompts_to_generate)} images.")
 EOF
 
-    - name: Configure Git
-      run: |
-        git config --global user.name "intellect9"
-        git config --global user.email "intellectra9@outlook.com"
+      - name: Configure Git
+        run: |
+          git config --global user.name "intellect9"
+          git config --global user.email "intellectra9@outlook.com"
 
-    - name: Commit and push generated images
-      env:
-        GH_PAT: ${{ secrets.GH_PAT }}
-      run: |
-        git stash --include-untracked
-        git pull origin main --rebase || echo "No rebase needed"
-        git stash pop || true
+      - name: Commit and push generated images
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git stash --include-untracked
+          git pull origin main --rebase || echo "No rebase needed"
+          git stash pop || true
 
-        git add images/
-        timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
-        git commit -m "🖼️ Generated images: ${timestamp}" || echo "No changes to commit"
-
-        git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
+          git add images/
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
+          git commit -m "🖼️ Generated images: ${timestamp}" || echo "No changes to commit"
+          git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
