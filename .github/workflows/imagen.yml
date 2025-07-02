@@ -40,8 +40,8 @@ jobs:
               "Content-Type": "application/json"
           }
 
-          IMAGES_DIR = "images"
-          VISUALS_JSON = "visuals/visuals.json"
+          IMAGES_DIR = "Images"
+          VISUALS_JSON = "Visual/visuals.json"
           NUM_IMAGES = 30
 
           os.makedirs(IMAGES_DIR, exist_ok=True)
@@ -135,7 +135,7 @@ jobs:
           git pull origin main --rebase || echo "No rebase needed"
           git stash pop || true
 
-          git add images/
+          git add Images/
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
           git commit -m "🖼️ Generated images: ${timestamp}" || echo "No changes to commit"
 
