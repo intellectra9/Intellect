@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # needed to push final video back
+  contents: write  # Needed to push back to repo
 
 jobs:
   generate_video:
@@ -24,83 +24,83 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Generate video using FFmpeg
+      - name: Generate final video using FFmpeg
         run: |
           python3 - <<EOF
           import os
           import json
           import subprocess
 
+          # === CONFIG ===
           AUDIO_FILE = "Intellect/Audio/a1.mp3"
           EDIT_JSON = "Edits/edit.json"
           IMAGES_DIR = "Images"
           OUTPUT_VIDEO = "Video/final_video.mp4"
 
-          # Load edit.json
+          # Load edits
           with open(EDIT_JSON, "r") as f:
               edits = json.load(f)["sentence_transcriptions"]
 
-          # FFmpeg complex filter parts
-          filter_parts = []
+          # === INPUTS ===
           inputs = []
-          overlay_id = 0
+          # Create a base black screen with total duration
+          TOTAL_DURATION = edits[-1]["end"] + 5  # small buffer
+          inputs.append(f"-f lavfi -t {TOTAL_DURATION} -i color=c=black:s=1280x720")
 
-          # Audio input
+          # Audio
           inputs.append(f"-i {AUDIO_FILE}")
 
+          # Images
+          for item in edits:
+              img_id = item["id"]
+              img_file = os.path.join(IMAGES_DIR, f"{img_id}.png")
+              if os.path.exists(img_file):
+                  inputs.append(f"-loop 1 -i {img_file}")
+              else:
+                  print(f"⚠️ Skipping missing image: {img_file}")
+
+          # === FILTER COMPLEX ===
+          filter_complex = ""
+          last = "[0:v]"  # base black video
           for idx, item in enumerate(edits):
               img_id = item["id"]
+              img_file = os.path.join(IMAGES_DIR, f"{img_id}.png")
+              if not os.path.exists(img_file):
+                  continue  # skip missing
+
               start = item["start"]
               end = item["end"]
-              duration = end - start
-              img_file = os.path.join(IMAGES_DIR, f"{img_id}.png")
-              
-              if not os.path.exists(img_file):
-                  print(f"❌ Image {img_file} not found, skipping.")
-                  continue
+              input_idx = idx + 2  # [0] base, [1] audio, [2:] images
 
-              # Each image input
-              inputs.append(f"-loop 1 -t {duration} -i {img_file}")
-
-              # Build filter for this image
+              # Enable overlay between start & end
               overlay = (
-                  f"[{idx+1}:v]scale=1280:720,format=rgba,"
-                  f"fade=t=in:st=0:d=0.5:alpha=1,"
-                  f"fade=t=out:st={duration-0.5}:d=0.5:alpha=1,"
-                  f"setpts=PTS+{start}/TB[over{overlay_id}]"
+                  f"{last}[{input_idx}:v] overlay=enable='between(t,{start},{end})'[tmp{idx}];"
               )
-              filter_parts.append(overlay)
-              overlay_id += 1
+              filter_complex += overlay
+              last = f"[tmp{idx}]"
 
-          # Start with black background
-          base = "color=color=black:size=1280x720:d=100[base];"
+          # Remove trailing ';'
+          if filter_complex.endswith(';'):
+              filter_complex = filter_complex[:-1]
 
-          # Overlay each image in sequence
-          overlays = ""
-          last = "[base]"
-          for i in range(overlay_id):
-              overlays += f"{last}[over{i}]overlay=shortest=1[tmp{i}];"
-              last = f"[tmp{i}]"
-
-          filter_complex = f"{base}{''.join(filter_parts)}{overlays[:-1]}"  # Remove last ';'
-
+          # === FULL COMMAND ===
           ffmpeg_cmd = [
               "ffmpeg",
               *sum([part.split() for part in inputs], []),
               "-filter_complex", filter_complex,
               "-map", last,
-              "-map", "0:a",
+              "-map", "1:a",
               "-c:v", "libx264",
               "-c:a", "aac",
               "-shortest",
               OUTPUT_VIDEO
           ]
 
-          print("Running FFmpeg command:")
+          print("📼 Running FFmpeg command:")
           print(" ".join(ffmpeg_cmd))
 
           subprocess.run(ffmpeg_cmd, check=True)
-          print(f"✅ Final video generated: {OUTPUT_VIDEO}")
+          print(f"✅ Video created at: {OUTPUT_VIDEO}")
           EOF
 
       - name: Configure Git
