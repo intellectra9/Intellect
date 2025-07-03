@@ -1,0 +1,124 @@
+name: Generate Video
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write  # needed to push final video back
+
+jobs:
+  generate_video:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Generate video using FFmpeg
+        run: |
+          python3 - <<EOF
+          import os
+          import json
+          import subprocess
+
+          AUDIO_FILE = "Intellect/Audio/a1.mp3"
+          EDIT_JSON = "Edits/edit.json"
+          IMAGES_DIR = "Images"
+          OUTPUT_VIDEO = "Video/final_video.mp4"
+
+          # Load edit.json
+          with open(EDIT_JSON, "r") as f:
+              edits = json.load(f)["sentence_transcriptions"]
+
+          # FFmpeg complex filter parts
+          filter_parts = []
+          inputs = []
+          overlay_id = 0
+
+          # Audio input
+          inputs.append(f"-i {AUDIO_FILE}")
+
+          for idx, item in enumerate(edits):
+              img_id = item["id"]
+              start = item["start"]
+              end = item["end"]
+              duration = end - start
+              img_file = os.path.join(IMAGES_DIR, f"{img_id}.png")
+              
+              if not os.path.exists(img_file):
+                  print(f"❌ Image {img_file} not found, skipping.")
+                  continue
+
+              # Each image input
+              inputs.append(f"-loop 1 -t {duration} -i {img_file}")
+
+              # Build filter for this image
+              overlay = (
+                  f"[{idx+1}:v]scale=1280:720,format=rgba,"
+                  f"fade=t=in:st=0:d=0.5:alpha=1,"
+                  f"fade=t=out:st={duration-0.5}:d=0.5:alpha=1,"
+                  f"setpts=PTS+{start}/TB[over{overlay_id}]"
+              )
+              filter_parts.append(overlay)
+              overlay_id += 1
+
+          # Start with black background
+          base = "color=color=black:size=1280x720:d=100[base];"
+
+          # Overlay each image in sequence
+          overlays = ""
+          last = "[base]"
+          for i in range(overlay_id):
+              overlays += f"{last}[over{i}]overlay=shortest=1[tmp{i}];"
+              last = f"[tmp{i}]"
+
+          filter_complex = f"{base}{''.join(filter_parts)}{overlays[:-1]}"  # Remove last ';'
+
+          ffmpeg_cmd = [
+              "ffmpeg",
+              *sum([part.split() for part in inputs], []),
+              "-filter_complex", filter_complex,
+              "-map", last,
+              "-map", "0:a",
+              "-c:v", "libx264",
+              "-c:a", "aac",
+              "-shortest",
+              OUTPUT_VIDEO
+          ]
+
+          print("Running FFmpeg command:")
+          print(" ".join(ffmpeg_cmd))
+
+          subprocess.run(ffmpeg_cmd, check=True)
+          print(f"✅ Final video generated: {OUTPUT_VIDEO}")
+          EOF
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "intellect9"
+          git config --global user.email "intellectra9@outlook.com"
+
+      - name: Commit and push final video
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git stash --include-untracked
+          git pull origin main --rebase || echo "No rebase needed"
+          git stash pop || true
+
+          git add Video/
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
+          git commit -m "🎬 Generated final video: ${timestamp}" || echo "No changes to commit"
+
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
+          git push origin HEAD:main
