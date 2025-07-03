@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate video inline  
         run: |  
-          python3 - <<EOF  
+          python3 - <<'EOF'  
           import os  
           import json  
           import subprocess
@@ -161,30 +161,90 @@ jobs:
           
           filter_complex = "".join(filter_parts) + concat_filter
 
-          # === Generate video with ffmpeg ===
+          # === Generate video with ffmpeg using file list method ===
           output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
           
-          cmd = [
-              "ffmpeg", "-y",  # Overwrite output file
-              *input_args,
-              "-filter_complex", filter_complex,
-              "-map", "[outv]",  # Use concatenated video
-              "-map", "0:a",     # Use original audio
-              "-c:v", "libx264",
-              "-preset", "medium",
-              "-crf", "23",
-              "-c:a", "aac",
-              "-b:a", "192k",
-              "-shortest",  # End when shortest stream ends
+          # Create a file list for ffmpeg concat
+          concat_file = os.path.join(TEMP_DIR, "concat_list.txt")
+          
+          print("🎥 Creating video segments...")
+          segment_files = []
+          
+          # Create individual video segments first
+          for i, segment in enumerate(video_segments):
+              segment_output = os.path.join(TEMP_DIR, f"segment_{i:03d}.mp4")
+              
+              # Extract audio segment
+              audio_segment = os.path.join(TEMP_DIR, f"audio_{i:03d}.wav")
+              audio_cmd = [
+                  "ffmpeg", "-y", "-i", AUDIO_FILE,
+                  "-ss", str(segment["start"]),
+                  "-t", str(segment["duration"]),
+                  "-c", "copy",
+                  audio_segment
+              ]
+              
+              try:
+                  subprocess.run(audio_cmd, capture_output=True, check=True)
+              except subprocess.CalledProcessError:
+                  # If copy fails, re-encode
+                  audio_cmd = [
+                      "ffmpeg", "-y", "-i", AUDIO_FILE,
+                      "-ss", str(segment["start"]),
+                      "-t", str(segment["duration"]),
+                      "-c:a", "pcm_s16le",
+                      audio_segment
+                  ]
+                  subprocess.run(audio_cmd, capture_output=True, check=True)
+              
+              # Create video segment
+              video_cmd = [
+                  "ffmpeg", "-y",
+                  "-loop", "1", "-i", segment["image_path"],
+                  "-i", audio_segment,
+                  "-c:v", "libx264",
+                  "-preset", "ultrafast",
+                  "-crf", "23",
+                  "-c:a", "aac",
+                  "-b:a", "192k",
+                  "-shortest",
+                  "-pix_fmt", "yuv420p",
+                  "-r", "30",
+                  segment_output
+              ]
+              
+              try:
+                  result = subprocess.run(video_cmd, capture_output=True, text=True, check=True)
+                  segment_files.append(segment_output)
+                  print(f"✅ Created segment {i+1}/{len(video_segments)}: {segment['id']}")
+              except subprocess.CalledProcessError as e:
+                  print(f"❌ Error creating segment {segment['id']}: {e}")
+                  print(f"stderr: {e.stderr}")
+                  continue
+          
+          if not segment_files:
+              print("❌ No video segments were created successfully")
+              sys.exit(1)
+          
+          # Create concat file
+          with open(concat_file, 'w') as f:
+              for segment_file in segment_files:
+                  f.write(f"file '{os.path.abspath(segment_file)}'\n")
+          
+          # Concatenate all segments
+          print("🔗 Concatenating video segments...")
+          concat_cmd = [
+              "ffmpeg", "-y",
+              "-f", "concat",
+              "-safe", "0",
+              "-i", concat_file,
+              "-c", "copy",
               output_path
           ]
-
-          print("🎥 Running ffmpeg command...")
-          print(f"Command: {' '.join(cmd)}")
-
+          
           try:
-              result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-              print("✅ Video generation completed successfully!")
+              result = subprocess.run(concat_cmd, capture_output=True, text=True, check=True)
+              print("✅ Video concatenation completed successfully!")
               print(f"📁 Output saved to: {output_path}")
               
               # Print file size
@@ -192,52 +252,32 @@ jobs:
               print(f"📊 File size: {file_size / (1024*1024):.2f} MB")
               
           except subprocess.CalledProcessError as e:
-              print(f"❌ FFmpeg error: {e}")
+              print(f"❌ Concatenation error: {e}")
               print(f"stdout: {e.stdout}")
               print(f"stderr: {e.stderr}")
-              sys.exit(1)
-
-          # === Alternative method if concat doesn't work ===
-          # This creates a video by overlaying images at specific timestamps
-          if not os.path.exists(output_path) or os.path.getsize(output_path) == 0:
-              print("🔄 Trying alternative method with overlay filters...")
               
-              # Create a black video base
-              filter_parts = ["color=black:1920x1080:d=1[base];"]
-              
-              # Add each image as an overlay at specific times
-              current_input = "base"
-              for i, segment in enumerate(video_segments):
-                  input_args.extend(["-loop", "1", "-t", "0.1", "-i", segment["image_path"]])
-                  
-                  overlay_filter = f"[{current_input}][{i+1}:v]overlay=enable='between(t,{segment['start']},{segment['end']})'[tmp{i}];"
-                  filter_parts.append(overlay_filter)
-                  current_input = f"tmp{i}"
-              
-              filter_complex = "".join(filter_parts)
-              
-              cmd_alt = [
+              # Try alternative method with re-encoding
+              print("🔄 Trying concatenation with re-encoding...")
+              concat_cmd_alt = [
                   "ffmpeg", "-y",
-                  "-i", AUDIO_FILE,
-                  *input_args,
-                  "-filter_complex", filter_complex,
-                  "-map", f"[{current_input}]",
-                  "-map", "0:a",
+                  "-f", "concat",
+                  "-safe", "0",
+                  "-i", concat_file,
                   "-c:v", "libx264",
                   "-preset", "medium",
                   "-crf", "23",
                   "-c:a", "aac",
                   "-b:a", "192k",
-                  "-shortest",
                   output_path
               ]
               
               try:
-                  result = subprocess.run(cmd_alt, capture_output=True, text=True, check=True)
-                  print("✅ Alternative method completed successfully!")
-              except subprocess.CalledProcessError as e:
-                  print(f"❌ Alternative method also failed: {e}")
-                  print(f"stderr: {e.stderr}")
+                  result = subprocess.run(concat_cmd_alt, capture_output=True, text=True, check=True)
+                  print("✅ Alternative concatenation completed successfully!")
+              except subprocess.CalledProcessError as e2:
+                  print(f"❌ Alternative concatenation also failed: {e2}")
+                  print(f"stderr: {e2.stderr}")
+                  sys.exit(1)
 
           # === Cleanup ===
           shutil.rmtree(TEMP_DIR, ignore_errors=True)
