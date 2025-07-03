@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "created_at": "2025-06-29T09:14:33.893306Z",
-    "total_sentences": 42,
+    "created_at": "2025-07-03T12:36:21.314293Z",
+    "total_sentences": 92,
     "source_files": {
       "visuals": "Visuals/visuals.json",
       "transcription": "Trans/transcription.json"
@@ -11,338 +11,738 @@
     {
       "id": "i1",
       "number": 1,
-      "sentence": "if there's one thing I've learned in this life it's that boldness is the solution to all the social problems you have whether it's with girls friends or work",
+      "sentence": "If there's one thing I've learned about modern dating, it's that the guy who can make a woman laugh through a screen at 2 AM while she's lying in bed has more power than the guy spending $300 on dinner dates.",
       "start": 0.031,
-      "end": 7.72,
-      "duration": 7.689
+      "end": 10.453,
+      "duration": 10.422
     },
     {
       "id": "i2",
       "number": 2,
-      "sentence": "the moment you acquire the skill of boldness your entire life will change",
-      "start": 7.76,
-      "end": 11.344,
-      "duration": 3.584
+      "sentence": "I know a guy who got a woman to drive 3 hours to see him... using nothing but text messages.",
+      "start": 11.054,
+      "end": 16.285,
+      "duration": 5.231
     },
     {
       "id": "i3",
       "number": 3,
-      "sentence": "and in this video I'm going to teach you how to reach the highest level of boldness that any human can reach on this planet",
-      "start": 11.724,
-      "end": 17.811,
-      "duration": 6.087
+      "sentence": "No phone calls, no video chats, just pure textual seduction.",
+      "start": 16.265,
+      "end": 19.99,
+      "duration": 3.725
     },
     {
       "id": "i4",
       "number": 4,
-      "sentence": "and I must tell you first that I'm not here to teach you how to be bold just so you can introduce yourself to a group of people or talk to a girl you like",
-      "start": 18.111,
-      "end": 25.84,
-      "duration": 7.729
+      "sentence": "By the end of this video, you're going to understand exactly how he did it, and more importantly, how YOU can rewire your brain to become that level of magnetically attractive through your phone.",
+      "start": 20.49,
+      "end": 29.822,
+      "duration": 9.332
     },
     {
       "id": "i5",
       "number": 5,
-      "sentence": "i'm here to teach you how to develop a crazy amount of boldness the kind of boldness that makes you walk down the street see a girl you barely know and have only spoken to once stand in front of her and say \"Seriously I'm breaking up with you.\"",
-      "start": 25.9,
-      "end": 27.9,
-      "duration": 2.0
+      "sentence": "Most guys are unconsciously repelling women with every message they send, and they have no idea why.",
+      "start": 30.383,
+      "end": 35.589,
+      "duration": 5.206
     },
     {
       "id": "i6",
       "number": 6,
-      "sentence": "Then walk away and leave her standing there shocked",
-      "start": 38.515,
-      "end": 40.858,
-      "duration": 2.343
+      "sentence": "I'm about to completely transform how you think about digital communication forever.",
+      "start": 36.09,
+      "end": 40.135,
+      "duration": 4.045
     },
     {
       "id": "i7",
       "number": 7,
-      "sentence": "or to be in a movie theater stand up start yelling and act like a homeless man just to laugh",
-      "start": 41.078,
-      "end": 46.204,
-      "duration": 5.126
+      "sentence": "Let me explain why texting mastery matters by going back in time for a second.",
+      "start": 40.736,
+      "end": 45.141,
+      "duration": 4.405
     },
     {
       "id": "i8",
       "number": 8,
-      "sentence": "if that kind of boldness seems hard to you or like something you shouldn't have I promise you that by the end of this video your perspective on it will completely change",
-      "start": 46.384,
-      "end": 54.199,
-      "duration": 7.815
+      "sentence": "For millions of years, attraction happened face-to-face.",
+      "start": 45.121,
+      "end": 47.306,
+      "duration": 2.185
     },
     {
       "id": "i9",
       "number": 9,
-      "sentence": "so welcome to the social skills series and let me first explain to you why boldness",
-      "start": 54.5,
-      "end": 58.869,
-      "duration": 4.369
+      "sentence": "Your ancestors had to rely on body language, voice tonality, and physical presence to attract a mate.",
+      "start": 48.609,
+      "end": 54.242,
+      "duration": 5.633
     },
     {
       "id": "i10",
       "number": 10,
-      "sentence": "if we go back in time to an era when societies were made up of tribes the bold man was the strongest man",
-      "start": 59.05,
-      "end": 65.242,
-      "duration": 6.192
+      "sentence": "But here's what's crazy - in just 20 years, we've completely revolutionized human courtship.",
+      "start": 54.743,
+      "end": 59.414,
+      "duration": 4.671
     },
     {
       "id": "i11",
       "number": 11,
-      "sentence": "if there was a strong man he was simply capable of doing anything he wanted and saying anything he wanted without fearing anything",
-      "start": 65.262,
-      "end": 72.571,
-      "duration": 7.309
+      "sentence": "Today, 90% of romantic connections begin with digital communication.",
+      "start": 59.915,
+      "end": 64.125,
+      "duration": 4.21
     },
     {
       "id": "i12",
       "number": 12,
-      "sentence": "in other words he was bold",
-      "start": 72.631,
-      "end": 73.952,
-      "duration": 1.321
+      "sentence": "Think about that.",
+      "start": 64.105,
+      "end": 64.866,
+      "duration": 0.761
     },
     {
       "id": "i13",
       "number": 13,
-      "sentence": "this mindset despite thousands of years passing still exists within us to this day",
-      "start": 73.992,
-      "end": 78.638,
-      "duration": 4.646
+      "sentence": "The skill that determined whether your great-grandfather got the girl was completely different from what determines whether YOU get the girl.",
+      "start": 65.367,
+      "end": 71.498,
+      "duration": 6.131
     },
     {
       "id": "i14",
       "number": 14,
-      "sentence": "if there is a group of people sitting together and one of them does something bold everyone around him instinctively feels that he is the strongest person in that group",
-      "start": 78.678,
-      "end": 87.388,
-      "duration": 8.71
+      "sentence": "But here's the problem - your brain is still wired for caveman courtship.",
+      "start": 71.999,
+      "end": 75.966,
+      "duration": 3.967
     },
     {
       "id": "i15",
       "number": 15,
-      "sentence": "and here I want to pause and give you a golden rule I want you to remember for the rest of your life",
-      "start": 87.728,
-      "end": 92.854,
-      "duration": 5.126
+      "sentence": "You're trying to use stone-age programming in a digital world, and it's creating a massive disconnect.",
+      "start": 75.986,
+      "end": 80.895,
+      "duration": 4.909
     },
     {
       "id": "i16",
       "number": 16,
-      "sentence": "the way you act is the way people see you",
-      "start": 92.914,
-      "end": 94.977,
-      "duration": 2.063
+      "sentence": "This is human nature, and that's why most guys fail miserably at texting.",
+      "start": 81.416,
+      "end": 85.523,
+      "duration": 4.107
     },
     {
       "id": "i17",
       "number": 17,
-      "sentence": "when you act in a bold way you present yourself as if you're the strongest person in the group as if you're the leader of that group",
-      "start": 95.017,
-      "end": 101.667,
-      "duration": 6.65
+      "sentence": "Women are receiving an average of 50+ messages per day from men.",
+      "start": 85.503,
+      "end": 89.049,
+      "duration": 3.546
     },
     {
       "id": "i18",
       "number": 18,
-      "sentence": "and when people see you behaving like that they naturally begin treating you the same way",
-      "start": 101.687,
-      "end": 106.134,
-      "duration": 4.447
+      "sentence": "You're not competing with the guy at the bar anymore - you're competing with every guy who has a smartphone.",
+      "start": 89.569,
+      "end": 94.758,
+      "duration": 5.189
     },
     {
       "id": "i19",
       "number": 19,
-      "sentence": "if you want people to trust your decision all you have to do is you trust that decision first",
-      "start": 106.194,
-      "end": 111.322,
-      "duration": 5.128
+      "sentence": "Texting has become the ultimate cheat code for social power, but nobody taught you how to use it.",
+      "start": 94.778,
+      "end": 99.605,
+      "duration": 4.827
     },
     {
       "id": "i20",
       "number": 20,
-      "sentence": "this is human nature and that's why my dear friend when you finish this video and acquire with me the skill of boldness your entire life will change",
-      "start": 111.362,
-      "end": 119.654,
-      "duration": 8.292
+      "sentence": "Let me explain what texting attraction really is from a psychological perspective.",
+      "start": 100.106,
+      "end": 104.473,
+      "duration": 4.367
     },
     {
       "id": "i21",
       "number": 21,
-      "sentence": "so now that you understand with me that boldness is something important and it's literally a cheat code for social power i'm going to explain to you how to become bold",
-      "start": 119.895,
-      "end": 128.368,
-      "duration": 8.473
+      "sentence": "Every text message you send creates one of two outcomes in a woman's brain: reward or punishment.",
+      "start": 104.453,
+      "end": 109.783,
+      "duration": 5.33
     },
     {
       "id": "i22",
       "number": 22,
-      "sentence": "and here I need to explain to you what boldness really is from a psychological and deep perspective",
-      "start": 128.708,
-      "end": 133.696,
-      "duration": 4.988
+      "sentence": "It either triggers a dopamine release that makes her crave more interaction with you, or it triggers a cortisol response that makes her want to avoid you.",
+      "start": 110.304,
+      "end": 117.698,
+      "duration": 7.394
     },
     {
       "id": "i23",
       "number": 23,
-      "sentence": "simply put a bold action is one that when you do it the result will either be a reward or a punishment",
-      "start": 133.776,
-      "end": 139.304,
-      "duration": 5.528
+      "sentence": "The real reason most guys fail at texting has nothing to do with what they're saying - it's about what they're projecting.",
+      "start": 118.239,
+      "end": 123.829,
+      "duration": 5.59
     },
     {
       "id": "i24",
       "number": 24,
-      "sentence": "if you like a girl and go approach her there are two possible outcomes either you get a reward her number or she rejects you and the punishment will be embarrassment",
-      "start": 139.625,
-      "end": 148.578,
-      "duration": 8.953
+      "sentence": "Your texts are unconsciously broadcasting your emotional state, your neediness level, and your social value to her primitive brain.",
+      "start": 123.809,
+      "end": 130.542,
+      "duration": 6.733
     },
     {
       "id": "i25",
       "number": 25,
-      "sentence": "and I want you to focus on this word embarrassment because we'll come back to it later",
-      "start": 148.939,
-      "end": 152.885,
-      "duration": 3.946
+      "sentence": "Here's what's happening: When you send a needy text, you're literally activating her disgust response.",
+      "start": 131.043,
+      "end": 135.872,
+      "duration": 4.829
     },
     {
       "id": "i26",
       "number": 26,
-      "sentence": "so to become someone who takes bold actions this element of punishment must disappear",
-      "start": 153.165,
-      "end": 157.692,
-      "duration": 4.527
+      "sentence": "It's the same biological mechanism that protected our ancestors from diseased or weak potential mates.",
+      "start": 136.494,
+      "end": 142.425,
+      "duration": 5.931
     },
     {
       "id": "i27",
       "number": 27,
-      "sentence": "and you can achieve that by letting me rewire your brain so that this punishment no longer appears to you and no longer affects you",
-      "start": 157.732,
-      "end": 165.163,
-      "duration": 7.431
+      "sentence": "Her brain reads your desperation as genetic weakness, and she pulls away without even knowing why.",
+      "start": 142.405,
+      "end": 147.396,
+      "duration": 4.991
     },
     {
       "id": "i28",
       "number": 28,
-      "sentence": "once you reach that point it means you'll have a crazy level of confidence and power and you'll become able to do and say anything you want without caring what anyone around you thinks",
-      "start": 165.263,
-      "end": 175.278,
-      "duration": 10.015
+      "sentence": "I'm going to rewire your brain so that every text you send triggers attraction instead of repulsion.",
+      "start": 147.917,
+      "end": 152.728,
+      "duration": 4.811
     },
     {
       "id": "i29",
       "number": 29,
-      "sentence": "so let's go back to our rule the bold action has two possible outcomes: reward or punishment",
-      "start": 175.298,
-      "end": 177.298,
-      "duration": 2.0
+      "sentence": "We're going to turn you into a texting machine that women can't resist engaging with.",
+      "start": 153.209,
+      "end": 157.579,
+      "duration": 4.37
     },
     {
       "id": "i30",
       "number": 30,
-      "sentence": "let's start with punishment and since we're now in the social skills series it makes sense that our goal is to apply boldness in social life",
-      "start": 175.479,
-      "end": 187.839,
-      "duration": 12.36
+      "sentence": "The real reason you feel anxious when texting women has nothing to do with the actual conversation - it's about a chemical cocktail of cortisol and adrenaline flooding your system because your brain thinks you're about to be rejected by the tribe.",
+      "start": 157.559,
+      "end": 169.174,
+      "duration": 11.615
     },
     {
       "id": "i31",
       "number": 31,
-      "sentence": "so what is the punishment in social life of course it's embarrassment",
-      "start": 188.18,
-      "end": 191.305,
-      "duration": 3.125
+      "sentence": "Think of your phone like a frame.",
+      "start": 169.695,
+      "end": 170.896,
+      "duration": 1.201
     },
     {
       "id": "i32",
       "number": 32,
-      "sentence": "so let me explain to you what this embarrassment actually is and how you can overcome it",
-      "start": 191.625,
-      "end": 196.073,
-      "duration": 4.448
+      "sentence": "Right now, you're operating from a weak frame - the frame of someone who needs her validation, who's walking on eggshells, who's afraid of saying the wrong thing.",
+      "start": 171.397,
+      "end": 179.888,
+      "duration": 8.491
     },
     {
       "id": "i33",
       "number": 33,
-      "sentence": "now when you're in a social situation like going out on a date for example people around you place you inside a certain frame",
-      "start": 196.133,
-      "end": 202.842,
-      "duration": 6.709
+      "sentence": "But she can feel this energy through the screen.",
+      "start": 179.868,
+      "end": 181.611,
+      "duration": 1.743
     },
     {
       "id": "i34",
       "number": 34,
-      "sentence": "that frame is what they expect you to do eat laugh reply to a message on your phone",
-      "start": 202.882,
-      "end": 207.167,
-      "duration": 4.285
+      "sentence": "Here's a mind-blowing reframe: That anxiety you feel before hitting send?",
+      "start": 182.072,
+      "end": 185.619,
+      "duration": 3.547
     },
     {
       "id": "i35",
       "number": 35,
-      "sentence": "but it's impossible for them to expect you to suddenly stand up and start singing or doing push-ups or dancing",
-      "start": 207.467,
-      "end": 213.514,
-      "duration": 6.047
+      "sentence": "It's not because texting is scary - it's because you're subconsciously treating every text like a job interview where she's the employer and you're desperately trying to prove you're worthy of her time.",
+      "start": 186.14,
+      "end": 195.598,
+      "duration": 9.458
     },
     {
       "id": "i36",
       "number": 36,
-      "sentence": "the problem that happens here is that the frame others put you in you also put yourself in it",
-      "start": 213.554,
-      "end": 215.554,
-      "duration": 2.0
+      "sentence": "But here's what's actually happening: She's sitting there hoping that someone, ANYONE, will stimulate her brain in an interesting way.",
+      "start": 195.578,
+      "end": 202.415,
+      "duration": 6.837
     },
     {
       "id": "i37",
       "number": 37,
-      "sentence": "so when your brain sees you trying to do something outside of that frame it tries its best to stop you to avoid embarrassment",
-      "start": 218.36,
-      "end": 224.927,
-      "duration": 6.567
+      "sentence": "She's bored out of her mind scrolling through the same boring 'hey beautiful' messages from guys who all sound exactly the same.",
+      "start": 202.917,
+      "end": 208.832,
+      "duration": 5.915
     },
     {
       "id": "i38",
       "number": 38,
-      "sentence": "and of course your brain thinks it's doing this for your own good because ever since you were a child you've been conditioned to believe that embarrassment is something you must escape",
-      "start": 224.907,
-      "end": 233.418,
-      "duration": 8.511
+      "sentence": "Let me give you a relatable example.",
+      "start": 209.353,
+      "end": 211.258,
+      "duration": 1.905
     },
     {
       "id": "i39",
       "number": 39,
-      "sentence": "and that you should care about what people think",
-      "start": 233.759,
-      "end": 235.802,
-      "duration": 2.043
+      "sentence": "You know that feeling when you're about to text her back and you spend 20 minutes crafting the 'perfect' response?",
+      "start": 211.238,
+      "end": 216.547,
+      "duration": 5.309
     },
     {
       "id": "i40",
       "number": 40,
-      "sentence": "what I want to explain to you now is this embarrassment and people have nothing to do with each other",
-      "start": 235.842,
-      "end": 240.728,
-      "duration": 4.886
+      "sentence": "That's your nervous system treating her like she's a wild animal that might attack you.",
+      "start": 217.127,
+      "end": 220.894,
+      "duration": 3.767
     },
     {
       "id": "i41",
       "number": 41,
-      "sentence": "for example let's say you walk up to a girl and she rejects you your brain sends a signal to your kidneys to release adrenaline and cortisol",
-      "start": 240.768,
-      "end": 248.519,
-      "duration": 7.751
+      "sentence": "Meanwhile, she's probably watching Netflix and barely thinking about the conversation at all.",
+      "start": 221.434,
+      "end": 226.122,
+      "duration": 4.688
     },
     {
       "id": "i42",
       "number": 42,
-      "sentence": "and these two hormones are what make you feel embarrassed",
-      "start": 248.759,
-      "end": 251.843,
-      "duration": 3.084
+      "sentence": "Here's how to control her emotional response by changing your internal state when you text.",
+      "start": 226.643,
+      "end": 230.729,
+      "duration": 4.086
+    },
+    {
+      "id": "i43",
+      "number": 43,
+      "sentence": "Listen to me carefully now - before you even open your phone, you need to get into what I call the 'outcome independence' state.",
+      "start": 231.29,
+      "end": 237.921,
+      "duration": 6.631
+    },
+    {
+      "id": "i44",
+      "number": 44,
+      "sentence": "This means you're texting for YOUR entertainment, not for her validation.",
+      "start": 237.901,
+      "end": 241.147,
+      "duration": 3.246
+    },
+    {
+      "id": "i45",
+      "number": 45,
+      "sentence": "Person A sends: 'Hey, how was your day? Hope you had a good one!'",
+      "start": 241.608,
+      "end": 245.476,
+      "duration": 3.868
+    },
+    {
+      "id": "i46",
+      "number": 46,
+      "sentence": "Person B sends: 'Just saw a guy try to impress a girl by doing pushups at Starbucks. The secondhand embarrassment was real 😬'",
+      "start": 245.957,
+      "end": 252.871,
+      "duration": 6.914
+    },
+    {
+      "id": "i47",
+      "number": 47,
+      "sentence": "Person A is seeking validation.",
+      "start": 254.675,
+      "end": 256.479,
+      "duration": 1.804
+    },
+    {
+      "id": "i48",
+      "number": 48,
+      "sentence": "Person B is sharing an experience.",
+      "start": 256.959,
+      "end": 258.743,
+      "duration": 1.784
+    },
+    {
+      "id": "i49",
+      "number": 49,
+      "sentence": "Guess which one gets the response?",
+      "start": 259.324,
+      "end": 260.627,
+      "duration": 1.303
+    },
+    {
+      "id": "i50",
+      "number": 50,
+      "sentence": "The technique is this: Every text should either make her laugh, make her think, or make her feel something.",
+      "start": 261.208,
+      "end": 266.939,
+      "duration": 5.731
+    },
+    {
+      "id": "i51",
+      "number": 51,
+      "sentence": "Never send a text that requires her to carry the conversational weight.",
+      "start": 267.46,
+      "end": 271.047,
+      "duration": 3.587
+    },
+    {
+      "id": "i52",
+      "number": 52,
+      "sentence": "Your texts should be gifts, not burdens.",
+      "start": 271.027,
+      "end": 273.027,
+      "duration": 2.0
+    },
+    {
+      "id": "i53",
+      "number": 53,
+      "sentence": "Here's your body language through text: Use periods sparingly - they create harsh energy.",
+      "start": 273.51,
+      "end": 278.177,
+      "duration": 4.667
+    },
+    {
+      "id": "i54",
+      "number": 54,
+      "sentence": "Use lowercase for casual confidence.",
+      "start": 278.717,
+      "end": 280.48,
+      "duration": 1.763
+    },
+    {
+      "id": "i55",
+      "number": 55,
+      "sentence": "Never double text unless you're genuinely adding value, not seeking attention.",
+      "start": 281.101,
+      "end": 284.806,
+      "duration": 3.705
+    },
+    {
+      "id": "i56",
+      "number": 56,
+      "sentence": "And for the love of God, stop asking 'what are you up to?' - it screams that you have nothing interesting happening in your own life.",
+      "start": 285.326,
+      "end": 291.795,
+      "duration": 6.469
+    },
+    {
+      "id": "i57",
+      "number": 57,
+      "sentence": "Connect your internal state to her external perception: When you text from a place of abundance and genuine amusement, she feels that energy.",
+      "start": 292.376,
+      "end": 299.886,
+      "duration": 7.51
+    },
+    {
+      "id": "i58",
+      "number": 58,
+      "sentence": "When you text from neediness and insecurity, she feels that too.",
+      "start": 299.866,
+      "end": 303.191,
+      "duration": 3.325
+    },
+    {
+      "id": "i59",
+      "number": 59,
+      "sentence": "The words matter less than the energy behind them.",
+      "start": 303.732,
+      "end": 305.975,
+      "duration": 2.243
+    },
+    {
+      "id": "i60",
+      "number": 60,
+      "sentence": "The mindset you need is to see most people as NPCs in a video game, and you're the main character creating the interesting storylines.",
+      "start": 306.456,
+      "end": 314.167,
+      "duration": 7.711
+    },
+    {
+      "id": "i61",
+      "number": 61,
+      "sentence": "This is going to be controversial, but I need you to understand this: 95% of people, including most of the guys texting her, are operating on autopilot.",
+      "start": 314.187,
+      "end": 323.46,
+      "duration": 9.273
+    },
+    {
+      "id": "i62",
+      "number": 62,
+      "sentence": "They're sending the same predictable responses, asking the same boring questions, playing the same desperate game.",
+      "start": 323.44,
+      "end": 329.71,
+      "duration": 6.27
+    },
+    {
+      "id": "i63",
+      "number": 63,
+      "sentence": "You need to break out of the conventional social programming that says you should be 'nice' and 'respectful' in a way that makes you invisible.",
+      "start": 329.73,
+      "end": 336.28,
+      "duration": 6.55
+    },
+    {
+      "id": "i64",
+      "number": 64,
+      "sentence": "Nice guys finish last in texting because nice is predictable, and predictable is boring.",
+      "start": 336.82,
+      "end": 341.247,
+      "duration": 4.427
+    },
+    {
+      "id": "i65",
+      "number": 65,
+      "sentence": "Modern dating is like a video game where everyone else is playing on easy mode, following the same basic strategies.",
+      "start": 341.808,
+      "end": 347.877,
+      "duration": 6.069
+    },
+    {
+      "id": "i66",
+      "number": 66,
+      "sentence": "But you're about to start playing on expert mode with cheat codes.",
+      "start": 348.438,
+      "end": 351.743,
+      "duration": 3.305
+    },
+    {
+      "id": "i67",
+      "number": 67,
+      "sentence": "While other guys are sending paragraph-long confessions about their feelings, you're sending one-liners that make her screenshot and send to her friends.",
+      "start": 351.723,
+      "end": 358.955,
+      "duration": 7.232
+    },
+    {
+      "id": "i68",
+      "number": 68,
+      "sentence": "The uncomfortable truth is that attention is the new currency, and most guys are broke.",
+      "start": 359.556,
+      "end": 363.964,
+      "duration": 4.408
+    },
+    {
+      "id": "i69",
+      "number": 69,
+      "sentence": "You're about to become wealthy.",
+      "start": 364.465,
+      "end": 365.607,
+      "duration": 1.142
+    },
+    {
+      "id": "i70",
+      "number": 70,
+      "sentence": "You don't become a texting master by playing it safe and sending boring messages.",
+      "start": 366.108,
+      "end": 370.074,
+      "duration": 3.966
+    },
+    {
+      "id": "i71",
+      "number": 71,
+      "sentence": "You become a texting master by embracing the risk of being polarizing, interesting, and unapologetically yourself.",
+      "start": 370.655,
+      "end": 377.427,
+      "duration": 6.772
+    },
+    {
+      "id": "i72",
+      "number": 72,
+      "sentence": "I want you to remember this for the rest of your life: Every time you reach for your phone to text her, you have a choice.",
+      "start": 377.407,
+      "end": 382.858,
+      "duration": 5.451
+    },
+    {
+      "id": "i73",
+      "number": 73,
+      "sentence": "You can either be another forgettable guy in her DMs, or you can be the guy who makes her day more interesting.",
+      "start": 383.46,
+      "end": 388.51,
+      "duration": 5.05
+    },
+    {
+      "id": "i74",
+      "number": 74,
+      "sentence": "Starting today, I want you to adopt the identity of someone whose texts are so engaging that women look forward to hearing from you.",
+      "start": 389.031,
+      "end": 395.685,
+      "duration": 6.654
+    },
+    {
+      "id": "i75",
+      "number": 75,
+      "sentence": "Not because you're desperate for their attention, but because you're genuinely entertaining and unpredictable.",
+      "start": 395.665,
+      "end": 400.374,
+      "duration": 4.709
+    },
+    {
+      "id": "i76",
+      "number": 76,
+      "sentence": "Here's your challenge: For the next 7 days, every text you send must pass the 'screenshot test' - would this be interesting enough for her to screenshot and show her friends?",
+      "start": 400.875,
+      "end": 409.492,
+      "duration": 8.617
+    },
+    {
+      "id": "i77",
+      "number": 77,
+      "sentence": "If not, rewrite it.",
+      "start": 410.094,
+      "end": 411.276,
+      "duration": 1.182
+    },
+    {
+      "id": "i78",
+      "number": 78,
+      "sentence": "You become dangerous when you realize that the power was always in your hands.",
+      "start": 411.777,
+      "end": 415.885,
+      "duration": 4.108
+    },
+    {
+      "id": "i79",
+      "number": 79,
+      "sentence": "The moment you stop needing her validation through text, you become the kind of man she can't stop thinking about.",
+      "start": 415.865,
+      "end": 421.251,
+      "duration": 5.386
+    },
+    {
+      "id": "i80",
+      "number": 80,
+      "sentence": "The world feels this energy shift, and women are naturally drawn to it.",
+      "start": 421.772,
+      "end": 425.376,
+      "duration": 3.604
+    },
+    {
+      "id": "i81",
+      "number": 81,
+      "sentence": "If you're still here watching this, I genuinely love you for taking your growth seriously.",
+      "start": 425.877,
+      "end": 429.901,
+      "duration": 4.024
+    },
+    {
+      "id": "i82",
+      "number": 82,
+      "sentence": "Look, I know this isn't easy.",
+      "start": 430.402,
+      "end": 431.984,
+      "duration": 1.582
+    },
+    {
+      "id": "i83",
+      "number": 83,
+      "sentence": "I know it feels uncomfortable to challenge everything you've been taught about how to communicate with women.",
+      "start": 432.525,
+      "end": 437.01,
+      "duration": 4.485
+    },
+    {
+      "id": "i84",
+      "number": 84,
+      "sentence": "But that discomfort is your old identity dying so your new one can be born.",
+      "start": 437.47,
+      "end": 441.135,
+      "duration": 3.665
+    },
+    {
+      "id": "i85",
+      "number": 85,
+      "sentence": "You now have the blueprint.",
+      "start": 441.635,
+      "end": 442.596,
+      "duration": 0.961
+    },
+    {
+      "id": "i86",
+      "number": 86,
+      "sentence": "You understand the psychology.",
+      "start": 443.077,
+      "end": 444.859,
+      "duration": 1.782
+    },
+    {
+      "id": "i87",
+      "number": 87,
+      "sentence": "You know the techniques.",
+      "start": 444.839,
+      "end": 445.801,
+      "duration": 0.962
+    },
+    {
+      "id": "i88",
+      "number": 88,
+      "sentence": "The only question left is: Are you going to use this knowledge, or are you going to go back to sending the same boring texts that every other guy sends?",
+      "start": 446.402,
+      "end": 453.675,
+      "duration": 7.273
+    },
+    {
+      "id": "i89",
+      "number": 89,
+      "sentence": "This was your wake-up call about texting mastery, and I'll see you in the next video where we're going to dive even deeper into the psychology of attraction.",
+      "start": 454.256,
+      "end": 461.79,
+      "duration": 7.534
+    },
+    {
+      "id": "i90",
+      "number": 90,
+      "sentence": "Remember - you're not just learning to text better.",
+      "start": 462.291,
+      "end": 464.455,
+      "duration": 2.164
+    },
+    {
+      "id": "i91",
+      "number": 91,
+      "sentence": "You're learning to become the kind of man who naturally attracts high-quality women through authentic confidence and genuine charisma.",
+      "start": 464.956,
+      "end": 471.107,
+      "duration": 6.151
+    },
+    {
+      "id": "i92",
+      "number": 92,
+      "sentence": "I'll see you next time.",
+      "start": 471.568,
+      "end": 472.77,
+      "duration": 1.202
     }
   ]
 }
