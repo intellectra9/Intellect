@@ -4,121 +4,263 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Needed to push back to repo
+  contents: write  # Allows pushing changes back
 
 jobs:
-  generate_video:
+  generate-video:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    steps:  
+      - name: Checkout repository  
+        uses: actions/checkout@v3  
 
-      - name: Install FFmpeg
+      - name: Set up Python  
+        uses: actions/setup-python@v5  
+        with:  
+          python-version: '3.10'  
+
+      - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+      - name: Install Python dependencies  
+        run: |  
+          pip install requests pillow
 
-      - name: Generate final video using FFmpeg
-        run: |
-          python3 - <<EOF
-          import os
-          import json
+      - name: Generate video inline  
+        run: |  
+          python3 - <<EOF  
+          import os  
+          import json  
           import subprocess
+          import sys
+          from PIL import Image
+          import tempfile
+          import shutil
 
-          # === CONFIG ===
-          AUDIO_FILE = "Intellect/Audio/a1.mp3"
+          # === Config ===  
+          AUDIO_FILE = "Audio/a1.mp3"
           EDIT_JSON = "Edits/edit.json"
           IMAGES_DIR = "Images"
-          OUTPUT_VIDEO = "Video/final_video.mp4"
+          OUTPUT_DIR = "Video"
+          OUTPUT_FILE = "final_video.mp4"
+          TEMP_DIR = "temp_video_generation"
 
-          # Load edits
+          # Create necessary directories
+          os.makedirs(OUTPUT_DIR, exist_ok=True)
+          os.makedirs(TEMP_DIR, exist_ok=True)
+
+          print("🎬 Starting video generation process...")
+
+          # === Validate required files ===
+          required_files = [AUDIO_FILE, EDIT_JSON]
+          for file_path in required_files:
+              if not os.path.exists(file_path):
+                  print(f"❌ Required file not found: {file_path}")
+                  sys.exit(1)
+
+          if not os.path.exists(IMAGES_DIR):
+              print(f"❌ Images directory not found: {IMAGES_DIR}")
+              sys.exit(1)
+
+          print("✅ All required files and directories found")
+
+          # === Load edit.json ===
           with open(EDIT_JSON, "r") as f:
-              edits = json.load(f)["sentence_transcriptions"]
+              edit_data = json.load(f)
 
-          # === INPUTS ===
-          inputs = []
-          # Create a base black screen with total duration
-          TOTAL_DURATION = edits[-1]["end"] + 5  # small buffer
-          inputs.append(f"-f lavfi -t {TOTAL_DURATION} -i color=c=black:s=1280x720")
+          sentence_transcriptions = edit_data.get("sentence_transcriptions", [])
+          if not sentence_transcriptions:
+              print("❌ No sentence transcriptions found in edit.json")
+              sys.exit(1)
 
-          # Audio
-          inputs.append(f"-i {AUDIO_FILE}")
+          print(f"📝 Found {len(sentence_transcriptions)} sentence transcriptions")
 
-          # Images
-          for item in edits:
-              img_id = item["id"]
-              img_file = os.path.join(IMAGES_DIR, f"{img_id}.png")
-              if os.path.exists(img_file):
-                  inputs.append(f"-loop 1 -i {img_file}")
-              else:
-                  print(f"⚠️ Skipping missing image: {img_file}")
+          # === Process images and create video segments ===
+          video_segments = []
+          missing_images = []
 
-          # === FILTER COMPLEX ===
-          filter_complex = ""
-          last = "[0:v]"  # base black video
-          for idx, item in enumerate(edits):
-              img_id = item["id"]
-              img_file = os.path.join(IMAGES_DIR, f"{img_id}.png")
-              if not os.path.exists(img_file):
-                  continue  # skip missing
+          for i, segment in enumerate(sentence_transcriptions):
+              segment_id = segment.get("id", f"i{i+1}")
+              start_time = segment.get("start", 0)
+              end_time = segment.get("end", 0)
+              duration = end_time - start_time
 
-              start = item["start"]
-              end = item["end"]
-              input_idx = idx + 2  # [0] base, [1] audio, [2:] images
+              if duration <= 0:
+                  print(f"⚠️ Skipping segment {segment_id} with invalid duration: {duration}")
+                  continue
 
-              # Enable overlay between start & end
-              overlay = (
-                  f"{last}[{input_idx}:v] overlay=enable='between(t,{start},{end})'[tmp{idx}];"
-              )
-              filter_complex += overlay
-              last = f"[tmp{idx}]"
+              # Find corresponding image
+              image_filename = f"{segment_id}.png"
+              image_path = os.path.join(IMAGES_DIR, image_filename)
 
-          # Remove trailing ';'
-          if filter_complex.endswith(';'):
-              filter_complex = filter_complex[:-1]
+              if not os.path.exists(image_path):
+                  missing_images.append(image_filename)
+                  print(f"⚠️ Image not found: {image_path}")
+                  continue
 
-          # === FULL COMMAND ===
-          ffmpeg_cmd = [
-              "ffmpeg",
-              *sum([part.split() for part in inputs], []),
+              print(f"🖼️ Processing segment {segment_id}: {start_time}s - {end_time}s ({duration:.2f}s)")
+
+              # Resize image to standard video dimensions (1920x1080)
+              try:
+                  with Image.open(image_path) as img:
+                      # Convert to RGB if necessary
+                      if img.mode != 'RGB':
+                          img = img.convert('RGB')
+                      
+                      # Resize to 1920x1080 maintaining aspect ratio
+                      img.thumbnail((1920, 1080), Image.Resampling.LANCZOS)
+                      
+                      # Create new image with black background
+                      new_img = Image.new('RGB', (1920, 1080), (0, 0, 0))
+                      
+                      # Center the image
+                      x = (1920 - img.width) // 2
+                      y = (1080 - img.height) // 2
+                      new_img.paste(img, (x, y))
+                      
+                      # Save processed image
+                      processed_image_path = os.path.join(TEMP_DIR, f"processed_{segment_id}.png")
+                      new_img.save(processed_image_path)
+
+                  video_segments.append({
+                      "id": segment_id,
+                      "image_path": processed_image_path,
+                      "start": start_time,
+                      "end": end_time,
+                      "duration": duration
+                  })
+
+              except Exception as e:
+                  print(f"❌ Error processing image {image_path}: {e}")
+                  missing_images.append(image_filename)
+
+          if missing_images:
+              print(f"⚠️ Missing images: {', '.join(missing_images)}")
+
+          if not video_segments:
+              print("❌ No valid video segments found")
+              sys.exit(1)
+
+          print(f"✅ Processed {len(video_segments)} video segments")
+
+          # === Create video filter complex ===
+          # First, create individual video clips from images
+          input_args = ["-i", AUDIO_FILE]
+          filter_parts = []
+          
+          for i, segment in enumerate(video_segments):
+              input_args.extend(["-loop", "1", "-t", str(segment["duration"]), "-i", segment["image_path"]])
+              # Scale and set frame rate for each image
+              filter_parts.append(f"[{i+1}:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setpts=PTS-STARTPTS,fps=30[v{i}];")
+
+          # Create concat filter for video
+          concat_inputs = "".join([f"[v{i}]" for i in range(len(video_segments))])
+          concat_filter = f"{concat_inputs}concat=n={len(video_segments)}:v=1:a=0[outv]"
+          
+          filter_complex = "".join(filter_parts) + concat_filter
+
+          # === Generate video with ffmpeg ===
+          output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
+          
+          cmd = [
+              "ffmpeg", "-y",  # Overwrite output file
+              *input_args,
               "-filter_complex", filter_complex,
-              "-map", last,
-              "-map", "1:a",
+              "-map", "[outv]",  # Use concatenated video
+              "-map", "0:a",     # Use original audio
               "-c:v", "libx264",
+              "-preset", "medium",
+              "-crf", "23",
               "-c:a", "aac",
-              "-shortest",
-              OUTPUT_VIDEO
+              "-b:a", "192k",
+              "-shortest",  # End when shortest stream ends
+              output_path
           ]
 
-          print("📼 Running FFmpeg command:")
-          print(" ".join(ffmpeg_cmd))
+          print("🎥 Running ffmpeg command...")
+          print(f"Command: {' '.join(cmd)}")
 
-          subprocess.run(ffmpeg_cmd, check=True)
-          print(f"✅ Video created at: {OUTPUT_VIDEO}")
-          EOF
+          try:
+              result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+              print("✅ Video generation completed successfully!")
+              print(f"📁 Output saved to: {output_path}")
+              
+              # Print file size
+              file_size = os.path.getsize(output_path)
+              print(f"📊 File size: {file_size / (1024*1024):.2f} MB")
+              
+          except subprocess.CalledProcessError as e:
+              print(f"❌ FFmpeg error: {e}")
+              print(f"stdout: {e.stdout}")
+              print(f"stderr: {e.stderr}")
+              sys.exit(1)
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "intellect9"
-          git config --global user.email "intellectra9@outlook.com"
+          # === Alternative method if concat doesn't work ===
+          # This creates a video by overlaying images at specific timestamps
+          if not os.path.exists(output_path) or os.path.getsize(output_path) == 0:
+              print("🔄 Trying alternative method with overlay filters...")
+              
+              # Create a black video base
+              filter_parts = ["color=black:1920x1080:d=1[base];"]
+              
+              # Add each image as an overlay at specific times
+              current_input = "base"
+              for i, segment in enumerate(video_segments):
+                  input_args.extend(["-loop", "1", "-t", "0.1", "-i", segment["image_path"]])
+                  
+                  overlay_filter = f"[{current_input}][{i+1}:v]overlay=enable='between(t,{segment['start']},{segment['end']})'[tmp{i}];"
+                  filter_parts.append(overlay_filter)
+                  current_input = f"tmp{i}"
+              
+              filter_complex = "".join(filter_parts)
+              
+              cmd_alt = [
+                  "ffmpeg", "-y",
+                  "-i", AUDIO_FILE,
+                  *input_args,
+                  "-filter_complex", filter_complex,
+                  "-map", f"[{current_input}]",
+                  "-map", "0:a",
+                  "-c:v", "libx264",
+                  "-preset", "medium",
+                  "-crf", "23",
+                  "-c:a", "aac",
+                  "-b:a", "192k",
+                  "-shortest",
+                  output_path
+              ]
+              
+              try:
+                  result = subprocess.run(cmd_alt, capture_output=True, text=True, check=True)
+                  print("✅ Alternative method completed successfully!")
+              except subprocess.CalledProcessError as e:
+                  print(f"❌ Alternative method also failed: {e}")
+                  print(f"stderr: {e.stderr}")
 
-      - name: Commit and push final video
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          git stash --include-untracked
-          git pull origin main --rebase || echo "No rebase needed"
-          git stash pop || true
+          # === Cleanup ===
+          shutil.rmtree(TEMP_DIR, ignore_errors=True)
+          
+          print("🎉 Video generation process completed!")
+          EOF  
 
-          git add Video/
-          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
-          git commit -m "🎬 Generated final video: ${timestamp}" || echo "No changes to commit"
+      - name: Configure Git  
+        run: |  
+          git config --global user.name "intellect9"  
+          git config --global user.email "intellectra9@outlook.com"  
 
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git
+      - name: Commit and push generated video  
+        env:  
+          GH_PAT: ${{ secrets.GH_PAT }}  
+        run: |  
+          git stash --include-untracked  
+          git pull origin main --rebase || echo "No rebase needed"  
+          git stash pop || true  
+
+          git add Video/  
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")  
+          git commit -m "🎬 Generated video: ${timestamp}" || echo "No changes to commit"  
+
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git  
           git push origin HEAD:main
