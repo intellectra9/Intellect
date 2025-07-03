@@ -28,9 +28,9 @@ jobs:
         run: |  
           pip install requests pillow
 
-      - name: Generate video inline  
-        run: |  
-          python3 - <<'EOF'  
+      - name: Create Python script
+        run: |
+          cat > generate_video.py << 'EOF'
           import os  
           import json  
           import subprocess
@@ -283,7 +283,10 @@ jobs:
           shutil.rmtree(TEMP_DIR, ignore_errors=True)
           
           print("🎉 Video generation process completed!")
-          EOF  
+          EOF
+
+      - name: Run video generation script
+        run: python3 generate_video.py
 
       - name: Configure Git  
         run: |  
