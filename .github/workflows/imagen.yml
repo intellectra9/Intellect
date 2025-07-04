@@ -45,7 +45,6 @@ jobs:
 
           IMAGES_DIR = "Images"
           VISUALS_JSON = "Visuals/visuals.json"
-          NUM_IMAGES = 30
 
           os.makedirs(IMAGES_DIR, exist_ok=True)
 
@@ -69,7 +68,7 @@ jobs:
               visuals = json.load(f)
 
           available_prompts = sorted(visuals, key=lambda x: x["number"])
-          prompts_to_generate = [item for item in available_prompts if item["number"] >= next_image_num][:NUM_IMAGES]
+          prompts_to_generate = [item for item in available_prompts if item["number"] >= next_image_num]
 
           if not prompts_to_generate:
               print("✅ No new prompts to generate. Exiting.")
