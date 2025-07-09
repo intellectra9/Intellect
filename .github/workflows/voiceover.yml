@@ -1,4 +1,4 @@
-name: Generate Voiceover from Story
+name: Voiceover
 
 on:
   workflow_dispatch:
