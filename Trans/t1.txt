@@ -1,2172 +1,2194 @@
 WhisperX FULL Word-Level Transcription Results
 ============================================================
 
-SEGMENT 1: [0.03s - 10.45s]
+SEGMENT 1: [0.03s - 10.95s]
 Text: "If there's one thing I've learned about modern dating, it's that the guy who can make a woman laugh through a screen at 2am while she's lying in bed has more power than the guy spending $300 on dinner dates."
 Word-level timestamps:
-   1. "If" -> 0.03s - 0.33s
-   2. "there's" -> 0.37s - 0.55s
-   3. "one" -> 0.65s - 0.73s
-   4. "thing" -> 0.77s - 0.93s
-   5. "I've" -> 0.99s - 1.11s
-   6. "learned" -> 1.17s - 1.39s
-   7. "about" -> 1.43s - 1.61s
-   8. "modern" -> 1.65s - 2.08s
-   9. "dating," -> 2.12s - 2.42s
-  10. "it's" -> 2.62s - 2.72s
-  11. "that" -> 2.76s - 2.86s
-  12. "the" -> 2.90s - 2.98s
-  13. "guy" -> 3.04s - 3.24s
-  14. "who" -> 3.26s - 3.36s
-  15. "can" -> 3.40s - 3.50s
-  16. "make" -> 3.54s - 3.68s
-  17. "a" -> 3.74s - 3.76s
-  18. "woman" -> 3.84s - 4.08s
-  19. "laugh" -> 4.14s - 4.36s
-  20. "through" -> 4.40s - 4.60s
-  21. "a" -> 4.64s - 4.66s
-  22. "screen" -> 4.74s - 5.02s
-  23. "at" -> 5.06s - 5.12s
-  24. "2am" -> 5.14s - 5.84s
-  25. "while" -> 5.98s - 6.14s
-  26. "she's" -> 6.18s - 6.36s
-  27. "lying" -> 6.42s - 6.71s
-  28. "in" -> 6.76s - 6.83s
-  29. "bed" -> 6.92s - 7.13s
-  30. "has" -> 7.19s - 7.35s
-  31. "more" -> 7.39s - 7.63s
-  32. "power" -> 7.71s - 8.07s
-  33. "than" -> 8.11s - 8.21s
-  34. "the" -> 8.23s - 8.31s
-  35. "guy" -> 8.35s - 8.55s
-  36. "spending" -> 8.59s - 8.89s
-  37. "$300" -> 8.91s - 9.13s
-  38. "on" -> 9.23s - 9.41s
-  39. "dinner" -> 9.95s - 10.15s
-  40. "dates." -> 10.19s - 10.45s
+   1. "If" -> 0.03s - 0.25s
+   2. "there's" -> 0.29s - 0.47s
+   3. "one" -> 0.49s - 0.65s
+   4. "thing" -> 0.67s - 0.81s
+   5. "I've" -> 0.85s - 0.97s
+   6. "learned" -> 1.01s - 1.23s
+   7. "about" -> 1.27s - 1.45s
+   8. "modern" -> 1.49s - 1.85s
+   9. "dating," -> 1.89s - 2.17s
+  10. "it's" -> 2.55s - 2.65s
+  11. "that" -> 2.67s - 2.79s
+  12. "the" -> 2.81s - 2.90s
+  13. "guy" -> 2.96s - 3.15s
+  14. "who" -> 3.19s - 3.31s
+  15. "can" -> 3.35s - 3.46s
+  16. "make" -> 3.52s - 3.64s
+  17. "a" -> 3.72s - 3.74s
+  18. "woman" -> 3.82s - 4.08s
+  19. "laugh" -> 4.12s - 4.38s
+  20. "through" -> 4.46s - 4.66s
+  21. "a" -> 4.68s - 4.70s
+  22. "screen" -> 4.76s - 5.10s
+  23. "at" -> 5.16s - 5.20s
+  24. "2am" -> 5.22s - 5.94s
+  25. "while" -> 6.22s - 6.38s
+  26. "she's" -> 6.40s - 6.56s
+  27. "lying" -> 6.64s - 6.88s
+  28. "in" -> 6.94s - 7.00s
+  29. "bed" -> 7.08s - 7.32s
+  30. "has" -> 7.44s - 7.62s
+  31. "more" -> 7.66s - 7.94s
+  32. "power" -> 8.02s - 8.36s
+  33. "than" -> 8.40s - 8.50s
+  34. "the" -> 8.54s - 8.62s
+  35. "guy" -> 8.66s - 8.88s
+  36. "spending" -> 8.96s - 9.28s
+  37. "$300" -> 9.30s - 9.62s
+  38. "on" -> 10.00s - 10.36s
+  39. "dinner" -> 10.42s - 10.62s
+  40. "dates." -> 10.66s - 10.95s
 
 --------------------------------------------------
 
-SEGMENT 2: [11.05s - 16.29s]
+SEGMENT 2: [11.54s - 16.85s]
 Text: "I know a guy who got a woman to drive three hours to see him, using nothing but text messages."
 Word-level timestamps:
-   1. "I" -> 11.05s - 11.09s
-   2. "know" -> 11.13s - 11.28s
-   3. "a" -> 11.34s - 11.36s
-   4. "guy" -> 11.41s - 11.60s
-   5. "who" -> 11.62s - 11.71s
-   6. "got" -> 11.76s - 11.90s
-   7. "a" -> 11.94s - 11.96s
-   8. "woman" -> 12.02s - 12.24s
-   9. "to" -> 12.28s - 12.34s
-  10. "drive" -> 12.40s - 12.66s
-  11. "three" -> 12.70s - 12.96s
-  12. "hours" -> 13.00s - 13.28s
-  13. "to" -> 13.36s - 13.44s
-  14. "see" -> 13.50s - 13.68s
-  15. "him," -> 13.74s - 13.88s
-  16. "using" -> 14.28s - 14.48s
-  17. "nothing" -> 14.54s - 14.82s
-  18. "but" -> 14.88s - 14.96s
-  19. "text" -> 15.04s - 15.30s
-  20. "messages." -> 15.34s - 16.29s
+   1. "I" -> 11.54s - 11.59s
+   2. "know" -> 11.63s - 11.77s
+   3. "a" -> 11.83s - 11.85s
+   4. "guy" -> 11.91s - 12.13s
+   5. "who" -> 12.17s - 12.29s
+   6. "got" -> 12.33s - 12.47s
+   7. "a" -> 12.51s - 12.53s
+   8. "woman" -> 12.59s - 12.81s
+   9. "to" -> 12.87s - 12.95s
+  10. "drive" -> 12.99s - 13.23s
+  11. "three" -> 13.27s - 13.61s
+  12. "hours" -> 13.67s - 13.97s
+  13. "to" -> 14.05s - 14.13s
+  14. "see" -> 14.19s - 14.37s
+  15. "him," -> 14.41s - 14.55s
+  16. "using" -> 15.15s - 15.35s
+  17. "nothing" -> 15.45s - 15.75s
+  18. "but" -> 15.91s - 16.03s
+  19. "text" -> 16.09s - 16.37s
+  20. "messages." -> 16.41s - 16.85s
 
 --------------------------------------------------
 
-SEGMENT 3: [16.27s - 19.99s]
+SEGMENT 3: [17.43s - 21.44s]
 Text: "No phone calls, no video chats, just pure textual seduction."
 Word-level timestamps:
-   1. "No" -> 16.27s - 16.50s
-   2. "phone" -> 16.57s - 16.81s
-   3. "calls," -> 16.87s - 17.15s
-   4. "no" -> 17.45s - 17.57s
-   5. "video" -> 17.59s - 17.93s
-   6. "chats," -> 17.97s - 18.31s
-   7. "just" -> 18.57s - 18.75s
-   8. "pure" -> 18.81s - 19.01s
-   9. "textual" -> 19.05s - 19.51s
-  10. "seduction." -> 19.55s - 19.99s
+   1. "No" -> 17.43s - 17.57s
+   2. "phone" -> 17.63s - 17.83s
+   3. "calls," -> 17.89s - 18.19s
+   4. "no" -> 18.57s - 18.69s
+   5. "video" -> 18.73s - 19.05s
+   6. "chats," -> 19.11s - 19.84s
+   7. "just" -> 19.86s - 20.02s
+   8. "pure" -> 20.14s - 20.42s
+   9. "textual" -> 20.48s - 20.94s
+  10. "seduction." -> 20.98s - 21.44s
 
 --------------------------------------------------
 
-SEGMENT 4: [20.49s - 23.93s]
-Text: "By the end of this video, you're going to understand exactly how he did it."
+SEGMENT 4: [21.90s - 27.09s]
+Text: "By the end of this video, you're going to understand exactly how he did it, and more importantly,"
 Word-level timestamps:
-   1. "By" -> 20.49s - 20.57s
-   2. "the" -> 20.61s - 20.69s
-   3. "end" -> 20.75s - 20.83s
-   4. "of" -> 20.87s - 20.91s
-   5. "this" -> 20.93s - 21.05s
-   6. "video," -> 21.11s - 21.53s
-   7. "you're" -> 21.77s - 21.93s
-   8. "going" -> 21.95s - 22.13s
-   9. "to" -> 22.15s - 22.21s
-  10. "understand" -> 22.29s - 22.73s
-  11. "exactly" -> 22.77s - 23.27s
-  12. "how" -> 23.35s - 23.45s
-  13. "he" -> 23.51s - 23.59s
-  14. "did" -> 23.65s - 23.81s
-  15. "it." -> 23.85s - 23.93s
+   1. "By" -> 21.90s - 22.02s
+   2. "the" -> 22.06s - 22.16s
+   3. "end" -> 22.24s - 22.34s
+   4. "of" -> 22.38s - 22.42s
+   5. "this" -> 22.46s - 22.58s
+   6. "video," -> 22.66s - 23.10s
+   7. "you're" -> 23.36s - 23.50s
+   8. "going" -> 23.52s - 23.64s
+   9. "to" -> 23.66s - 23.72s
+  10. "understand" -> 23.74s - 24.30s
+  11. "exactly" -> 24.40s - 24.94s
+  12. "how" -> 25.00s - 25.14s
+  13. "he" -> 25.18s - 25.26s
+  14. "did" -> 25.34s - 25.50s
+  15. "it," -> 25.56s - 25.62s
+  16. "and" -> 25.96s - 26.04s
+  17. "more" -> 26.10s - 26.26s
+  18. "importantly," -> 26.32s - 27.09s
 
 --------------------------------------------------
 
-SEGMENT 5: [24.32s - 29.82s]
-Text: "And more importantly, how you can rewire your brain to become that level of magnetically attractive through your phone."
+SEGMENT 5: [27.07s - 32.23s]
+Text: "How you can rewire your brain to become that level of magnetically attractive through your phone."
 Word-level timestamps:
-   1. "And" -> 24.32s - 24.39s
-   2. "more" -> 24.45s - 24.59s
-   3. "importantly," -> 24.66s - 25.16s
-   4. "how" -> 25.52s - 25.62s
-   5. "you" -> 25.66s - 25.76s
-   6. "can" -> 25.78s - 25.90s
-   7. "rewire" -> 25.96s - 26.40s
-   8. "your" -> 26.44s - 26.58s
-   9. "brain" -> 26.62s - 26.90s
-  10. "to" -> 26.94s - 27.00s
-  11. "become" -> 27.04s - 27.34s
-  12. "that" -> 27.38s - 27.50s
-  13. "level" -> 27.56s - 27.82s
-  14. "of" -> 27.86s - 27.90s
-  15. "magnetically" -> 27.98s - 28.62s
-  16. "attractive" -> 28.68s - 29.18s
-  17. "through" -> 29.20s - 29.36s
-  18. "your" -> 29.38s - 29.48s
-  19. "phone." -> 29.54s - 29.82s
+   1. "How" -> 27.07s - 27.39s
+   2. "you" -> 27.45s - 27.57s
+   3. "can" -> 27.61s - 27.73s
+   4. "rewire" -> 27.79s - 28.23s
+   5. "your" -> 28.27s - 28.41s
+   6. "brain" -> 28.47s - 28.77s
+   7. "to" -> 28.83s - 28.89s
+   8. "become" -> 28.95s - 29.31s
+   9. "that" -> 29.33s - 29.53s
+  10. "level" -> 29.57s - 29.95s
+  11. "of" -> 30.01s - 30.07s
+  12. "magnetically" -> 30.17s - 30.83s
+  13. "attractive" -> 30.91s - 31.43s
+  14. "through" -> 31.59s - 31.77s
+  15. "your" -> 31.81s - 31.93s
+  16. "phone." -> 31.97s - 32.23s
 
 --------------------------------------------------
 
-SEGMENT 6: [30.38s - 35.59s]
+SEGMENT 6: [32.70s - 38.20s]
 Text: "Most guys are unconsciously repelling women with every message they send, and they have no idea why."
 Word-level timestamps:
-   1. "Most" -> 30.38s - 30.58s
-   2. "guys" -> 30.64s - 30.88s
-   3. "are" -> 30.94s - 31.02s
-   4. "unconsciously" -> 31.08s - 31.74s
-   5. "repelling" -> 31.76s - 32.27s
-   6. "women" -> 32.30s - 32.52s
-   7. "with" -> 32.55s - 32.66s
-   8. "every" -> 32.85s - 33.03s
-   9. "message" -> 33.09s - 33.39s
-  10. "they" -> 33.43s - 33.55s
-  11. "send," -> 33.63s - 33.91s
-  12. "and" -> 34.27s - 34.35s
-  13. "they" -> 34.37s - 34.47s
-  14. "have" -> 34.51s - 34.63s
-  15. "no" -> 34.71s - 34.83s
-  16. "idea" -> 34.93s - 35.25s
-  17. "why." -> 35.35s - 35.59s
+   1. "Most" -> 32.70s - 32.88s
+   2. "guys" -> 32.94s - 33.18s
+   3. "are" -> 33.22s - 33.32s
+   4. "unconsciously" -> 33.44s - 34.20s
+   5. "repelling" -> 34.22s - 34.70s
+   6. "women" -> 34.76s - 35.02s
+   7. "with" -> 35.06s - 35.18s
+   8. "every" -> 35.40s - 35.58s
+   9. "message" -> 35.66s - 35.96s
+  10. "they" -> 36.02s - 36.16s
+  11. "send," -> 36.24s - 36.54s
+  12. "and" -> 36.88s - 36.94s
+  13. "they" -> 36.98s - 37.08s
+  14. "have" -> 37.14s - 37.28s
+  15. "no" -> 37.36s - 37.50s
+  16. "idea" -> 37.58s - 37.86s
+  17. "why." -> 37.90s - 38.20s
 
 --------------------------------------------------
 
-SEGMENT 7: [36.09s - 40.13s]
+SEGMENT 7: [38.67s - 42.97s]
 Text: "I'm about to completely transform how you think about digital communication forever."
 Word-level timestamps:
-   1. "I'm" -> 36.09s - 36.21s
-   2. "about" -> 36.25s - 36.43s
-   3. "to" -> 36.45s - 36.51s
-   4. "completely" -> 36.57s - 37.11s
-   5. "transform" -> 37.19s - 37.75s
-   6. "how" -> 37.79s - 37.97s
-   7. "you" -> 38.03s - 38.13s
-   8. "think" -> 38.19s - 38.35s
-   9. "about" -> 38.41s - 38.61s
-  10. "digital" -> 38.65s - 38.99s
-  11. "communication" -> 39.03s - 39.71s
-  12. "forever." -> 39.77s - 40.13s
+   1. "I'm" -> 38.67s - 38.79s
+   2. "about" -> 38.83s - 39.03s
+   3. "to" -> 39.09s - 39.17s
+   4. "completely" -> 39.23s - 39.75s
+   5. "transform" -> 39.83s - 40.41s
+   6. "how" -> 40.45s - 40.57s
+   7. "you" -> 40.63s - 40.75s
+   8. "think" -> 40.81s - 40.99s
+   9. "about" -> 41.05s - 41.27s
+  10. "digital" -> 41.41s - 41.79s
+  11. "communication" -> 41.85s - 42.53s
+  12. "forever." -> 42.61s - 42.97s
 
 --------------------------------------------------
 
-SEGMENT 8: [40.74s - 45.14s]
+SEGMENT 8: [43.49s - 47.38s]
 Text: "Let me explain why texting mastery matters by going back in time for a second."
 Word-level timestamps:
-   1. "Let" -> 40.74s - 40.84s
-   2. "me" -> 40.88s - 40.94s
-   3. "explain" -> 41.02s - 41.36s
-   4. "why" -> 41.42s - 41.54s
-   5. "texting" -> 41.62s - 42.02s
-   6. "mastery" -> 42.08s - 42.54s
-   7. "matters" -> 42.60s - 42.90s
-   8. "by" -> 42.98s - 43.08s
-   9. "going" -> 43.14s - 43.36s
-  10. "back" -> 43.42s - 43.66s
-  11. "in" -> 43.72s - 43.78s
-  12. "time" -> 43.86s - 44.08s
-  13. "for" -> 44.12s - 44.22s
-  14. "a" -> 44.26s - 44.28s
-  15. "second." -> 44.36s - 45.14s
+   1. "Let" -> 43.49s - 43.59s
+   2. "me" -> 43.63s - 43.71s
+   3. "explain" -> 43.77s - 44.13s
+   4. "why" -> 44.22s - 44.34s
+   5. "texting" -> 44.44s - 44.86s
+   6. "mastery" -> 44.92s - 45.32s
+   7. "matters" -> 45.36s - 45.64s
+   8. "by" -> 45.70s - 45.80s
+   9. "going" -> 45.84s - 46.06s
+  10. "back" -> 46.12s - 46.34s
+  11. "in" -> 46.40s - 46.46s
+  12. "time" -> 46.54s - 46.76s
+  13. "for" -> 46.80s - 46.92s
+  14. "a" -> 46.94s - 46.98s
+  15. "second." -> 47.04s - 47.38s
 
 --------------------------------------------------
 
-SEGMENT 9: [45.12s - 48.01s]
+SEGMENT 9: [47.88s - 51.37s]
 Text: "For millions of years, attraction happened face to face."
 Word-level timestamps:
-   1. "For" -> 45.12s - 45.30s
-   2. "millions" -> 45.34s - 45.66s
-   3. "of" -> 45.72s - 45.76s
-   4. "years," -> 45.80s - 46.10s
-   5. "attraction" -> 46.44s - 46.97s
-   6. "happened" -> 47.01s - 47.31s
-   7. "face" -> 47.35s - 47.57s
-   8. "to" -> 47.61s - 47.67s
-   9. "face." -> 47.73s - 48.01s
+   1. "For" -> 47.88s - 48.00s
+   2. "millions" -> 48.04s - 48.48s
+   3. "of" -> 48.52s - 48.56s
+   4. "years," -> 48.64s - 48.90s
+   5. "attraction" -> 49.26s - 49.77s
+   6. "happened" -> 49.87s - 50.17s
+   7. "face" -> 50.25s - 50.45s
+   8. "to" -> 50.49s - 50.57s
+   9. "face." -> 50.63s - 51.37s
 
 --------------------------------------------------
 
-SEGMENT 10: [48.61s - 54.24s]
+SEGMENT 10: [51.35s - 57.44s]
 Text: "Your ancestors had to rely on body language, voice tonality, and physical presence to attract a mate."
 Word-level timestamps:
-   1. "Your" -> 48.61s - 48.73s
-   2. "ancestors" -> 48.81s - 49.31s
-   3. "had" -> 49.37s - 49.49s
-   4. "to" -> 49.51s - 49.57s
-   5. "rely" -> 49.63s - 49.95s
-   6. "on" -> 50.03s - 50.07s
-   7. "body" -> 50.21s - 50.51s
-   8. "language," -> 50.55s - 50.93s
-   9. "voice" -> 51.23s - 51.50s
-  10. "tonality," -> 51.54s - 52.06s
-  11. "and" -> 52.36s - 52.44s
-  12. "physical" -> 52.50s - 52.82s
-  13. "presence" -> 52.92s - 53.26s
-  14. "to" -> 53.32s - 53.44s
-  15. "attract" -> 53.52s - 53.84s
-  16. "a" -> 53.92s - 53.94s
-  17. "mate." -> 53.98s - 54.24s
+   1. "Your" -> 51.35s - 51.57s
+   2. "ancestors" -> 51.65s - 52.17s
+   3. "had" -> 52.23s - 52.37s
+   4. "to" -> 52.41s - 52.49s
+   5. "rely" -> 52.55s - 52.91s
+   6. "on" -> 53.03s - 53.07s
+   7. "body" -> 53.11s - 53.51s
+   8. "language," -> 53.57s - 53.95s
+   9. "voice" -> 54.35s - 54.61s
+  10. "tonality," -> 54.65s - 55.22s
+  11. "and" -> 55.54s - 55.62s
+  12. "physical" -> 55.70s - 56.04s
+  13. "presence" -> 56.12s - 56.48s
+  14. "to" -> 56.56s - 56.66s
+  15. "attract" -> 56.72s - 57.06s
+  16. "a" -> 57.12s - 57.16s
+  17. "mate." -> 57.20s - 57.44s
 
 --------------------------------------------------
 
-SEGMENT 11: [54.74s - 59.41s]
-Text: "But here's what's crazy, in just 20 years, we've completely revolutionized human courtship."
+SEGMENT 11: [57.90s - 59.00s]
+Text: "But here's what's crazy."
 Word-level timestamps:
-   1. "But" -> 54.74s - 54.82s
-   2. "here's" -> 54.86s - 55.08s
-   3. "what's" -> 55.12s - 55.30s
-   4. "crazy," -> 55.37s - 55.79s
-   5. "in" -> 56.01s - 56.07s
-   6. "just" -> 56.11s - 56.27s
-   7. "20" -> 56.29s - 56.57s
-   8. "years," -> 56.63s - 56.91s
-   9. "we've" -> 57.15s - 57.31s
-  10. "completely" -> 57.33s - 57.83s
-  11. "revolutionized" -> 57.91s - 58.65s
-  12. "human" -> 58.69s - 58.91s
-  13. "courtship." -> 58.97s - 59.41s
+   1. "But" -> 57.90s - 58.00s
+   2. "here's" -> 58.06s - 58.32s
+   3. "what's" -> 58.36s - 58.52s
+   4. "crazy." -> 58.58s - 59.00s
 
 --------------------------------------------------
 
-SEGMENT 12: [59.91s - 64.12s]
+SEGMENT 12: [59.46s - 63.93s]
+Text: "In just 20 years, we've completely revolutionized human courtship."
+Word-level timestamps:
+   1. "In" -> 59.46s - 59.52s
+   2. "just" -> 59.58s - 59.80s
+   3. "20" -> 59.82s - 60.18s
+   4. "years," -> 60.22s - 60.52s
+   5. "we've" -> 60.91s - 61.13s
+   6. "completely" -> 61.17s - 61.79s
+   7. "revolutionized" -> 61.81s - 62.71s
+   8. "human" -> 62.77s - 63.01s
+   9. "courtship." -> 63.05s - 63.93s
+
+--------------------------------------------------
+
+SEGMENT 13: [63.95s - 68.80s]
 Text: "Today, 90% of romantic connections begin with digital communication."
 Word-level timestamps:
-   1. "Today," -> 59.91s - 60.20s
-   2. "90%" -> 60.22s - 60.64s
-   3. "of" -> 60.76s - 61.10s
-   4. "romantic" -> 61.18s - 61.58s
-   5. "connections" -> 61.62s - 62.12s
-   6. "begin" -> 62.18s - 62.48s
-   7. "with" -> 62.52s - 62.62s
-   8. "digital" -> 62.68s - 63.00s
-   9. "communication." -> 63.04s - 64.12s
+   1. "Today," -> 63.95s - 64.21s
+   2. "90%" -> 64.23s - 64.85s
+   3. "of" -> 65.39s - 65.43s
+   4. "romantic" -> 65.45s - 65.95s
+   5. "connections" -> 66.02s - 66.50s
+   6. "begin" -> 66.62s - 67.00s
+   7. "with" -> 67.20s - 67.34s
+   8. "digital" -> 67.42s - 67.76s
+   9. "communication." -> 67.80s - 68.80s
 
 --------------------------------------------------
 
-SEGMENT 13: [64.11s - 64.87s]
+SEGMENT 14: [68.78s - 69.46s]
 Text: "Think about that."
 Word-level timestamps:
-   1. "Think" -> 64.11s - 64.39s
-   2. "about" -> 64.43s - 64.63s
-   3. "that." -> 64.67s - 64.87s
+   1. "Think" -> 68.78s - 69.02s
+   2. "about" -> 69.06s - 69.24s
+   3. "that." -> 69.28s - 69.46s
 
 --------------------------------------------------
 
-SEGMENT 14: [65.37s - 71.50s]
-Text: "The skill that determined whether your great-grandfather got the girl was completely different from what determines whether you get the girl."
+SEGMENT 15: [69.94s - 76.11s]
+Text: "The skill that determined whether your great grandfather got the girl was completely different from what determines whether you get the girl."
 Word-level timestamps:
-   1. "The" -> 65.37s - 65.47s
-   2. "skill" -> 65.53s - 65.75s
-   3. "that" -> 65.79s - 65.89s
-   4. "determined" -> 65.93s - 66.39s
-   5. "whether" -> 66.45s - 66.67s
-   6. "your" -> 66.71s - 66.85s
-   7. "great-grandfather" -> 66.91s - 67.75s
-   8. "got" -> 67.79s - 68.03s
-   9. "the" -> 68.05s - 68.15s
-  10. "girl" -> 68.21s - 68.47s
-  11. "was" -> 68.51s - 68.61s
-  12. "completely" -> 68.67s - 69.19s
-  13. "different" -> 69.23s - 69.61s
-  14. "from" -> 69.66s - 69.75s
-  15. "what" -> 69.81s - 69.95s
-  16. "determines" -> 70.00s - 70.48s
-  17. "whether" -> 70.50s - 70.76s
-  18. "you" -> 70.82s - 70.94s
-  19. "get" -> 70.98s - 71.10s
-  20. "the" -> 71.12s - 71.20s
-  21. "girl." -> 71.26s - 71.50s
+   1. "The" -> 69.94s - 70.04s
+   2. "skill" -> 70.10s - 70.32s
+   3. "that" -> 70.36s - 70.46s
+   4. "determined" -> 70.52s - 71.02s
+   5. "whether" -> 71.10s - 71.32s
+   6. "your" -> 71.36s - 71.50s
+   7. "great" -> 71.56s - 71.81s
+   8. "grandfather" -> 71.86s - 72.41s
+   9. "got" -> 72.45s - 72.61s
+  10. "the" -> 72.65s - 72.71s
+  11. "girl" -> 72.77s - 73.01s
+  12. "was" -> 73.07s - 73.19s
+  13. "completely" -> 73.27s - 73.83s
+  14. "different" -> 73.91s - 74.23s
+  15. "from" -> 74.29s - 74.41s
+  16. "what" -> 74.45s - 74.59s
+  17. "determines" -> 74.63s - 75.17s
+  18. "whether" -> 75.21s - 75.47s
+  19. "you" -> 75.51s - 75.63s
+  20. "get" -> 75.65s - 75.75s
+  21. "the" -> 75.79s - 75.85s
+  22. "girl." -> 75.91s - 76.11s
 
 --------------------------------------------------
 
-SEGMENT 15: [72.00s - 75.97s]
-Text: "But here's the problem, your brain is still wired for caveman courtship."
+SEGMENT 16: [76.55s - 77.37s]
+Text: "But here's the problem."
 Word-level timestamps:
-   1. "But" -> 72.00s - 72.08s
-   2. "here's" -> 72.12s - 72.32s
-   3. "the" -> 72.36s - 72.44s
-   4. "problem," -> 72.48s - 72.86s
-   5. "your" -> 73.18s - 73.32s
-   6. "brain" -> 73.36s - 73.64s
-   7. "is" -> 73.68s - 73.74s
-   8. "still" -> 73.78s - 74.00s
-   9. "wired" -> 74.06s - 74.36s
-  10. "for" -> 74.40s - 74.50s
-  11. "caveman" -> 74.56s - 75.02s
-  12. "courtship." -> 75.08s - 75.97s
+   1. "But" -> 76.55s - 76.65s
+   2. "here's" -> 76.69s - 76.87s
+   3. "the" -> 76.91s - 76.99s
+   4. "problem." -> 77.03s - 77.37s
 
 --------------------------------------------------
 
-SEGMENT 16: [75.99s - 80.89s]
+SEGMENT 17: [77.75s - 80.18s]
+Text: "Your brain is still wired for caveman courtship."
+Word-level timestamps:
+   1. "Your" -> 77.75s - 77.89s
+   2. "brain" -> 77.94s - 78.19s
+   3. "is" -> 78.25s - 78.31s
+   4. "still" -> 78.38s - 78.64s
+   5. "wired" -> 78.74s - 79.08s
+   6. "for" -> 79.12s - 79.24s
+   7. "caveman" -> 79.30s - 79.72s
+   8. "courtship." -> 79.76s - 80.18s
+
+--------------------------------------------------
+
+SEGMENT 18: [80.62s - 86.15s]
 Text: "You're trying to use Stone Age programming in a digital world, and it's creating a massive disconnect."
 Word-level timestamps:
-   1. "You're" -> 75.99s - 76.15s
-   2. "trying" -> 76.17s - 76.39s
-   3. "to" -> 76.43s - 76.47s
-   4. "use" -> 76.61s - 76.73s
-   5. "Stone" -> 76.79s - 77.07s
-   6. "Age" -> 77.11s - 77.25s
-   7. "programming" -> 77.31s - 77.81s
-   8. "in" -> 77.87s - 77.93s
-   9. "a" -> 77.97s - 77.99s
-  10. "digital" -> 78.05s - 78.37s
-  11. "world," -> 78.41s - 78.67s
-  12. "and" -> 79.05s - 79.13s
-  13. "it's" -> 79.17s - 79.29s
-  14. "creating" -> 79.35s - 79.77s
-  15. "a" -> 79.83s - 79.85s
-  16. "massive" -> 79.93s - 80.29s
-  17. "disconnect." -> 80.33s - 80.89s
+   1. "You're" -> 80.62s - 80.76s
+   2. "trying" -> 80.80s - 81.04s
+   3. "to" -> 81.08s - 81.16s
+   4. "use" -> 81.28s - 81.42s
+   5. "Stone" -> 81.46s - 81.74s
+   6. "Age" -> 81.80s - 81.94s
+   7. "programming" -> 82.00s - 82.58s
+   8. "in" -> 82.70s - 82.76s
+   9. "a" -> 82.82s - 82.84s
+  10. "digital" -> 82.92s - 83.28s
+  11. "world," -> 83.32s - 83.62s
+  12. "and" -> 84.02s - 84.08s
+  13. "it's" -> 84.12s - 84.22s
+  14. "creating" -> 84.28s - 84.75s
+  15. "a" -> 84.78s - 84.99s
+  16. "massive" -> 85.17s - 85.59s
+  17. "disconnect." -> 85.63s - 86.15s
 
 --------------------------------------------------
 
-SEGMENT 17: [81.42s - 85.52s]
+SEGMENT 19: [86.67s - 90.86s]
 Text: "This is human nature, and that's why most guys fail miserably at texting."
 Word-level timestamps:
-   1. "This" -> 81.42s - 81.56s
-   2. "is" -> 81.64s - 81.68s
-   3. "human" -> 81.74s - 82.00s
-   4. "nature," -> 82.04s - 82.36s
-   5. "and" -> 82.76s - 82.84s
-   6. "that's" -> 82.88s - 83.04s
-   7. "why" -> 83.06s - 83.18s
-   8. "most" -> 83.22s - 83.50s
-   9. "guys" -> 83.56s - 83.80s
-  10. "fail" -> 83.84s - 84.04s
-  11. "miserably" -> 84.14s - 84.58s
-  12. "at" -> 84.64s - 84.70s
-  13. "texting." -> 84.74s - 85.52s
+   1. "This" -> 86.67s - 86.85s
+   2. "is" -> 86.95s - 87.01s
+   3. "human" -> 87.09s - 87.35s
+   4. "nature," -> 87.41s - 87.73s
+   5. "and" -> 88.15s - 88.21s
+   6. "that's" -> 88.25s - 88.43s
+   7. "why" -> 88.45s - 88.57s
+   8. "most" -> 88.61s - 88.87s
+   9. "guys" -> 88.89s - 89.13s
+  10. "fail" -> 89.19s - 89.43s
+  11. "miserably" -> 89.53s - 89.95s
+  12. "at" -> 90.03s - 90.07s
+  13. "texting." -> 90.11s - 90.86s
 
 --------------------------------------------------
 
-SEGMENT 18: [85.50s - 89.05s]
+SEGMENT 20: [90.83s - 94.48s]
 Text: "Women are receiving an average of 50 plus messages per day from men."
 Word-level timestamps:
-   1. "Women" -> 85.50s - 85.86s
-   2. "are" -> 85.92s - 86.00s
-   3. "receiving" -> 86.04s - 86.42s
-   4. "an" -> 86.48s - 86.55s
-   5. "average" -> 86.75s - 86.97s
-   6. "of" -> 87.03s - 87.06s
-   7. "50" -> 87.09s - 87.45s
-   8. "plus" -> 87.51s - 87.77s
-   9. "messages" -> 87.83s - 88.21s
-  10. "per" -> 88.29s - 88.41s
-  11. "day" -> 88.45s - 88.61s
-  12. "from" -> 88.67s - 88.79s
-  13. "men." -> 88.85s - 89.05s
+   1. "Women" -> 90.83s - 91.17s
+   2. "are" -> 91.26s - 91.32s
+   3. "receiving" -> 91.36s - 91.82s
+   4. "an" -> 91.88s - 91.92s
+   5. "average" -> 91.96s - 92.34s
+   6. "of" -> 92.38s - 92.42s
+   7. "50" -> 92.44s - 92.88s
+   8. "plus" -> 92.96s - 93.22s
+   9. "messages" -> 93.28s - 93.70s
+  10. "per" -> 93.78s - 93.90s
+  11. "day" -> 93.94s - 94.08s
+  12. "from" -> 94.12s - 94.26s
+  13. "men." -> 94.30s - 94.48s
 
 --------------------------------------------------
 
-SEGMENT 19: [89.57s - 91.63s]
+SEGMENT 21: [94.90s - 96.92s]
 Text: "You're not competing with the guy at the bar anymore."
 Word-level timestamps:
-   1. "You're" -> 89.57s - 89.73s
-   2. "not" -> 89.75s - 89.87s
-   3. "competing" -> 89.93s - 90.33s
-   4. "with" -> 90.37s - 90.47s
-   5. "the" -> 90.49s - 90.57s
-   6. "guy" -> 90.61s - 90.77s
-   7. "at" -> 90.81s - 90.87s
-   8. "the" -> 90.89s - 90.97s
-   9. "bar" -> 91.01s - 91.19s
-  10. "anymore." -> 91.25s - 91.63s
+   1. "You're" -> 94.90s - 95.06s
+   2. "not" -> 95.08s - 95.18s
+   3. "competing" -> 95.24s - 95.62s
+   4. "with" -> 95.66s - 95.76s
+   5. "the" -> 95.80s - 95.86s
+   6. "guy" -> 95.90s - 96.08s
+   7. "at" -> 96.12s - 96.18s
+   8. "the" -> 96.20s - 96.28s
+   9. "bar" -> 96.32s - 96.52s
+  10. "anymore." -> 96.58s - 96.92s
 
 --------------------------------------------------
 
-SEGMENT 20: [91.99s - 94.76s]
+SEGMENT 22: [97.32s - 99.87s]
 Text: "You're competing with every guy who has a smartphone."
 Word-level timestamps:
-   1. "You're" -> 91.99s - 92.13s
-   2. "competing" -> 92.15s - 92.57s
-   3. "with" -> 92.59s - 92.69s
-   4. "every" -> 92.88s - 93.03s
-   5. "guy" -> 93.09s - 93.28s
-   6. "who" -> 93.31s - 93.42s
-   7. "has" -> 93.46s - 93.58s
-   8. "a" -> 93.62s - 93.66s
-   9. "smartphone." -> 93.70s - 94.76s
+   1. "You're" -> 97.32s - 97.50s
+   2. "competing" -> 97.55s - 97.98s
+   3. "with" -> 98.05s - 98.17s
+   4. "every" -> 98.37s - 98.57s
+   5. "guy" -> 98.63s - 98.91s
+   6. "who" -> 98.97s - 99.07s
+   7. "has" -> 99.11s - 99.21s
+   8. "a" -> 99.25s - 99.29s
+   9. "smartphone." -> 99.33s - 99.87s
 
 --------------------------------------------------
 
-SEGMENT 21: [94.78s - 99.61s]
+SEGMENT 23: [100.29s - 105.17s]
 Text: "Texting has become the ultimate cheat code for social power, but nobody taught you how to use it."
 Word-level timestamps:
-   1. "Texting" -> 94.78s - 95.14s
-   2. "has" -> 95.18s - 95.28s
-   3. "become" -> 95.34s - 95.60s
-   4. "the" -> 95.64s - 95.72s
-   5. "ultimate" -> 95.88s - 96.18s
-   6. "cheat" -> 96.26s - 96.50s
-   7. "code" -> 96.56s - 96.80s
-   8. "for" -> 96.86s - 96.96s
-   9. "social" -> 97.04s - 97.36s
-  10. "power," -> 97.42s - 97.74s
-  11. "but" -> 98.14s - 98.22s
-  12. "nobody" -> 98.32s - 98.64s
-  13. "taught" -> 98.70s - 98.88s
-  14. "you" -> 98.92s - 99.02s
-  15. "how" -> 99.08s - 99.17s
-  16. "to" -> 99.20s - 99.25s
-  17. "use" -> 99.36s - 99.48s
-  18. "it." -> 99.55s - 99.61s
+   1. "Texting" -> 100.29s - 100.65s
+   2. "has" -> 100.67s - 100.79s
+   3. "become" -> 100.85s - 101.13s
+   4. "the" -> 101.17s - 101.27s
+   5. "ultimate" -> 101.47s - 101.81s
+   6. "cheat" -> 101.91s - 102.13s
+   7. "code" -> 102.19s - 102.43s
+   8. "for" -> 102.49s - 102.59s
+   9. "social" -> 102.65s - 102.95s
+  10. "power," -> 103.01s - 103.35s
+  11. "but" -> 103.65s - 103.75s
+  12. "nobody" -> 103.83s - 104.13s
+  13. "taught" -> 104.19s - 104.39s
+  14. "you" -> 104.43s - 104.53s
+  15. "how" -> 104.59s - 104.67s
+  16. "to" -> 104.69s - 104.78s
+  17. "use" -> 104.92s - 105.03s
+  18. "it." -> 105.11s - 105.17s
 
 --------------------------------------------------
 
-SEGMENT 22: [100.11s - 104.47s]
+SEGMENT 24: [105.66s - 110.34s]
 Text: "Let me explain what texting attraction really is from a psychological perspective."
 Word-level timestamps:
-   1. "Let" -> 100.11s - 100.23s
-   2. "me" -> 100.25s - 100.33s
-   3. "explain" -> 100.41s - 100.75s
-   4. "what" -> 100.79s - 100.93s
-   5. "texting" -> 100.99s - 101.35s
-   6. "attraction" -> 101.41s - 101.93s
-   7. "really" -> 101.99s - 102.25s
-   8. "is" -> 102.27s - 102.45s
-   9. "from" -> 102.49s - 102.59s
-  10. "a" -> 102.63s - 102.65s
-  11. "psychological" -> 102.73s - 103.47s
-  12. "perspective." -> 103.55s - 104.47s
+   1. "Let" -> 105.66s - 105.76s
+   2. "me" -> 105.80s - 105.86s
+   3. "explain" -> 105.94s - 106.34s
+   4. "what" -> 106.40s - 106.54s
+   5. "texting" -> 106.60s - 106.98s
+   6. "attraction" -> 107.04s - 107.54s
+   7. "really" -> 107.58s - 107.98s
+   8. "is" -> 108.00s - 108.30s
+   9. "from" -> 108.38s - 108.48s
+  10. "a" -> 108.52s - 108.56s
+  11. "psychological" -> 108.62s - 109.26s
+  12. "perspective." -> 109.32s - 110.34s
 
 --------------------------------------------------
 
-SEGMENT 23: [104.45s - 109.78s]
+SEGMENT 25: [110.36s - 116.15s]
 Text: "Every text message you send creates one of two outcomes in a woman's brain, reward or punishment."
 Word-level timestamps:
-   1. "Every" -> 104.45s - 104.81s
-   2. "text" -> 104.87s - 105.11s
-   3. "message" -> 105.15s - 105.44s
-   4. "you" -> 105.47s - 105.58s
-   5. "send" -> 105.64s - 105.84s
-   6. "creates" -> 105.94s - 106.24s
-   7. "one" -> 106.34s - 106.40s
-   8. "of" -> 106.44s - 106.48s
-   9. "two" -> 106.50s - 106.78s
-  10. "outcomes" -> 106.92s - 107.36s
-  11. "in" -> 107.42s - 107.48s
-  12. "a" -> 107.52s - 107.54s
-  13. "woman's" -> 107.60s - 107.88s
-  14. "brain," -> 107.94s - 108.22s
-  15. "reward" -> 108.68s - 109.10s
-  16. "or" -> 109.20s - 109.28s
-  17. "punishment." -> 109.36s - 109.78s
+   1. "Every" -> 110.36s - 110.56s
+   2. "text" -> 110.62s - 110.86s
+   3. "message" -> 110.94s - 111.22s
+   4. "you" -> 111.26s - 111.36s
+   5. "send" -> 111.42s - 111.62s
+   6. "creates" -> 111.69s - 112.05s
+   7. "one" -> 112.14s - 112.20s
+   8. "of" -> 112.25s - 112.29s
+   9. "two" -> 112.33s - 112.59s
+  10. "outcomes" -> 112.75s - 113.19s
+  11. "in" -> 113.33s - 113.39s
+  12. "a" -> 113.41s - 113.45s
+  13. "woman's" -> 113.51s - 113.81s
+  14. "brain," -> 113.87s - 114.17s
+  15. "reward" -> 114.65s - 115.05s
+  16. "or" -> 115.25s - 115.31s
+  17. "punishment." -> 115.37s - 116.15s
 
 --------------------------------------------------
 
-SEGMENT 24: [110.30s - 117.70s]
+SEGMENT 26: [116.13s - 123.96s]
 Text: "It either triggers a dopamine release that makes her crave more interaction with you, or it triggers a cortisol response that makes her want to avoid you."
 Word-level timestamps:
-   1. "It" -> 110.30s - 110.36s
-   2. "either" -> 110.42s - 110.62s
-   3. "triggers" -> 110.70s - 111.05s
-   4. "a" -> 111.11s - 111.14s
-   5. "dopamine" -> 111.19s - 111.63s
-   6. "release" -> 111.67s - 111.99s
-   7. "that" -> 112.05s - 112.17s
-   8. "makes" -> 112.25s - 112.43s
-   9. "her" -> 112.47s - 112.57s
-  10. "crave" -> 112.65s - 112.93s
-  11. "more" -> 112.97s - 113.17s
-  12. "interaction" -> 113.23s - 113.75s
-  13. "with" -> 113.81s - 113.91s
-  14. "you," -> 113.97s - 114.07s
-  15. "or" -> 114.53s - 114.61s
-  16. "it" -> 114.65s - 114.71s
-  17. "triggers" -> 114.79s - 115.15s
-  18. "a" -> 115.21s - 115.25s
-  19. "cortisol" -> 115.31s - 115.79s
-  20. "response" -> 115.83s - 116.30s
-  21. "that" -> 116.38s - 116.47s
-  22. "makes" -> 116.58s - 116.78s
-  23. "her" -> 116.82s - 116.92s
-  24. "want" -> 116.96s - 117.06s
-  25. "to" -> 117.08s - 117.18s
-  26. "avoid" -> 117.24s - 117.54s
-  27. "you." -> 117.60s - 117.70s
+   1. "It" -> 116.13s - 116.33s
+   2. "either" -> 116.39s - 116.59s
+   3. "triggers" -> 116.69s - 117.03s
+   4. "a" -> 117.09s - 117.13s
+   5. "dopamine" -> 117.19s - 117.67s
+   6. "release" -> 117.71s - 118.09s
+   7. "that" -> 118.15s - 118.25s
+   8. "makes" -> 118.31s - 118.51s
+   9. "her" -> 118.55s - 118.65s
+  10. "crave" -> 118.73s - 119.05s
+  11. "more" -> 119.13s - 119.31s
+  12. "interaction" -> 119.39s - 119.95s
+  13. "with" -> 120.02s - 120.14s
+  14. "you," -> 120.17s - 120.34s
+  15. "or" -> 120.82s - 120.90s
+  16. "it" -> 120.94s - 120.98s
+  17. "triggers" -> 121.06s - 121.38s
+  18. "a" -> 121.44s - 121.48s
+  19. "cortisol" -> 121.54s - 122.04s
+  20. "response" -> 122.08s - 122.54s
+  21. "that" -> 122.60s - 122.72s
+  22. "makes" -> 122.80s - 123.00s
+  23. "her" -> 123.04s - 123.14s
+  24. "want" -> 123.18s - 123.30s
+  25. "to" -> 123.34s - 123.42s
+  26. "avoid" -> 123.48s - 123.78s
+  27. "you." -> 123.82s - 123.96s
 
 --------------------------------------------------
 
-SEGMENT 25: [118.24s - 121.86s]
+SEGMENT 27: [124.40s - 128.46s]
 Text: "The real reason most guys fail at texting has nothing to do with what they're saying."
 Word-level timestamps:
-   1. "The" -> 118.24s - 118.32s
-   2. "real" -> 118.36s - 118.56s
-   3. "reason" -> 118.62s - 118.90s
-   4. "most" -> 118.96s - 119.16s
-   5. "guys" -> 119.22s - 119.46s
-   6. "fail" -> 119.50s - 119.72s
-   7. "at" -> 119.78s - 119.82s
-   8. "texting" -> 119.88s - 120.26s
-   9. "has" -> 120.30s - 120.42s
-  10. "nothing" -> 120.54s - 120.78s
-  11. "to" -> 120.82s - 120.90s
-  12. "do" -> 120.96s - 121.06s
-  13. "with" -> 121.10s - 121.20s
-  14. "what" -> 121.22s - 121.32s
-  15. "they're" -> 121.34s - 121.53s
-  16. "saying." -> 121.56s - 121.86s
+   1. "The" -> 124.40s - 124.52s
+   2. "real" -> 124.54s - 124.74s
+   3. "reason" -> 124.80s - 125.10s
+   4. "most" -> 125.20s - 125.44s
+   5. "guys" -> 125.50s - 125.76s
+   6. "fail" -> 125.82s - 126.08s
+   7. "at" -> 126.14s - 126.20s
+   8. "texting" -> 126.26s - 126.66s
+   9. "has" -> 126.70s - 126.82s
+  10. "nothing" -> 126.86s - 127.20s
+  11. "to" -> 127.24s - 127.30s
+  12. "do" -> 127.38s - 127.54s
+  13. "with" -> 127.60s - 127.72s
+  14. "what" -> 127.78s - 127.88s
+  15. "they're" -> 127.90s - 128.12s
+  16. "saying." -> 128.16s - 128.46s
 
 --------------------------------------------------
 
-SEGMENT 26: [122.27s - 123.83s]
+SEGMENT 28: [128.91s - 130.07s]
 Text: "It's about what they're projecting."
 Word-level timestamps:
-   1. "It's" -> 122.27s - 122.37s
-   2. "about" -> 122.41s - 122.61s
-   3. "what" -> 122.65s - 122.75s
-   4. "they're" -> 122.77s - 122.95s
-   5. "projecting." -> 122.97s - 123.83s
+   1. "It's" -> 128.91s - 129.00s
+   2. "about" -> 129.04s - 129.22s
+   3. "what" -> 129.28s - 129.38s
+   4. "they're" -> 129.41s - 129.59s
+   5. "projecting." -> 129.61s - 130.07s
 
 --------------------------------------------------
 
-SEGMENT 27: [123.81s - 130.54s]
+SEGMENT 29: [130.49s - 137.89s]
 Text: "Your texts are unconsciously broadcasting your emotional state, your neediness level, and your social value to her primitive brain."
 Word-level timestamps:
-   1. "Your" -> 123.81s - 124.03s
-   2. "texts" -> 124.09s - 124.35s
-   3. "are" -> 124.41s - 124.49s
-   4. "unconsciously" -> 124.57s - 125.21s
-   5. "broadcasting" -> 125.29s - 125.97s
-   6. "your" -> 126.01s - 126.11s
-   7. "emotional" -> 126.17s - 126.61s
-   8. "state," -> 126.67s - 126.97s
-   9. "your" -> 127.34s - 127.48s
-  10. "neediness" -> 127.52s - 127.92s
-  11. "level," -> 127.98s - 128.24s
-  12. "and" -> 128.58s - 128.64s
-  13. "your" -> 128.68s - 128.82s
-  14. "social" -> 128.88s - 129.20s
-  15. "value" -> 129.28s - 129.60s
-  16. "to" -> 129.64s - 129.72s
-  17. "her" -> 129.76s - 129.84s
-  18. "primitive" -> 129.88s - 130.22s
-  19. "brain." -> 130.28s - 130.54s
+   1. "Your" -> 130.49s - 130.63s
+   2. "texts" -> 130.69s - 131.03s
+   3. "are" -> 131.17s - 131.27s
+   4. "unconsciously" -> 131.39s - 132.15s
+   5. "broadcasting" -> 132.25s - 132.97s
+   6. "your" -> 133.01s - 133.13s
+   7. "emotional" -> 133.19s - 133.65s
+   8. "state," -> 133.71s - 134.05s
+   9. "your" -> 134.37s - 134.51s
+  10. "neediness" -> 134.57s - 134.99s
+  11. "level," -> 135.05s - 135.31s
+  12. "and" -> 135.69s - 135.77s
+  13. "your" -> 135.81s - 135.95s
+  14. "social" -> 136.05s - 136.41s
+  15. "value" -> 136.45s - 136.79s
+  16. "to" -> 136.93s - 137.03s
+  17. "her" -> 137.07s - 137.17s
+  18. "primitive" -> 137.23s - 137.55s
+  19. "brain." -> 137.61s - 137.89s
 
 --------------------------------------------------
 
-SEGMENT 28: [131.04s - 132.16s]
+SEGMENT 30: [138.31s - 139.12s]
 Text: "Here's what's happening."
 Word-level timestamps:
-   1. "Here's" -> 131.04s - 131.22s
-   2. "what's" -> 131.26s - 131.44s
-   3. "happening." -> 131.48s - 132.16s
+   1. "Here's" -> 138.31s - 138.51s
+   2. "what's" -> 138.53s - 138.72s
+   3. "happening." -> 138.75s - 139.12s
 
 --------------------------------------------------
 
-SEGMENT 29: [132.19s - 135.87s]
+SEGMENT 31: [139.50s - 143.96s]
 Text: "When you send a needy text, you're literally activating her disgust response."
 Word-level timestamps:
-   1. "When" -> 132.19s - 132.28s
-   2. "you" -> 132.32s - 132.43s
-   3. "send" -> 132.47s - 132.63s
-   4. "a" -> 132.69s - 132.71s
-   5. "needy" -> 132.75s - 132.99s
-   6. "text," -> 133.05s - 133.57s
-   7. "you're" -> 133.59s - 133.73s
-   8. "literally" -> 133.79s - 134.17s
-   9. "activating" -> 134.35s - 134.79s
-  10. "her" -> 134.85s - 134.95s
-  11. "disgust" -> 134.99s - 135.37s
-  12. "response." -> 135.41s - 135.87s
+   1. "When" -> 139.50s - 139.60s
+   2. "you" -> 139.64s - 139.74s
+   3. "send" -> 139.76s - 139.92s
+   4. "a" -> 139.98s - 140.00s
+   5. "needy" -> 140.06s - 140.32s
+   6. "text," -> 140.38s - 140.74s
+   7. "you're" -> 141.02s - 141.16s
+   8. "literally" -> 141.22s - 141.62s
+   9. "activating" -> 141.82s - 142.30s
+  10. "her" -> 142.36s - 142.46s
+  11. "disgust" -> 142.52s - 142.92s
+  12. "response." -> 142.98s - 143.96s
 
 --------------------------------------------------
 
-SEGMENT 30: [136.49s - 142.43s]
+SEGMENT 32: [143.94s - 149.63s]
 Text: "It's the same biological mechanism that protected our ancestors from diseased or weak potential mates."
 Word-level timestamps:
-   1. "It's" -> 136.49s - 136.61s
-   2. "the" -> 136.67s - 136.77s
-   3. "same" -> 136.83s - 137.06s
-   4. "biological" -> 137.12s - 137.80s
-   5. "mechanism" -> 137.88s - 138.38s
-   6. "that" -> 138.44s - 138.56s
-   7. "protected" -> 138.62s - 139.06s
-   8. "our" -> 139.14s - 139.24s
-   9. "ancestors" -> 139.40s - 139.94s
-  10. "from" -> 139.98s - 140.10s
-  11. "diseased" -> 140.16s - 140.64s
-  12. "or" -> 140.80s - 140.88s
-  13. "weak" -> 140.92s - 141.16s
-  14. "potential" -> 141.20s - 141.60s
-  15. "mates." -> 141.66s - 142.43s
+   1. "It's" -> 143.94s - 144.14s
+   2. "the" -> 144.18s - 144.28s
+   3. "same" -> 144.32s - 144.56s
+   4. "biological" -> 144.58s - 145.32s
+   5. "mechanism" -> 145.40s - 145.84s
+   6. "that" -> 145.90s - 146.00s
+   7. "protected" -> 146.04s - 146.48s
+   8. "our" -> 146.56s - 146.65s
+   9. "ancestors" -> 146.78s - 147.32s
+  10. "from" -> 147.39s - 147.53s
+  11. "diseased" -> 147.55s - 148.07s
+  12. "or" -> 148.47s - 148.53s
+  13. "weak" -> 148.57s - 148.83s
+  14. "potential" -> 148.89s - 149.33s
+  15. "mates." -> 149.37s - 149.63s
 
 --------------------------------------------------
 
-SEGMENT 31: [142.41s - 147.40s]
+SEGMENT 33: [150.21s - 155.92s]
 Text: "Her brain reads your desperation as genetic weakness, and she pulls away without even knowing why."
 Word-level timestamps:
-   1. "Her" -> 142.41s - 142.59s
-   2. "brain" -> 142.62s - 142.95s
-   3. "reads" -> 143.01s - 143.21s
-   4. "your" -> 143.25s - 143.35s
-   5. "desperation" -> 143.39s - 144.03s
-   6. "as" -> 144.05s - 144.19s
-   7. "genetic" -> 144.23s - 144.61s
-   8. "weakness," -> 144.65s - 145.03s
-   9. "and" -> 145.41s - 145.49s
-  10. "she" -> 145.53s - 145.65s
-  11. "pulls" -> 145.71s - 145.93s
-  12. "away" -> 145.99s - 146.21s
-  13. "without" -> 146.25s - 146.57s
-  14. "even" -> 146.63s - 146.81s
-  15. "knowing" -> 146.85s - 147.10s
-  16. "why." -> 147.18s - 147.40s
+   1. "Her" -> 150.21s - 150.33s
+   2. "brain" -> 150.39s - 150.67s
+   3. "reads" -> 150.69s - 150.99s
+   4. "your" -> 151.03s - 151.15s
+   5. "desperation" -> 151.23s - 151.95s
+   6. "as" -> 152.13s - 152.19s
+   7. "genetic" -> 152.27s - 152.67s
+   8. "weakness," -> 152.73s - 153.13s
+   9. "and" -> 153.61s - 153.69s
+  10. "she" -> 153.73s - 153.87s
+  11. "pulls" -> 153.93s - 154.17s
+  12. "away" -> 154.23s - 154.50s
+  13. "without" -> 154.53s - 154.96s
+  14. "even" -> 155.08s - 155.24s
+  15. "knowing" -> 155.30s - 155.56s
+  16. "why." -> 155.66s - 155.92s
 
 --------------------------------------------------
 
-SEGMENT 32: [147.92s - 152.73s]
+SEGMENT 34: [156.38s - 161.68s]
 Text: "I'm going to rewire your brain so that every text you send triggers attraction instead of repulsion."
 Word-level timestamps:
-   1. "I'm" -> 147.92s - 148.04s
-   2. "going" -> 148.08s - 148.26s
-   3. "to" -> 148.30s - 148.36s
-   4. "rewire" -> 148.42s - 148.78s
-   5. "your" -> 148.82s - 148.94s
-   6. "brain" -> 148.98s - 149.30s
-   7. "so" -> 149.42s - 149.54s
-   8. "that" -> 149.56s - 149.66s
-   9. "every" -> 149.70s - 150.06s
-  10. "text" -> 150.10s - 150.34s
-  11. "you" -> 150.38s - 150.52s
-  12. "send" -> 150.56s - 150.76s
-  13. "triggers" -> 150.82s - 151.16s
-  14. "attraction" -> 151.25s - 151.77s
-  15. "instead" -> 151.85s - 152.15s
-  16. "of" -> 152.19s - 152.23s
-  17. "repulsion." -> 152.25s - 152.73s
+   1. "I'm" -> 156.38s - 156.50s
+   2. "going" -> 156.52s - 156.68s
+   3. "to" -> 156.72s - 156.78s
+   4. "rewire" -> 156.84s - 157.24s
+   5. "your" -> 157.30s - 157.42s
+   6. "brain" -> 157.48s - 157.80s
+   7. "so" -> 158.00s - 158.10s
+   8. "that" -> 158.14s - 158.26s
+   9. "every" -> 158.28s - 158.68s
+  10. "text" -> 158.76s - 159.08s
+  11. "you" -> 159.14s - 159.26s
+  12. "send" -> 159.32s - 159.52s
+  13. "triggers" -> 159.62s - 159.96s
+  14. "attraction" -> 160.04s - 160.56s
+  15. "instead" -> 160.58s - 161.06s
+  16. "of" -> 161.10s - 161.14s
+  17. "repulsion." -> 161.20s - 161.68s
 
 --------------------------------------------------
 
-SEGMENT 33: [153.21s - 157.58s]
+SEGMENT 35: [162.10s - 166.91s]
 Text: "We're going to turn you into a texting machine that women can't resist engaging with."
 Word-level timestamps:
-   1. "We're" -> 153.21s - 153.35s
-   2. "going" -> 153.39s - 153.57s
-   3. "to" -> 153.61s - 153.67s
-   4. "turn" -> 153.73s - 153.95s
-   5. "you" -> 153.99s - 154.09s
-   6. "into" -> 154.15s - 154.33s
-   7. "a" -> 154.41s - 154.43s
-   8. "texting" -> 154.49s - 154.85s
-   9. "machine" -> 154.87s - 155.19s
-  10. "that" -> 155.23s - 155.33s
-  11. "women" -> 155.41s - 155.68s
-  12. "can't" -> 155.79s - 156.06s
-  13. "resist" -> 156.10s - 156.44s
-  14. "engaging" -> 156.52s - 156.98s
-  15. "with." -> 157.02s - 157.58s
+   1. "We're" -> 162.10s - 162.25s
+   2. "going" -> 162.26s - 162.38s
+   3. "to" -> 162.43s - 162.47s
+   4. "turn" -> 162.53s - 162.73s
+   5. "you" -> 162.77s - 162.93s
+   6. "into" -> 162.95s - 163.29s
+   7. "a" -> 163.37s - 163.39s
+   8. "texting" -> 163.47s - 163.87s
+   9. "machine" -> 163.91s - 164.27s
+  10. "that" -> 164.31s - 164.69s
+  11. "women" -> 164.71s - 165.05s
+  12. "can't" -> 165.15s - 165.41s
+  13. "resist" -> 165.45s - 165.79s
+  14. "engaging" -> 165.85s - 166.27s
+  15. "with." -> 166.33s - 166.91s
 
 --------------------------------------------------
 
-SEGMENT 34: [157.56s - 169.17s]
-Text: "The real reason you feel anxious when texting women has nothing to do with the actual conversation, it's about a chemical cocktail of cortisol and adrenaline flooding your system because your brain thinks you're about to be rejected by the tribe."
+SEGMENT 36: [166.89s - 172.30s]
+Text: "The real reason you feel anxious when texting women has nothing to do with the actual conversation."
 Word-level timestamps:
-   1. "The" -> 157.56s - 157.78s
-   2. "real" -> 157.82s - 158.00s
-   3. "reason" -> 158.06s - 158.32s
-   4. "you" -> 158.36s - 158.46s
-   5. "feel" -> 158.50s - 158.72s
-   6. "anxious" -> 158.86s - 159.14s
-   7. "when" -> 159.18s - 159.32s
-   8. "texting" -> 159.38s - 159.74s
-   9. "women" -> 159.78s - 160.00s
-  10. "has" -> 160.06s - 160.18s
-  11. "nothing" -> 160.28s - 160.54s
-  12. "to" -> 160.60s - 160.66s
-  13. "do" -> 160.70s - 160.82s
-  14. "with" -> 160.88s - 160.98s
-  15. "the" -> 161.02s - 161.10s
-  16. "actual" -> 161.26s - 161.56s
-  17. "conversation," -> 161.62s - 162.32s
-  18. "it's" -> 162.69s - 162.79s
-  19. "about" -> 162.85s - 163.01s
-  20. "a" -> 163.07s - 163.09s
-  21. "chemical" -> 163.13s - 163.45s
-  22. "cocktail" -> 163.51s - 163.97s
-  23. "of" -> 164.01s - 164.05s
-  24. "cortisol" -> 164.13s - 164.67s
-  25. "and" -> 164.71s - 164.79s
-  26. "adrenaline" -> 164.85s - 165.35s
-  27. "flooding" -> 165.41s - 165.69s
-  28. "your" -> 165.71s - 165.83s
-  29. "system" -> 165.89s - 166.21s
-  30. "because" -> 166.33s - 166.57s
-  31. "your" -> 166.61s - 166.73s
-  32. "brain" -> 166.79s - 167.11s
-  33. "thinks" -> 167.17s - 167.39s
-  34. "you're" -> 167.41s - 167.59s
-  35. "about" -> 167.63s - 167.79s
-  36. "to" -> 167.83s - 167.89s
-  37. "be" -> 167.93s - 168.01s
-  38. "rejected" -> 168.07s - 168.51s
-  39. "by" -> 168.55s - 168.65s
-  40. "the" -> 168.69s - 168.77s
-  41. "tribe." -> 168.83s - 169.17s
+   1. "The" -> 166.89s - 167.09s
+   2. "real" -> 167.13s - 167.33s
+   3. "reason" -> 167.39s - 167.69s
+   4. "you" -> 167.71s - 167.87s
+   5. "feel" -> 167.93s - 168.15s
+   6. "anxious" -> 168.19s - 168.72s
+   7. "when" -> 168.79s - 168.94s
+   8. "texting" -> 169.03s - 169.44s
+   9. "women" -> 169.50s - 169.76s
+  10. "has" -> 169.82s - 169.96s
+  11. "nothing" -> 170.00s - 170.38s
+  12. "to" -> 170.42s - 170.50s
+  13. "do" -> 170.58s - 170.76s
+  14. "with" -> 170.84s - 170.96s
+  15. "the" -> 171.00s - 171.10s
+  16. "actual" -> 171.26s - 171.56s
+  17. "conversation." -> 171.62s - 172.30s
 
 --------------------------------------------------
 
-SEGMENT 35: [169.69s - 170.90s]
+SEGMENT 37: [172.74s - 180.38s]
+Text: "It's about a chemical cocktail of cortisol and adrenaline flooding your system because your brain thinks you're about to be rejected by the tribe."
+Word-level timestamps:
+   1. "It's" -> 172.74s - 172.84s
+   2. "about" -> 172.88s - 173.06s
+   3. "a" -> 173.10s - 173.12s
+   4. "chemical" -> 173.20s - 173.60s
+   5. "cocktail" -> 173.66s - 174.19s
+   6. "of" -> 174.23s - 174.27s
+   7. "cortisol" -> 174.39s - 174.99s
+   8. "and" -> 175.29s - 175.39s
+   9. "adrenaline" -> 175.45s - 175.97s
+  10. "flooding" -> 176.11s - 176.41s
+  11. "your" -> 176.43s - 176.57s
+  12. "system" -> 176.65s - 176.99s
+  13. "because" -> 177.31s - 177.55s
+  14. "your" -> 177.59s - 177.73s
+  15. "brain" -> 177.79s - 178.09s
+  16. "thinks" -> 178.23s - 178.47s
+  17. "you're" -> 178.50s - 178.68s
+  18. "about" -> 178.72s - 178.92s
+  19. "to" -> 178.96s - 179.04s
+  20. "be" -> 179.08s - 179.16s
+  21. "rejected" -> 179.24s - 179.72s
+  22. "by" -> 179.78s - 179.90s
+  23. "the" -> 179.94s - 180.02s
+  24. "tribe." -> 180.06s - 180.38s
+
+--------------------------------------------------
+
+SEGMENT 38: [180.86s - 182.14s]
 Text: "Think of your phone like a frame."
 Word-level timestamps:
-   1. "Think" -> 169.69s - 169.84s
-   2. "of" -> 169.88s - 169.91s
-   3. "your" -> 169.96s - 170.06s
-   4. "phone" -> 170.09s - 170.30s
-   5. "like" -> 170.34s - 170.44s
-   6. "a" -> 170.50s - 170.52s
-   7. "frame." -> 170.60s - 170.90s
+   1. "Think" -> 180.86s - 181.00s
+   2. "of" -> 181.04s - 181.08s
+   3. "your" -> 181.10s - 181.24s
+   4. "phone" -> 181.30s - 181.56s
+   5. "like" -> 181.60s - 181.72s
+   6. "a" -> 181.76s - 181.78s
+   7. "frame." -> 181.86s - 182.14s
 
 --------------------------------------------------
 
-SEGMENT 36: [171.40s - 173.64s]
+SEGMENT 39: [182.60s - 185.39s]
 Text: "Right now, you're operating from a weak frame."
 Word-level timestamps:
-   1. "Right" -> 171.40s - 171.56s
-   2. "now," -> 171.62s - 171.82s
-   3. "you're" -> 172.16s - 172.32s
-   4. "operating" -> 172.40s - 172.80s
-   5. "from" -> 172.84s - 172.94s
-   6. "a" -> 173.00s - 173.02s
-   7. "weak" -> 173.08s - 173.28s
-   8. "frame." -> 173.34s - 173.64s
+   1. "Right" -> 182.60s - 182.76s
+   2. "now," -> 182.80s - 182.98s
+   3. "you're" -> 183.49s - 183.65s
+   4. "operating" -> 183.77s - 184.21s
+   5. "from" -> 184.25s - 184.37s
+   6. "a" -> 184.41s - 184.43s
+   7. "weak" -> 184.49s - 184.67s
+   8. "frame." -> 184.75s - 185.39s
 
 --------------------------------------------------
 
-SEGMENT 37: [174.02s - 179.89s]
+SEGMENT 40: [185.37s - 191.34s]
 Text: "The frame of someone who needs her validation, who's walking on eggshells, who's afraid of saying the wrong thing."
 Word-level timestamps:
-   1. "The" -> 174.02s - 174.12s
-   2. "frame" -> 174.18s - 174.40s
-   3. "of" -> 174.44s - 174.50s
-   4. "someone" -> 174.56s - 174.84s
-   5. "who" -> 174.88s - 174.96s
-   6. "needs" -> 175.00s - 175.20s
-   7. "her" -> 175.24s - 175.34s
-   8. "validation," -> 175.40s - 176.00s
-   9. "who's" -> 176.36s - 176.52s
-  10. "walking" -> 176.58s - 176.92s
-  11. "on" -> 177.00s - 177.06s
-  12. "eggshells," -> 177.19s - 177.59s
-  13. "who's" -> 177.88s - 178.03s
-  14. "afraid" -> 178.07s - 178.37s
-  15. "of" -> 178.41s - 178.45s
-  16. "saying" -> 178.53s - 178.77s
-  17. "the" -> 178.81s - 178.89s
-  18. "wrong" -> 178.93s - 179.17s
-  19. "thing." -> 179.25s - 179.89s
+   1. "The" -> 185.37s - 185.51s
+   2. "frame" -> 185.57s - 185.81s
+   3. "of" -> 185.85s - 185.91s
+   4. "someone" -> 185.97s - 186.27s
+   5. "who" -> 186.31s - 186.43s
+   6. "needs" -> 186.53s - 186.77s
+   7. "her" -> 186.81s - 186.91s
+   8. "validation," -> 186.97s - 187.59s
+   9. "who's" -> 187.95s - 188.11s
+  10. "walking" -> 188.19s - 188.51s
+  11. "on" -> 188.57s - 188.63s
+  12. "eggshells," -> 188.67s - 189.24s
+  13. "who's" -> 189.68s - 189.84s
+  14. "afraid" -> 189.90s - 190.22s
+  15. "of" -> 190.28s - 190.34s
+  16. "saying" -> 190.40s - 190.64s
+  17. "the" -> 190.68s - 190.74s
+  18. "wrong" -> 190.78s - 191.02s
+  19. "thing." -> 191.10s - 191.34s
 
 --------------------------------------------------
 
-SEGMENT 38: [179.87s - 181.61s]
+SEGMENT 41: [191.78s - 193.92s]
 Text: "But she can feel this energy through the screen."
 Word-level timestamps:
-   1. "But" -> 179.87s - 180.01s
-   2. "she" -> 180.07s - 180.19s
-   3. "can" -> 180.23s - 180.33s
-   4. "feel" -> 180.37s - 180.53s
-   5. "this" -> 180.57s - 180.69s
-   6. "energy" -> 180.75s - 181.01s
-   7. "through" -> 181.03s - 181.19s
-   8. "the" -> 181.21s - 181.27s
-   9. "screen." -> 181.31s - 181.61s
+   1. "But" -> 191.78s - 191.86s
+   2. "she" -> 191.92s - 192.04s
+   3. "can" -> 192.08s - 192.22s
+   4. "feel" -> 192.30s - 192.50s
+   5. "this" -> 192.56s - 192.70s
+   6. "energy" -> 192.84s - 193.16s
+   7. "through" -> 193.26s - 193.44s
+   8. "the" -> 193.46s - 193.54s
+   9. "screen." -> 193.56s - 193.92s
 
 --------------------------------------------------
 
-SEGMENT 39: [182.07s - 185.62s]
-Text: "Here's a mind-blowing reframe that anxiety you feel before hitting send."
+SEGMENT 42: [194.34s - 198.45s]
+Text: "Here's a mind blowing reframe that anxiety you feel before hitting send."
 Word-level timestamps:
-   1. "Here's" -> 182.07s - 182.25s
-   2. "a" -> 182.29s - 182.31s
-   3. "mind-blowing" -> 182.37s - 182.87s
-   4. "reframe" -> 182.93s - 183.41s
-   5. "that" -> 183.78s - 183.90s
-   6. "anxiety" -> 183.96s - 184.38s
-   7. "you" -> 184.42s - 184.54s
-   8. "feel" -> 184.58s - 184.76s
-   9. "before" -> 184.80s - 185.04s
-  10. "hitting" -> 185.06s - 185.28s
-  11. "send." -> 185.34s - 185.62s
+   1. "Here's" -> 194.34s - 194.60s
+   2. "a" -> 194.66s - 194.68s
+   3. "mind" -> 194.84s - 195.12s
+   4. "blowing" -> 195.14s - 195.47s
+   5. "reframe" -> 195.54s - 195.97s
+   6. "that" -> 196.39s - 196.51s
+   7. "anxiety" -> 196.57s - 197.05s
+   8. "you" -> 197.07s - 197.23s
+   9. "feel" -> 197.31s - 197.55s
+  10. "before" -> 197.61s - 197.89s
+  11. "hitting" -> 197.93s - 198.19s
+  12. "send." -> 198.21s - 198.45s
 
 --------------------------------------------------
 
-SEGMENT 40: [186.14s - 187.76s]
+SEGMENT 43: [198.91s - 201.11s]
 Text: "It's not because texting is scary."
 Word-level timestamps:
-   1. "It's" -> 186.14s - 186.24s
-   2. "not" -> 186.30s - 186.42s
-   3. "because" -> 186.48s - 186.74s
-   4. "texting" -> 186.80s - 187.16s
-   5. "is" -> 187.22s - 187.28s
-   6. "scary." -> 187.34s - 187.76s
+   1. "It's" -> 198.91s - 199.01s
+   2. "not" -> 199.07s - 199.23s
+   3. "because" -> 199.29s - 199.57s
+   4. "texting" -> 199.61s - 200.11s
+   5. "is" -> 200.17s - 200.23s
+   6. "scary." -> 200.27s - 201.11s
 
 --------------------------------------------------
 
-SEGMENT 41: [188.08s - 195.60s]
+SEGMENT 44: [201.13s - 209.49s]
 Text: "It's because you're subconsciously treating every text like a job interview where she's the employer and you're desperately trying to prove you're worthy of her time."
 Word-level timestamps:
-   1. "It's" -> 188.08s - 188.18s
-   2. "because" -> 188.22s - 188.46s
-   3. "you're" -> 188.48s - 188.65s
-   4. "subconsciously" -> 188.66s - 189.37s
-   5. "treating" -> 189.45s - 189.75s
-   6. "every" -> 189.77s - 190.07s
-   7. "text" -> 190.15s - 190.41s
-   8. "like" -> 190.43s - 190.55s
-   9. "a" -> 190.61s - 190.63s
-  10. "job" -> 190.69s - 190.95s
-  11. "interview" -> 191.01s - 191.37s
-  12. "where" -> 191.41s - 191.57s
-  13. "she's" -> 191.61s - 191.79s
-  14. "the" -> 191.83s - 191.93s
-  15. "employer" -> 192.01s - 192.53s
-  16. "and" -> 192.71s - 192.77s
-  17. "you're" -> 192.81s - 192.95s
-  18. "desperately" -> 192.99s - 193.45s
-  19. "trying" -> 193.53s - 193.75s
-  20. "to" -> 193.79s - 193.84s
-  21. "prove" -> 193.91s - 194.13s
-  22. "you're" -> 194.16s - 194.32s
-  23. "worthy" -> 194.36s - 194.66s
-  24. "of" -> 194.70s - 194.74s
-  25. "her" -> 194.78s - 194.88s
-  26. "time." -> 194.94s - 195.60s
+   1. "It's" -> 201.13s - 201.23s
+   2. "because" -> 201.27s - 201.57s
+   3. "you're" -> 201.62s - 201.81s
+   4. "subconsciously" -> 201.85s - 202.64s
+   5. "treating" -> 202.76s - 203.10s
+   6. "every" -> 203.34s - 203.56s
+   7. "text" -> 203.64s - 203.96s
+   8. "like" -> 204.02s - 204.14s
+   9. "a" -> 204.20s - 204.22s
+  10. "job" -> 204.32s - 204.58s
+  11. "interview" -> 204.64s - 204.98s
+  12. "where" -> 205.02s - 205.36s
+  13. "she's" -> 205.42s - 205.64s
+  14. "the" -> 205.68s - 205.78s
+  15. "employer" -> 205.86s - 206.34s
+  16. "and" -> 206.58s - 206.66s
+  17. "you're" -> 206.68s - 206.84s
+  18. "desperately" -> 206.90s - 207.40s
+  19. "trying" -> 207.44s - 207.76s
+  20. "to" -> 207.80s - 207.86s
+  21. "prove" -> 207.93s - 208.12s
+  22. "you're" -> 208.16s - 208.31s
+  23. "worthy" -> 208.32s - 208.63s
+  24. "of" -> 208.67s - 208.71s
+  25. "her" -> 208.77s - 208.87s
+  26. "time." -> 208.93s - 209.49s
 
 --------------------------------------------------
 
-SEGMENT 42: [195.58s - 197.12s]
+SEGMENT 45: [209.47s - 211.07s]
 Text: "But here's what's actually happening."
 Word-level timestamps:
-   1. "But" -> 195.58s - 195.76s
-   2. "here's" -> 195.80s - 196.00s
-   3. "what's" -> 196.04s - 196.20s
-   4. "actually" -> 196.34s - 196.64s
-   5. "happening." -> 196.72s - 197.12s
+   1. "But" -> 209.47s - 209.69s
+   2. "here's" -> 209.77s - 210.01s
+   3. "what's" -> 210.05s - 210.23s
+   4. "actually" -> 210.33s - 210.63s
+   5. "happening." -> 210.69s - 211.07s
 
 --------------------------------------------------
 
-SEGMENT 43: [197.56s - 202.41s]
+SEGMENT 46: [211.55s - 216.63s]
 Text: "She's sitting there hoping that someone, anyone, will stimulate her brain in an interesting way."
 Word-level timestamps:
-   1. "She's" -> 197.56s - 197.74s
-   2. "sitting" -> 197.78s - 198.00s
-   3. "there" -> 198.02s - 198.19s
-   4. "hoping" -> 198.22s - 198.49s
-   5. "that" -> 198.53s - 198.65s
-   6. "someone," -> 198.71s - 199.07s
-   7. "anyone," -> 199.59s - 199.99s
-   8. "will" -> 200.35s - 200.49s
-   9. "stimulate" -> 200.53s - 200.95s
-  10. "her" -> 200.99s - 201.07s
-  11. "brain" -> 201.13s - 201.45s
-  12. "in" -> 201.47s - 201.55s
-  13. "an" -> 201.61s - 201.65s
-  14. "interesting" -> 201.77s - 202.18s
-  15. "way." -> 202.25s - 202.41s
+   1. "She's" -> 211.55s - 211.71s
+   2. "sitting" -> 211.75s - 211.97s
+   3. "there" -> 211.99s - 212.13s
+   4. "hoping" -> 212.17s - 212.45s
+   5. "that" -> 212.49s - 212.61s
+   6. "someone," -> 212.69s - 213.07s
+   7. "anyone," -> 213.51s - 213.87s
+   8. "will" -> 214.27s - 214.43s
+   9. "stimulate" -> 214.47s - 214.95s
+  10. "her" -> 215.01s - 215.09s
+  11. "brain" -> 215.17s - 215.49s
+  12. "in" -> 215.65s - 215.71s
+  13. "an" -> 215.75s - 215.79s
+  14. "interesting" -> 215.89s - 216.34s
+  15. "way." -> 216.41s - 216.63s
 
 --------------------------------------------------
 
-SEGMENT 44: [202.92s - 208.83s]
-Text: "She's bored out of her mind scrolling through the same boring, hey, beautiful messages from guys who all sound exactly the same."
+SEGMENT 47: [217.08s - 223.66s]
+Text: "She's bored out of her mind scrolling through the same boring, hey beautiful messages from guys who all sound exactly the same."
 Word-level timestamps:
-   1. "She's" -> 202.92s - 203.12s
-   2. "bored" -> 203.16s - 203.36s
-   3. "out" -> 203.42s - 203.50s
-   4. "of" -> 203.54s - 203.58s
-   5. "her" -> 203.62s - 203.72s
-   6. "mind" -> 203.78s - 204.00s
-   7. "scrolling" -> 204.06s - 204.42s
-   8. "through" -> 204.46s - 204.62s
-   9. "the" -> 204.64s - 204.72s
-  10. "same" -> 204.78s - 205.00s
-  11. "boring," -> 205.06s - 205.40s
-  12. "hey," -> 205.50s - 205.74s
-  13. "beautiful" -> 205.76s - 206.21s
-  14. "messages" -> 206.28s - 206.69s
-  15. "from" -> 206.75s - 206.87s
-  16. "guys" -> 206.95s - 207.23s
-  17. "who" -> 207.27s - 207.37s
-  18. "all" -> 207.47s - 207.59s
-  19. "sound" -> 207.65s - 207.89s
-  20. "exactly" -> 207.95s - 208.39s
-  21. "the" -> 208.45s - 208.55s
-  22. "same." -> 208.59s - 208.83s
+   1. "She's" -> 217.08s - 217.26s
+   2. "bored" -> 217.32s - 217.52s
+   3. "out" -> 217.54s - 217.62s
+   4. "of" -> 217.66s - 217.70s
+   5. "her" -> 217.74s - 217.84s
+   6. "mind" -> 217.88s - 218.12s
+   7. "scrolling" -> 218.16s - 218.72s
+   8. "through" -> 218.74s - 218.96s
+   9. "the" -> 218.98s - 219.06s
+  10. "same" -> 219.12s - 219.34s
+  11. "boring," -> 219.40s - 219.76s
+  12. "hey" -> 220.00s - 220.20s
+  13. "beautiful" -> 220.26s - 220.70s
+  14. "messages" -> 220.80s - 221.24s
+  15. "from" -> 221.32s - 221.46s
+  16. "guys" -> 221.52s - 221.82s
+  17. "who" -> 221.86s - 221.98s
+  18. "all" -> 222.16s - 222.30s
+  19. "sound" -> 222.36s - 222.66s
+  20. "exactly" -> 222.74s - 223.22s
+  21. "the" -> 223.28s - 223.38s
+  22. "same." -> 223.42s - 223.66s
 
 --------------------------------------------------
 
-SEGMENT 45: [209.35s - 211.26s]
+SEGMENT 48: [224.12s - 225.79s]
 Text: "Let me give you a relatable example."
 Word-level timestamps:
-   1. "Let" -> 209.35s - 209.45s
-   2. "me" -> 209.47s - 209.55s
-   3. "give" -> 209.59s - 209.73s
-   4. "you" -> 209.77s - 209.85s
-   5. "a" -> 209.91s - 209.94s
-   6. "relatable" -> 210.00s - 210.42s
-   7. "example." -> 210.48s - 211.26s
+   1. "Let" -> 224.12s - 224.22s
+   2. "me" -> 224.26s - 224.34s
+   3. "give" -> 224.40s - 224.54s
+   4. "you" -> 224.59s - 224.71s
+   5. "a" -> 224.76s - 224.78s
+   6. "relatable" -> 224.84s - 225.31s
+   7. "example." -> 225.37s - 225.79s
 
 --------------------------------------------------
 
-SEGMENT 46: [211.24s - 216.55s]
-Text: "You know that feeling when you're about to text her back, and you spend 20 minutes crafting the perfect response?"
+SEGMENT 49: [226.29s - 231.91s]
+Text: "You know that feeling when you're about to text her back and you spend 20 minutes crafting the perfect response."
 Word-level timestamps:
-   1. "You" -> 211.24s - 211.44s
-   2. "know" -> 211.46s - 211.58s
-   3. "that" -> 211.62s - 211.74s
-   4. "feeling" -> 211.80s - 212.08s
-   5. "when" -> 212.10s - 212.20s
-   6. "you're" -> 212.22s - 212.36s
-   7. "about" -> 212.40s - 212.56s
-   8. "to" -> 212.58s - 212.66s
-   9. "text" -> 212.70s - 212.92s
-  10. "her" -> 212.96s - 213.06s
-  11. "back," -> 213.10s - 213.38s
-  12. "and" -> 213.62s - 213.70s
-  13. "you" -> 213.72s - 213.86s
-  14. "spend" -> 213.88s - 214.10s
-  15. "20" -> 214.12s - 214.44s
-  16. "minutes" -> 214.50s - 214.74s
-  17. "crafting" -> 214.78s - 215.10s
-  18. "the" -> 215.14s - 215.22s
-  19. "perfect" -> 215.28s - 215.69s
-  20. "response?" -> 216.07s - 216.55s
+   1. "You" -> 226.29s - 226.41s
+   2. "know" -> 226.43s - 226.55s
+   3. "that" -> 226.61s - 226.71s
+   4. "feeling" -> 226.83s - 227.13s
+   5. "when" -> 227.17s - 227.27s
+   6. "you're" -> 227.29s - 227.47s
+   7. "about" -> 227.51s - 227.69s
+   8. "to" -> 227.71s - 227.79s
+   9. "text" -> 227.85s - 228.09s
+  10. "her" -> 228.11s - 228.21s
+  11. "back" -> 228.27s - 228.51s
+  12. "and" -> 228.73s - 228.81s
+  13. "you" -> 228.83s - 228.95s
+  14. "spend" -> 228.97s - 229.17s
+  15. "20" -> 229.19s - 229.55s
+  16. "minutes" -> 229.59s - 229.83s
+  17. "crafting" -> 229.95s - 230.33s
+  18. "the" -> 230.39s - 230.47s
+  19. "perfect" -> 230.55s - 230.91s
+  20. "response." -> 230.95s - 231.91s
 
 --------------------------------------------------
 
-SEGMENT 47: [217.13s - 220.89s]
+SEGMENT 50: [231.89s - 236.12s]
 Text: "That's your nervous system treating her like she's a wild animal that might attack you."
 Word-level timestamps:
-   1. "That's" -> 217.13s - 217.29s
-   2. "your" -> 217.31s - 217.41s
-   3. "nervous" -> 217.47s - 217.75s
-   4. "system" -> 217.79s - 218.09s
-   5. "treating" -> 218.17s - 218.43s
-   6. "her" -> 218.49s - 218.57s
-   7. "like" -> 218.63s - 218.77s
-   8. "she's" -> 218.83s - 219.01s
-   9. "a" -> 219.05s - 219.09s
-  10. "wild" -> 219.19s - 219.55s
-  11. "animal" -> 219.71s - 219.97s
-  12. "that" -> 220.03s - 220.15s
-  13. "might" -> 220.21s - 220.37s
-  14. "attack" -> 220.43s - 220.71s
-  15. "you." -> 220.75s - 220.89s
+   1. "That's" -> 231.89s - 232.15s
+   2. "your" -> 232.17s - 232.29s
+   3. "nervous" -> 232.35s - 232.68s
+   4. "system" -> 232.72s - 233.01s
+   5. "treating" -> 233.06s - 233.44s
+   6. "her" -> 233.50s - 233.60s
+   7. "like" -> 233.68s - 233.86s
+   8. "she's" -> 234.06s - 234.26s
+   9. "a" -> 234.30s - 234.32s
+  10. "wild" -> 234.46s - 234.78s
+  11. "animal" -> 234.90s - 235.18s
+  12. "that" -> 235.20s - 235.34s
+  13. "might" -> 235.42s - 235.58s
+  14. "attack" -> 235.62s - 235.94s
+  15. "you." -> 235.98s - 236.12s
 
 --------------------------------------------------
 
-SEGMENT 48: [221.43s - 226.12s]
+SEGMENT 51: [236.58s - 241.25s]
 Text: "Meanwhile, she's probably watching Netflix and barely thinking about the conversation at all."
 Word-level timestamps:
-   1. "Meanwhile," -> 221.43s - 221.90s
-   2. "she's" -> 222.16s - 222.34s
-   3. "probably" -> 222.42s - 222.80s
-   4. "watching" -> 222.84s - 223.24s
-   5. "Netflix" -> 223.32s - 223.82s
-   6. "and" -> 223.92s - 224.00s
-   7. "barely" -> 224.04s - 224.36s
-   8. "thinking" -> 224.46s - 224.74s
-   9. "about" -> 224.82s - 225.00s
-  10. "the" -> 225.02s - 225.10s
-  11. "conversation" -> 225.16s - 225.80s
-  12. "at" -> 225.86s - 225.90s
-  13. "all." -> 226.00s - 226.12s
+   1. "Meanwhile," -> 236.58s - 236.98s
+   2. "she's" -> 237.44s - 237.62s
+   3. "probably" -> 237.68s - 238.03s
+   4. "watching" -> 238.04s - 238.43s
+   5. "Netflix" -> 238.51s - 238.95s
+   6. "and" -> 239.13s - 239.21s
+   7. "barely" -> 239.29s - 239.59s
+   8. "thinking" -> 239.67s - 239.97s
+   9. "about" -> 240.03s - 240.19s
+  10. "the" -> 240.21s - 240.29s
+  11. "conversation" -> 240.33s - 240.93s
+  12. "at" -> 240.99s - 241.03s
+  13. "all." -> 241.13s - 241.25s
 
 --------------------------------------------------
 
-SEGMENT 49: [226.64s - 230.73s]
+SEGMENT 52: [241.71s - 246.90s]
 Text: "Here's how to control her emotional response by changing your internal state when you text."
 Word-level timestamps:
-   1. "Here's" -> 226.64s - 226.82s
-   2. "how" -> 226.86s - 226.94s
-   3. "to" -> 226.96s - 227.02s
-   4. "control" -> 227.06s - 227.40s
-   5. "her" -> 227.46s - 227.56s
-   6. "emotional" -> 227.62s - 228.06s
-   7. "response" -> 228.10s - 228.59s
-   8. "by" -> 228.67s - 228.79s
-   9. "changing" -> 228.91s - 229.23s
-  10. "your" -> 229.25s - 229.37s
-  11. "internal" -> 229.43s - 229.81s
-  12. "state" -> 229.87s - 230.11s
-  13. "when" -> 230.13s - 230.23s
-  14. "you" -> 230.27s - 230.37s
-  15. "text." -> 230.41s - 230.73s
+   1. "Here's" -> 241.71s - 241.93s
+   2. "how" -> 241.97s - 242.05s
+   3. "to" -> 242.09s - 242.13s
+   4. "control" -> 242.19s - 242.61s
+   5. "her" -> 242.67s - 242.77s
+   6. "emotional" -> 242.83s - 243.29s
+   7. "response" -> 243.35s - 243.84s
+   8. "by" -> 243.96s - 244.08s
+   9. "changing" -> 244.18s - 244.56s
+  10. "your" -> 244.60s - 244.74s
+  11. "internal" -> 244.80s - 245.18s
+  12. "state" -> 245.24s - 245.54s
+  13. "when" -> 245.78s - 245.88s
+  14. "you" -> 245.92s - 246.02s
+  15. "text." -> 246.06s - 246.90s
 
 --------------------------------------------------
 
-SEGMENT 50: [231.29s - 237.92s]
-Text: "Listen to me carefully now, before you even open your phone, you need to get into what I call the outcome independence state."
+SEGMENT 53: [246.92s - 250.43s]
+Text: "Listen to me carefully now before you even open your phone."
 Word-level timestamps:
-   1. "Listen" -> 231.29s - 231.55s
-   2. "to" -> 231.57s - 231.63s
-   3. "me" -> 231.69s - 231.77s
-   4. "carefully" -> 231.85s - 232.27s
-   5. "now," -> 232.33s - 232.51s
-   6. "before" -> 232.83s - 233.09s
-   7. "you" -> 233.15s - 233.27s
-   8. "even" -> 233.37s - 233.53s
-   9. "open" -> 233.61s - 233.81s
-  10. "your" -> 233.83s - 233.96s
-  11. "phone," -> 234.01s - 234.34s
-  12. "you" -> 234.54s - 234.64s
-  13. "need" -> 234.66s - 234.80s
-  14. "to" -> 234.84s - 234.88s
-  15. "get" -> 234.92s - 235.04s
-  16. "into" -> 235.10s - 235.28s
-  17. "what" -> 235.32s - 235.42s
-  18. "I" -> 235.48s - 235.52s
-  19. "call" -> 235.60s - 235.80s
-  20. "the" -> 235.84s - 235.92s
-  21. "outcome" -> 236.10s - 236.44s
-  22. "independence" -> 236.50s - 237.04s
-  23. "state." -> 237.18s - 237.92s
+   1. "Listen" -> 246.92s - 247.20s
+   2. "to" -> 247.24s - 247.32s
+   3. "me" -> 247.36s - 247.46s
+   4. "carefully" -> 247.58s - 248.04s
+   5. "now" -> 248.09s - 248.32s
+   6. "before" -> 248.81s - 249.11s
+   7. "you" -> 249.13s - 249.29s
+   8. "even" -> 249.39s - 249.59s
+   9. "open" -> 249.61s - 249.91s
+  10. "your" -> 249.93s - 250.07s
+  11. "phone." -> 250.13s - 250.43s
 
 --------------------------------------------------
 
-SEGMENT 51: [237.90s - 241.15s]
+SEGMENT 54: [250.81s - 254.36s]
+Text: "You need to get into what I call the outcome independence state."
+Word-level timestamps:
+   1. "You" -> 250.81s - 250.89s
+   2. "need" -> 250.93s - 251.05s
+   3. "to" -> 251.07s - 251.13s
+   4. "get" -> 251.17s - 251.29s
+   5. "into" -> 251.31s - 251.55s
+   6. "what" -> 251.63s - 251.75s
+   7. "I" -> 251.81s - 251.87s
+   8. "call" -> 251.95s - 252.21s
+   9. "the" -> 252.25s - 252.39s
+  10. "outcome" -> 252.57s - 252.93s
+  11. "independence" -> 252.95s - 253.62s
+  12. "state." -> 253.70s - 254.36s
+
+--------------------------------------------------
+
+SEGMENT 55: [254.34s - 257.82s]
 Text: "This means you're texting for your entertainment, not for her validation."
 Word-level timestamps:
-   1. "This" -> 237.90s - 238.10s
-   2. "means" -> 238.16s - 238.32s
-   3. "you're" -> 238.34s - 238.48s
-   4. "texting" -> 238.50s - 238.84s
-   5. "for" -> 238.88s - 238.96s
-   6. "your" -> 239.00s - 239.12s
-   7. "entertainment," -> 239.16s - 239.71s
-   8. "not" -> 240.04s - 240.21s
-   9. "for" -> 240.27s - 240.37s
-  10. "her" -> 240.41s - 240.51s
-  11. "validation." -> 240.55s - 241.15s
+   1. "This" -> 254.34s - 254.60s
+   2. "means" -> 254.66s - 254.84s
+   3. "you're" -> 254.86s - 255.02s
+   4. "texting" -> 255.06s - 255.46s
+   5. "for" -> 255.50s - 255.58s
+   6. "your" -> 255.62s - 255.74s
+   7. "entertainment," -> 255.78s - 256.36s
+   8. "not" -> 256.78s - 256.94s
+   9. "for" -> 257.00s - 257.10s
+  10. "her" -> 257.14s - 257.24s
+  11. "validation." -> 257.28s - 257.82s
 
 --------------------------------------------------
 
-SEGMENT 52: [241.61s - 242.39s]
-Text: "Person A sends."
+SEGMENT 56: [258.30s - 259.10s]
+Text: "Person A sense."
 Word-level timestamps:
-   1. "Person" -> 241.61s - 241.93s
-   2. "A" -> 241.95s - 242.03s
-   3. "sends." -> 242.09s - 242.39s
+   1. "Person" -> 258.30s - 258.58s
+   2. "A" -> 258.62s - 258.74s
+   3. "sense." -> 258.78s - 259.10s
 
 --------------------------------------------------
 
-SEGMENT 53: [242.89s - 243.13s]
-Text: "Hey."
+SEGMENT 57: [259.62s - 260.40s]
+Text: "Hey, how was your day?"
 Word-level timestamps:
-   1. "Hey." -> 242.89s - 243.13s
+   1. "Hey," -> 259.62s - 259.78s
+   2. "how" -> 259.84s - 259.92s
+   3. "was" -> 259.96s - 260.06s
+   4. "your" -> 260.08s - 260.20s
+   5. "day?" -> 260.23s - 260.40s
 
 --------------------------------------------------
 
-SEGMENT 54: [243.59s - 244.19s]
-Text: "How was your day?"
-Word-level timestamps:
-   1. "How" -> 243.59s - 243.69s
-   2. "was" -> 243.73s - 243.81s
-   3. "your" -> 243.85s - 243.95s
-   4. "day?" -> 243.99s - 244.19s
-
---------------------------------------------------
-
-SEGMENT 55: [244.67s - 245.48s]
+SEGMENT 58: [260.87s - 261.81s]
 Text: "Hope you had a good one."
 Word-level timestamps:
-   1. "Hope" -> 244.67s - 244.79s
-   2. "you" -> 244.81s - 244.91s
-   3. "had" -> 244.94s - 245.01s
-   4. "a" -> 245.06s - 245.07s
-   5. "good" -> 245.12s - 245.28s
-   6. "one." -> 245.38s - 245.48s
+   1. "Hope" -> 260.87s - 261.03s
+   2. "you" -> 261.07s - 261.15s
+   3. "had" -> 261.19s - 261.27s
+   4. "a" -> 261.31s - 261.33s
+   5. "good" -> 261.39s - 261.55s
+   6. "one." -> 261.71s - 261.81s
 
 --------------------------------------------------
 
-SEGMENT 56: [245.96s - 246.82s]
-Text: "Person B sends."
+SEGMENT 59: [262.27s - 263.11s]
+Text: "Person B sense."
 Word-level timestamps:
-   1. "Person" -> 245.96s - 246.26s
-   2. "B" -> 246.30s - 246.46s
-   3. "sends." -> 246.48s - 246.82s
+   1. "Person" -> 262.27s - 262.57s
+   2. "B" -> 262.61s - 262.75s
+   3. "sense." -> 262.79s - 263.11s
 
 --------------------------------------------------
 
-SEGMENT 57: [247.18s - 250.53s]
+SEGMENT 60: [263.53s - 267.59s]
 Text: "Just saw a guy try to impress a girl by doing pushups at Starbucks."
 Word-level timestamps:
-   1. "Just" -> 247.18s - 247.34s
-   2. "saw" -> 247.36s - 247.52s
-   3. "a" -> 247.56s - 247.60s
-   4. "guy" -> 247.64s - 247.82s
-   5. "try" -> 247.86s - 248.04s
-   6. "to" -> 248.08s - 248.12s
-   7. "impress" -> 248.20s - 248.52s
-   8. "a" -> 248.58s - 248.60s
-   9. "girl" -> 248.66s - 248.88s
-  10. "by" -> 248.94s - 249.06s
-  11. "doing" -> 249.12s - 249.38s
-  12. "pushups" -> 249.44s - 249.84s
-  13. "at" -> 249.91s - 249.97s
-  14. "Starbucks." -> 250.00s - 250.53s
+   1. "Just" -> 263.53s - 263.69s
+   2. "saw" -> 263.71s - 263.89s
+   3. "a" -> 263.93s - 263.95s
+   4. "guy" -> 264.01s - 264.23s
+   5. "try" -> 264.31s - 264.49s
+   6. "to" -> 264.53s - 264.59s
+   7. "impress" -> 264.67s - 264.99s
+   8. "a" -> 265.05s - 265.07s
+   9. "girl" -> 265.13s - 265.35s
+  10. "by" -> 265.41s - 265.51s
+  11. "doing" -> 265.57s - 265.77s
+  12. "pushups" -> 265.85s - 266.31s
+  13. "at" -> 266.39s - 266.45s
+  14. "Starbucks." -> 266.49s - 267.59s
 
 --------------------------------------------------
 
-SEGMENT 58: [251.09s - 254.05s]
-Text: "The second hand embarrassment was real grimacing face."
+SEGMENT 61: [267.61s - 271.08s]
+Text: "The second hand embarrassment was real, with a grimacing emoji."
 Word-level timestamps:
-   1. "The" -> 251.09s - 251.21s
-   2. "second" -> 251.25s - 251.55s
-   3. "hand" -> 251.59s - 251.79s
-   4. "embarrassment" -> 251.85s - 252.41s
-   5. "was" -> 252.45s - 252.57s
-   6. "real" -> 252.65s - 252.87s
-   7. "grimacing" -> 252.93s - 253.33s
-   8. "face." -> 253.43s - 254.05s
+   1. "The" -> 267.61s - 267.71s
+   2. "second" -> 267.77s - 268.07s
+   3. "hand" -> 268.12s - 268.31s
+   4. "embarrassment" -> 268.42s - 269.00s
+   5. "was" -> 269.06s - 269.16s
+   6. "real," -> 269.26s - 269.56s
+   7. "with" -> 269.92s - 270.04s
+   8. "a" -> 270.10s - 270.12s
+   9. "grimacing" -> 270.18s - 270.60s
+  10. "emoji." -> 270.66s - 271.08s
 
 --------------------------------------------------
 
-SEGMENT 59: [254.68s - 256.48s]
+SEGMENT 62: [271.52s - 273.42s]
 Text: "Person A is seeking validation."
 Word-level timestamps:
-   1. "Person" -> 254.68s - 255.06s
-   2. "A" -> 255.08s - 255.22s
-   3. "is" -> 255.40s - 255.46s
-   4. "seeking" -> 255.54s - 255.84s
-   5. "validation." -> 255.88s - 256.48s
+   1. "Person" -> 271.52s - 271.88s
+   2. "A" -> 272.10s - 272.22s
+   3. "is" -> 272.40s - 272.46s
+   4. "seeking" -> 272.52s - 272.82s
+   5. "validation." -> 272.86s - 273.42s
 
 --------------------------------------------------
 
-SEGMENT 60: [256.96s - 258.74s]
+SEGMENT 63: [273.86s - 276.33s]
 Text: "Person B is sharing an experience."
 Word-level timestamps:
-   1. "Person" -> 256.96s - 257.26s
-   2. "B" -> 257.30s - 257.42s
-   3. "is" -> 257.46s - 257.50s
-   4. "sharing" -> 257.60s - 257.94s
-   5. "an" -> 257.98s - 258.04s
-   6. "experience." -> 258.10s - 258.74s
+   1. "Person" -> 273.86s - 274.20s
+   2. "B" -> 274.24s - 274.46s
+   3. "is" -> 274.64s - 274.70s
+   4. "sharing" -> 274.76s - 275.04s
+   5. "an" -> 275.10s - 275.14s
+   6. "experience." -> 275.20s - 276.33s
 
 --------------------------------------------------
 
-SEGMENT 61: [259.32s - 260.63s]
+SEGMENT 64: [276.35s - 278.17s]
 Text: "Guess which one gets the response?"
 Word-level timestamps:
-   1. "Guess" -> 259.32s - 259.50s
-   2. "which" -> 259.55s - 259.69s
-   3. "one" -> 259.75s - 259.82s
-   4. "gets" -> 259.87s - 260.00s
-   5. "the" -> 260.02s - 260.11s
-   6. "response?" -> 260.17s - 260.63s
+   1. "Guess" -> 276.35s - 276.55s
+   2. "which" -> 276.59s - 276.75s
+   3. "one" -> 276.85s - 276.95s
+   4. "gets" -> 276.97s - 277.13s
+   5. "the" -> 277.15s - 277.23s
+   6. "response?" -> 277.25s - 278.17s
 
 --------------------------------------------------
 
-SEGMENT 62: [261.21s - 262.13s]
+SEGMENT 65: [278.15s - 279.35s]
 Text: "The technique is this."
 Word-level timestamps:
-   1. "The" -> 261.21s - 261.29s
-   2. "technique" -> 261.35s - 261.73s
-   3. "is" -> 261.79s - 261.87s
-   4. "this." -> 261.93s - 262.13s
+   1. "The" -> 278.15s - 278.31s
+   2. "technique" -> 278.35s - 278.79s
+   3. "is" -> 278.99s - 279.07s
+   4. "this." -> 279.13s - 279.35s
 
 --------------------------------------------------
 
-SEGMENT 63: [262.73s - 266.94s]
+SEGMENT 66: [279.97s - 284.37s]
 Text: "Every text should either make her laugh, make her think, or make her feel something."
 Word-level timestamps:
-   1. "Every" -> 262.73s - 262.89s
-   2. "text" -> 262.95s - 263.17s
-   3. "should" -> 263.21s - 263.35s
-   4. "either" -> 263.43s - 263.63s
-   5. "make" -> 263.69s - 263.83s
-   6. "her" -> 263.87s - 263.97s
-   7. "laugh," -> 264.05s - 264.37s
-   8. "make" -> 264.83s - 264.95s
-   9. "her" -> 265.00s - 265.10s
-  10. "think," -> 265.22s - 265.50s
-  11. "or" -> 265.94s - 266.00s
-  12. "make" -> 266.04s - 266.18s
-  13. "her" -> 266.20s - 266.30s
-  14. "feel" -> 266.36s - 266.56s
-  15. "something." -> 266.62s - 266.94s
+   1. "Every" -> 279.97s - 280.19s
+   2. "text" -> 280.29s - 280.59s
+   3. "should" -> 280.63s - 280.81s
+   4. "either" -> 280.97s - 281.19s
+   5. "make" -> 281.23s - 281.39s
+   6. "her" -> 281.43s - 281.53s
+   7. "laugh," -> 281.59s - 281.89s
+   8. "make" -> 282.31s - 282.45s
+   9. "her" -> 282.49s - 282.59s
+  10. "think," -> 282.69s - 282.93s
+  11. "or" -> 283.37s - 283.43s
+  12. "make" -> 283.47s - 283.63s
+  13. "her" -> 283.67s - 283.77s
+  14. "feel" -> 283.81s - 283.99s
+  15. "something." -> 284.05s - 284.37s
 
 --------------------------------------------------
 
-SEGMENT 64: [267.46s - 271.05s]
+SEGMENT 67: [284.81s - 288.28s]
 Text: "Never send a text that requires her to carry the conversational weight."
 Word-level timestamps:
-   1. "Never" -> 267.46s - 267.66s
-   2. "send" -> 267.72s - 267.90s
-   3. "a" -> 267.94s - 267.96s
-   4. "text" -> 268.00s - 268.26s
-   5. "that" -> 268.30s - 268.40s
-   6. "requires" -> 268.44s - 268.88s
-   7. "her" -> 268.94s - 269.04s
-   8. "to" -> 269.10s - 269.16s
-   9. "carry" -> 269.22s - 269.46s
-  10. "the" -> 269.50s - 269.58s
-  11. "conversational" -> 269.64s - 270.39s
-  12. "weight." -> 270.43s - 271.05s
+   1. "Never" -> 284.81s - 284.99s
+   2. "send" -> 285.06s - 285.21s
+   3. "a" -> 285.27s - 285.30s
+   4. "text" -> 285.38s - 285.69s
+   5. "that" -> 285.74s - 285.86s
+   6. "requires" -> 285.89s - 286.38s
+   7. "her" -> 286.44s - 286.56s
+   8. "to" -> 286.58s - 286.72s
+   9. "carry" -> 286.80s - 287.10s
+  10. "the" -> 287.14s - 287.20s
+  11. "conversational" -> 287.26s - 287.96s
+  12. "weight." -> 288.02s - 288.28s
 
 --------------------------------------------------
 
-SEGMENT 65: [271.03s - 272.95s]
+SEGMENT 68: [288.72s - 291.42s]
 Text: "Your text should be gifts, not burdens."
 Word-level timestamps:
-   1. "Your" -> 271.03s - 271.23s
-   2. "text" -> 271.27s - 271.47s
-   3. "should" -> 271.51s - 271.67s
-   4. "be" -> 271.69s - 271.77s
-   5. "gifts," -> 271.81s - 272.15s
-   6. "not" -> 272.39s - 272.53s
-   7. "burdens." -> 272.59s - 272.95s
+   1. "Your" -> 288.72s - 288.84s
+   2. "text" -> 288.90s - 289.18s
+   3. "should" -> 289.26s - 289.42s
+   4. "be" -> 289.46s - 289.54s
+   5. "gifts," -> 289.58s - 289.92s
+   6. "not" -> 290.34s - 290.48s
+   7. "burdens." -> 290.54s - 291.42s
 
 --------------------------------------------------
 
-SEGMENT 66: [273.51s - 275.07s]
+SEGMENT 69: [291.44s - 293.26s]
 Text: "Here's your body language through text."
 Word-level timestamps:
-   1. "Here's" -> 273.51s - 273.69s
-   2. "your" -> 273.71s - 273.83s
-   3. "body" -> 273.87s - 274.15s
-   4. "language" -> 274.21s - 274.51s
-   5. "through" -> 274.55s - 274.71s
-   6. "text." -> 274.75s - 275.07s
+   1. "Here's" -> 291.44s - 291.66s
+   2. "your" -> 291.70s - 291.82s
+   3. "body" -> 291.88s - 292.16s
+   4. "language" -> 292.20s - 292.56s
+   5. "through" -> 292.60s - 292.80s
+   6. "text." -> 292.86s - 293.26s
 
 --------------------------------------------------
 
-SEGMENT 67: [275.61s - 276.75s]
+SEGMENT 70: [293.84s - 295.06s]
 Text: "Use periods sparingly."
 Word-level timestamps:
-   1. "Use" -> 275.61s - 275.75s
-   2. "periods" -> 275.79s - 276.19s
-   3. "sparingly." -> 276.25s - 276.75s
+   1. "Use" -> 293.84s - 293.96s
+   2. "periods" -> 294.04s - 294.44s
+   3. "sparingly." -> 294.50s - 295.06s
 
 --------------------------------------------------
 
-SEGMENT 68: [277.12s - 278.18s]
+SEGMENT 71: [295.40s - 296.56s]
 Text: "They create harsh energy."
 Word-level timestamps:
-   1. "They" -> 277.12s - 277.24s
-   2. "create" -> 277.27s - 277.54s
-   3. "harsh" -> 277.58s - 277.80s
-   4. "energy." -> 277.86s - 278.18s
+   1. "They" -> 295.40s - 295.52s
+   2. "create" -> 295.58s - 295.87s
+   3. "harsh" -> 295.90s - 296.17s
+   4. "energy." -> 296.23s - 296.56s
 
 --------------------------------------------------
 
-SEGMENT 69: [278.72s - 280.48s]
+SEGMENT 72: [297.09s - 298.89s]
 Text: "Use lowercase for casual confidence."
 Word-level timestamps:
-   1. "Use" -> 278.72s - 278.82s
-   2. "lowercase" -> 278.86s - 279.38s
-   3. "for" -> 279.42s - 279.54s
-   4. "casual" -> 279.58s - 279.94s
-   5. "confidence." -> 280.00s - 280.48s
+   1. "Use" -> 297.09s - 297.19s
+   2. "lowercase" -> 297.25s - 297.75s
+   3. "for" -> 297.79s - 297.91s
+   4. "casual" -> 297.95s - 298.33s
+   5. "confidence." -> 298.39s - 298.89s
 
 --------------------------------------------------
 
-SEGMENT 70: [281.10s - 284.81s]
-Text: "Never double text unless you're genuinely adding value, not seeking attention."
+SEGMENT 73: [299.45s - 302.23s]
+Text: "Never double text unless you're genuinely adding value."
 Word-level timestamps:
-   1. "Never" -> 281.10s - 281.28s
-   2. "double" -> 281.34s - 281.54s
-   3. "text" -> 281.58s - 281.82s
-   4. "unless" -> 281.88s - 282.12s
-   5. "you're" -> 282.16s - 282.28s
-   6. "genuinely" -> 282.32s - 282.76s
-   7. "adding" -> 282.86s - 283.06s
-   8. "value," -> 283.10s - 283.46s
-   9. "not" -> 283.82s - 283.96s
-  10. "seeking" -> 284.02s - 284.32s
-  11. "attention." -> 284.38s - 284.81s
+   1. "Never" -> 299.45s - 299.63s
+   2. "double" -> 299.71s - 299.93s
+   3. "text" -> 300.01s - 300.33s
+   4. "unless" -> 300.47s - 300.77s
+   5. "you're" -> 300.79s - 300.95s
+   6. "genuinely" -> 300.99s - 301.47s
+   7. "adding" -> 301.61s - 301.83s
+   8. "value." -> 301.87s - 302.23s
 
 --------------------------------------------------
 
-SEGMENT 71: [285.33s - 288.35s]
+SEGMENT 74: [302.63s - 303.57s]
+Text: "Not seeking attention."
+Word-level timestamps:
+   1. "Not" -> 302.63s - 302.77s
+   2. "seeking" -> 302.83s - 303.11s
+   3. "attention." -> 303.17s - 303.57s
+
+--------------------------------------------------
+
+SEGMENT 75: [303.99s - 307.72s]
 Text: "And for the love of God, stop asking, what are you up to?"
 Word-level timestamps:
-   1. "And" -> 285.33s - 285.39s
-   2. "for" -> 285.43s - 285.51s
-   3. "the" -> 285.55s - 285.61s
-   4. "love" -> 285.67s - 285.85s
-   5. "of" -> 285.89s - 285.93s
-   6. "God," -> 286.01s - 286.29s
-   7. "stop" -> 286.73s - 286.99s
-   8. "asking," -> 287.01s - 287.43s
-   9. "what" -> 287.71s - 287.79s
-  10. "are" -> 287.83s - 287.89s
-  11. "you" -> 287.93s - 288.01s
-  12. "up" -> 288.09s - 288.17s
-  13. "to?" -> 288.21s - 288.35s
+   1. "And" -> 303.99s - 304.07s
+   2. "for" -> 304.11s - 304.17s
+   3. "the" -> 304.23s - 304.29s
+   4. "love" -> 304.33s - 304.51s
+   5. "of" -> 304.55s - 304.59s
+   6. "God," -> 304.63s - 304.99s
+   7. "stop" -> 305.39s - 305.65s
+   8. "asking," -> 305.79s - 306.12s
+   9. "what" -> 306.38s - 306.48s
+  10. "are" -> 306.50s - 306.57s
+  11. "you" -> 306.62s - 306.71s
+  12. "up" -> 306.81s - 306.89s
+  13. "to?" -> 306.98s - 307.72s
 
 --------------------------------------------------
 
-SEGMENT 72: [288.87s - 291.80s]
+SEGMENT 76: [307.70s - 310.96s]
 Text: "It screams that you have nothing interesting happening in your own life."
 Word-level timestamps:
-   1. "It" -> 288.87s - 288.93s
-   2. "screams" -> 288.99s - 289.31s
-   3. "that" -> 289.35s - 289.43s
-   4. "you" -> 289.45s - 289.55s
-   5. "have" -> 289.59s - 289.69s
-   6. "nothing" -> 289.79s - 290.05s
-   7. "interesting" -> 290.13s - 290.55s
-   8. "happening" -> 290.57s - 291.03s
-   9. "in" -> 291.07s - 291.13s
-  10. "your" -> 291.15s - 291.29s
-  11. "own" -> 291.35s - 291.48s
-  12. "life." -> 291.56s - 291.80s
+   1. "It" -> 307.70s - 307.90s
+   2. "screams" -> 307.96s - 308.30s
+   3. "that" -> 308.34s - 308.44s
+   4. "you" -> 308.48s - 308.58s
+   5. "have" -> 308.62s - 308.74s
+   6. "nothing" -> 308.78s - 309.22s
+   7. "interesting" -> 309.38s - 309.78s
+   8. "happening" -> 309.86s - 310.24s
+   9. "in" -> 310.28s - 310.32s
+  10. "your" -> 310.36s - 310.50s
+  11. "own" -> 310.56s - 310.66s
+  12. "life." -> 310.74s - 310.96s
 
 --------------------------------------------------
 
-SEGMENT 73: [292.38s - 294.88s]
+SEGMENT 77: [311.50s - 314.57s]
 Text: "Connect your internal state to her external perception."
 Word-level timestamps:
-   1. "Connect" -> 292.38s - 292.66s
-   2. "your" -> 292.68s - 292.82s
-   3. "internal" -> 292.86s - 293.26s
-   4. "state" -> 293.32s - 293.56s
-   5. "to" -> 293.60s - 293.70s
-   6. "her" -> 293.74s - 293.84s
-   7. "external" -> 293.90s - 294.30s
-   8. "perception." -> 294.36s - 294.88s
+   1. "Connect" -> 311.50s - 311.82s
+   2. "your" -> 311.88s - 312.02s
+   3. "internal" -> 312.16s - 312.62s
+   4. "state" -> 312.70s - 313.02s
+   5. "to" -> 313.10s - 313.19s
+   6. "her" -> 313.23s - 313.35s
+   7. "external" -> 313.43s - 313.91s
+   8. "perception." -> 313.99s - 314.57s
 
 --------------------------------------------------
 
-SEGMENT 74: [295.28s - 299.89s]
+SEGMENT 78: [314.97s - 319.63s]
 Text: "When you text from a place of abundance and genuine amusement, she feels that energy."
 Word-level timestamps:
-   1. "When" -> 295.28s - 295.38s
-   2. "you" -> 295.40s - 295.50s
-   3. "text" -> 295.54s - 295.76s
-   4. "from" -> 295.78s - 295.90s
-   5. "a" -> 295.96s - 295.98s
-   6. "place" -> 296.04s - 296.28s
-   7. "of" -> 296.34s - 296.38s
-   8. "abundance" -> 296.40s - 296.90s
-   9. "and" -> 297.04s - 297.12s
-  10. "genuine" -> 297.18s - 297.56s
-  11. "amusement," -> 297.60s - 298.12s
-  12. "she" -> 298.58s - 298.70s
-  13. "feels" -> 298.76s - 298.99s
-  14. "that" -> 299.02s - 299.14s
-  15. "energy." -> 299.19s - 299.89s
+   1. "When" -> 314.97s - 315.07s
+   2. "you" -> 315.11s - 315.21s
+   3. "text" -> 315.27s - 315.53s
+   4. "from" -> 315.57s - 315.69s
+   5. "a" -> 315.75s - 315.77s
+   6. "place" -> 315.85s - 316.13s
+   7. "of" -> 316.19s - 316.23s
+   8. "abundance" -> 316.31s - 316.83s
+   9. "and" -> 316.91s - 316.97s
+  10. "genuine" -> 317.07s - 317.47s
+  11. "amusement," -> 317.51s - 317.97s
+  12. "she" -> 318.45s - 318.59s
+  13. "feels" -> 318.73s - 319.01s
+  14. "that" -> 319.07s - 319.19s
+  15. "energy." -> 319.27s - 319.63s
 
 --------------------------------------------------
 
-SEGMENT 75: [299.87s - 303.19s]
+SEGMENT 79: [320.07s - 323.64s]
 Text: "When you text from neediness and insecurity, she feels that too."
 Word-level timestamps:
-   1. "When" -> 299.87s - 300.05s
-   2. "you" -> 300.09s - 300.17s
-   3. "text" -> 300.21s - 300.43s
-   4. "from" -> 300.47s - 300.59s
-   5. "neediness" -> 300.69s - 301.15s
-   6. "and" -> 301.23s - 301.31s
-   7. "insecurity," -> 301.39s - 302.01s
-   8. "she" -> 302.29s - 302.41s
-   9. "feels" -> 302.47s - 302.71s
-  10. "that" -> 302.77s - 302.89s
-  11. "too." -> 302.97s - 303.19s
+   1. "When" -> 320.07s - 320.18s
+   2. "you" -> 320.22s - 320.32s
+   3. "text" -> 320.38s - 320.64s
+   4. "from" -> 320.68s - 320.80s
+   5. "neediness" -> 320.90s - 321.40s
+   6. "and" -> 321.46s - 321.54s
+   7. "insecurity," -> 321.66s - 322.32s
+   8. "she" -> 322.74s - 322.86s
+   9. "feels" -> 322.92s - 323.16s
+  10. "that" -> 323.20s - 323.34s
+  11. "too." -> 323.42s - 323.64s
 
 --------------------------------------------------
 
-SEGMENT 76: [303.73s - 305.98s]
+SEGMENT 80: [324.10s - 326.89s]
 Text: "The words matter less than the energy behind them."
 Word-level timestamps:
-   1. "The" -> 303.73s - 303.83s
-   2. "words" -> 303.89s - 304.11s
-   3. "matter" -> 304.17s - 304.49s
-   4. "less" -> 304.55s - 304.75s
-   5. "than" -> 304.79s - 304.89s
-   6. "the" -> 304.93s - 304.99s
-   7. "energy" -> 305.09s - 305.39s
-   8. "behind" -> 305.43s - 305.77s
-   9. "them." -> 305.83s - 305.98s
+   1. "The" -> 324.10s - 324.20s
+   2. "words" -> 324.24s - 324.48s
+   3. "matter" -> 324.52s - 324.94s
+   4. "less" -> 325.02s - 325.26s
+   5. "than" -> 325.30s - 325.42s
+   6. "the" -> 325.46s - 325.52s
+   7. "energy" -> 325.64s - 325.94s
+   8. "behind" -> 326.02s - 326.37s
+   9. "them." -> 326.40s - 326.89s
 
 --------------------------------------------------
 
-SEGMENT 77: [306.46s - 314.17s]
+SEGMENT 81: [326.87s - 334.60s]
 Text: "The mindset you need is to see most people as NPCs in a video game, and you're the main character creating the interesting storylines."
 Word-level timestamps:
-   1. "The" -> 306.46s - 306.54s
-   2. "mindset" -> 306.56s - 306.96s
-   3. "you" -> 306.98s - 307.08s
-   4. "need" -> 307.12s - 307.34s
-   5. "is" -> 307.40s - 307.46s
-   6. "to" -> 307.50s - 307.58s
-   7. "see" -> 307.62s - 307.78s
-   8. "most" -> 307.88s - 308.10s
-   9. "people" -> 308.16s - 308.48s
-  10. "as" -> 308.58s - 308.64s
-  11. "NPCs" -> 308.66s - 309.44s
-  12. "in" -> 309.48s - 309.54s
-  13. "a" -> 309.58s - 309.62s
-  14. "video" -> 309.66s - 309.98s
-  15. "game," -> 310.02s - 310.24s
-  16. "and" -> 310.64s - 310.70s
-  17. "you're" -> 310.72s - 310.86s
-  18. "the" -> 310.88s - 310.94s
-  19. "main" -> 311.00s - 311.22s
-  20. "character" -> 311.30s - 311.72s
-  21. "creating" -> 311.76s - 312.24s
-  22. "the" -> 312.30s - 312.36s
-  23. "interesting" -> 312.46s - 312.88s
-  24. "storylines." -> 312.94s - 314.17s
+   1. "The" -> 326.87s - 327.05s
+   2. "mindset" -> 327.09s - 327.53s
+   3. "you" -> 327.57s - 327.71s
+   4. "need" -> 327.77s - 328.01s
+   5. "is" -> 328.03s - 328.25s
+   6. "to" -> 328.29s - 328.35s
+   7. "see" -> 328.41s - 328.61s
+   8. "most" -> 328.71s - 328.95s
+   9. "people" -> 329.05s - 329.39s
+  10. "as" -> 329.47s - 329.53s
+  11. "NPCs" -> 329.57s - 330.45s
+  12. "in" -> 330.60s - 330.65s
+  13. "a" -> 330.69s - 330.71s
+  14. "video" -> 330.77s - 331.14s
+  15. "game," -> 331.18s - 331.44s
+  16. "and" -> 331.80s - 331.86s
+  17. "you're" -> 331.90s - 332.02s
+  18. "the" -> 332.04s - 332.10s
+  19. "main" -> 332.14s - 332.30s
+  20. "character" -> 332.34s - 332.70s
+  21. "creating" -> 332.74s - 333.24s
+  22. "the" -> 333.28s - 333.36s
+  23. "interesting" -> 333.52s - 333.94s
+  24. "storylines." -> 333.98s - 334.60s
 
 --------------------------------------------------
 
-SEGMENT 78: [314.19s - 317.17s]
+SEGMENT 82: [335.19s - 338.37s]
 Text: "This is going to be controversial, but I need you to understand this."
 Word-level timestamps:
-   1. "This" -> 314.19s - 314.31s
-   2. "is" -> 314.39s - 314.45s
-   3. "going" -> 314.49s - 314.65s
-   4. "to" -> 314.69s - 314.73s
-   5. "be" -> 314.77s - 314.85s
-   6. "controversial," -> 314.91s - 315.65s
-   7. "but" -> 315.91s - 316.01s
-   8. "I" -> 316.05s - 316.07s
-   9. "need" -> 316.13s - 316.25s
-  10. "you" -> 316.27s - 316.35s
-  11. "to" -> 316.39s - 316.43s
-  12. "understand" -> 316.45s - 316.95s
-  13. "this." -> 316.99s - 317.17s
+   1. "This" -> 335.19s - 335.33s
+   2. "is" -> 335.39s - 335.47s
+   3. "going" -> 335.49s - 335.63s
+   4. "to" -> 335.67s - 335.71s
+   5. "be" -> 335.75s - 335.81s
+   6. "controversial," -> 335.87s - 336.55s
+   7. "but" -> 336.89s - 336.99s
+   8. "I" -> 337.05s - 337.09s
+   9. "need" -> 337.17s - 337.35s
+  10. "you" -> 337.37s - 337.47s
+  11. "to" -> 337.51s - 337.55s
+  12. "understand" -> 337.63s - 338.13s
+  13. "this." -> 338.17s - 338.37s
 
 --------------------------------------------------
 
-SEGMENT 79: [317.19s - 323.46s]
+SEGMENT 83: [338.95s - 344.59s]
 Text: "95% of people, including most of the guys texting her, are operating on autopilot."
 Word-level timestamps:
-   1. "95%" -> 317.19s - 318.29s
-   2. "of" -> 318.57s - 318.75s
-   3. "people," -> 318.81s - 319.13s
-   4. "including" -> 319.45s - 319.86s
-   5. "most" -> 319.95s - 320.15s
-   6. "of" -> 320.19s - 320.24s
-   7. "the" -> 320.27s - 320.36s
-   8. "guys" -> 320.40s - 320.66s
-   9. "texting" -> 320.72s - 321.08s
-  10. "her," -> 321.12s - 321.24s
-  11. "are" -> 321.70s - 321.80s
-  12. "operating" -> 321.90s - 322.32s
-  13. "on" -> 322.38s - 322.44s
-  14. "autopilot." -> 322.46s - 323.46s
+   1. "95%" -> 338.95s - 339.48s
+   2. "of" -> 339.74s - 339.92s
+   3. "people," -> 340.00s - 340.36s
+   4. "including" -> 340.70s - 341.08s
+   5. "most" -> 341.16s - 341.34s
+   6. "of" -> 341.38s - 341.42s
+   7. "the" -> 341.46s - 341.54s
+   8. "guys" -> 341.58s - 341.80s
+   9. "texting" -> 341.88s - 342.26s
+  10. "her," -> 342.28s - 342.42s
+  11. "are" -> 342.86s - 342.96s
+  12. "operating" -> 343.08s - 343.46s
+  13. "on" -> 343.55s - 343.61s
+  14. "autopilot." -> 343.67s - 344.59s
 
 --------------------------------------------------
 
-SEGMENT 80: [323.44s - 329.71s]
+SEGMENT 84: [344.57s - 350.88s]
 Text: "They're sending the same predictable responses, asking the same boring questions, playing the same desperate game."
 Word-level timestamps:
-   1. "They're" -> 323.44s - 323.70s
-   2. "sending" -> 323.74s - 323.96s
-   3. "the" -> 324.00s - 324.08s
-   4. "same" -> 324.14s - 324.34s
-   5. "predictable" -> 324.40s - 324.90s
-   6. "responses," -> 324.96s - 325.54s
-   7. "asking" -> 325.98s - 326.26s
-   8. "the" -> 326.28s - 326.38s
-   9. "same" -> 326.44s - 326.64s
-  10. "boring" -> 326.70s - 327.00s
-  11. "questions," -> 327.07s - 327.51s
-  12. "playing" -> 327.89s - 328.15s
-  13. "the" -> 328.17s - 328.27s
-  14. "same" -> 328.31s - 328.51s
-  15. "desperate" -> 328.59s - 328.95s
-  16. "game." -> 329.01s - 329.71s
+   1. "They're" -> 344.57s - 344.83s
+   2. "sending" -> 344.87s - 345.15s
+   3. "the" -> 345.19s - 345.31s
+   4. "same" -> 345.37s - 345.61s
+   5. "predictable" -> 345.71s - 346.23s
+   6. "responses," -> 346.31s - 346.91s
+   7. "asking" -> 347.47s - 347.75s
+   8. "the" -> 347.79s - 347.89s
+   9. "same" -> 347.93s - 348.17s
+  10. "boring" -> 348.25s - 348.55s
+  11. "questions," -> 348.61s - 349.07s
+  12. "playing" -> 349.45s - 349.71s
+  13. "the" -> 349.73s - 349.83s
+  14. "same" -> 349.92s - 350.13s
+  15. "desperate" -> 350.21s - 350.60s
+  16. "game." -> 350.64s - 350.88s
 
 --------------------------------------------------
 
-SEGMENT 81: [329.73s - 336.28s]
+SEGMENT 85: [351.32s - 358.43s]
 Text: "You need to break out of the conventional social programming that says you should be nice and respectful in a way that makes you invisible."
 Word-level timestamps:
-   1. "You" -> 329.73s - 329.81s
-   2. "need" -> 329.85s - 329.97s
-   3. "to" -> 329.99s - 330.05s
-   4. "break" -> 330.09s - 330.29s
-   5. "out" -> 330.39s - 330.47s
-   6. "of" -> 330.51s - 330.55s
-   7. "the" -> 330.59s - 330.65s
-   8. "conventional" -> 330.69s - 331.27s
-   9. "social" -> 331.35s - 331.67s
-  10. "programming" -> 331.75s - 332.27s
-  11. "that" -> 332.31s - 332.43s
-  12. "says" -> 332.49s - 332.67s
-  13. "you" -> 332.71s - 332.81s
-  14. "should" -> 332.85s - 333.01s
-  15. "be" -> 333.06s - 333.15s
-  16. "nice" -> 333.25s - 333.56s
-  17. "and" -> 333.98s - 334.06s
-  18. "respectful" -> 334.16s - 334.78s
-  19. "in" -> 334.92s - 334.96s
-  20. "a" -> 335.02s - 335.04s
-  21. "way" -> 335.10s - 335.22s
-  22. "that" -> 335.28s - 335.38s
-  23. "makes" -> 335.44s - 335.62s
-  24. "you" -> 335.64s - 335.76s
-  25. "invisible." -> 335.80s - 336.28s
+   1. "You" -> 351.32s - 351.40s
+   2. "need" -> 351.44s - 351.58s
+   3. "to" -> 351.62s - 351.70s
+   4. "break" -> 351.74s - 352.00s
+   5. "out" -> 352.10s - 352.18s
+   6. "of" -> 352.24s - 352.28s
+   7. "the" -> 352.30s - 352.38s
+   8. "conventional" -> 352.42s - 353.00s
+   9. "social" -> 353.08s - 353.42s
+  10. "programming" -> 353.48s - 354.00s
+  11. "that" -> 354.04s - 354.14s
+  12. "says" -> 354.18s - 354.34s
+  13. "you" -> 354.38s - 354.48s
+  14. "should" -> 354.52s - 354.70s
+  15. "be" -> 354.74s - 354.82s
+  16. "nice" -> 354.86s - 355.32s
+  17. "and" -> 355.72s - 355.80s
+  18. "respectful" -> 355.86s - 356.48s
+  19. "in" -> 356.94s - 357.00s
+  20. "a" -> 357.04s - 357.06s
+  21. "way" -> 357.14s - 357.32s
+  22. "that" -> 357.40s - 357.50s
+  23. "makes" -> 357.56s - 357.75s
+  24. "you" -> 357.79s - 357.88s
+  25. "invisible." -> 357.94s - 358.43s
 
 --------------------------------------------------
 
-SEGMENT 82: [336.82s - 341.25s]
-Text: "Nice guys finish last in texting because nice is predictable and predictable is boring."
+SEGMENT 86: [358.93s - 363.95s]
+Text: "Nice guys finish last and texting because nice is predictable and predictable is boring."
 Word-level timestamps:
-   1. "Nice" -> 336.82s - 337.04s
-   2. "guys" -> 337.06s - 337.28s
-   3. "finish" -> 337.32s - 337.56s
-   4. "last" -> 337.62s - 337.86s
-   5. "in" -> 337.92s - 338.00s
-   6. "texting" -> 338.04s - 338.40s
-   7. "because" -> 338.52s - 338.78s
-   8. "nice" -> 338.88s - 339.12s
-   9. "is" -> 339.18s - 339.26s
-  10. "predictable" -> 339.32s - 339.82s
-  11. "and" -> 340.11s - 340.17s
-  12. "predictable" -> 340.20s - 340.71s
-  13. "is" -> 340.79s - 340.87s
-  14. "boring." -> 340.93s - 341.25s
+   1. "Nice" -> 358.93s - 359.15s
+   2. "guys" -> 359.19s - 359.41s
+   3. "finish" -> 359.49s - 359.77s
+   4. "last" -> 359.83s - 360.11s
+   5. "and" -> 360.17s - 360.25s
+   6. "texting" -> 360.31s - 360.71s
+   7. "because" -> 360.79s - 361.07s
+   8. "nice" -> 361.09s - 361.45s
+   9. "is" -> 361.51s - 361.57s
+  10. "predictable" -> 361.65s - 362.21s
+  11. "and" -> 362.63s - 362.69s
+  12. "predictable" -> 362.75s - 363.25s
+  13. "is" -> 363.45s - 363.51s
+  14. "boring." -> 363.59s - 363.95s
 
 --------------------------------------------------
 
-SEGMENT 83: [341.81s - 347.88s]
-Text: "Modern dating is like a video game where everyone else is playing on easy mode, following the same basic strategies."
+SEGMENT 87: [364.41s - 371.62s]
+Text: "Modern dating is like a video game where everyone else is playing on easy mode following the same basic strategies."
 Word-level timestamps:
-   1. "Modern" -> 341.81s - 342.11s
-   2. "dating" -> 342.13s - 342.41s
-   3. "is" -> 342.45s - 342.59s
-   4. "like" -> 342.65s - 342.75s
-   5. "a" -> 342.81s - 342.83s
-   6. "video" -> 342.87s - 343.23s
-   7. "game" -> 343.27s - 343.47s
-   8. "where" -> 343.51s - 343.65s
-   9. "everyone" -> 343.73s - 344.05s
-  10. "else" -> 344.11s - 344.27s
-  11. "is" -> 344.35s - 344.41s
-  12. "playing" -> 344.49s - 344.79s
-  13. "on" -> 344.87s - 344.93s
-  14. "easy" -> 345.09s - 345.31s
-  15. "mode," -> 345.37s - 345.63s
-  16. "following" -> 346.07s - 346.44s
-  17. "the" -> 346.48s - 346.57s
-  18. "same" -> 346.62s - 346.84s
-  19. "basic" -> 346.92s - 347.28s
-  20. "strategies." -> 347.32s - 347.88s
+   1. "Modern" -> 364.41s - 364.69s
+   2. "dating" -> 364.73s - 365.01s
+   3. "is" -> 365.13s - 365.19s
+   4. "like" -> 365.25s - 365.37s
+   5. "a" -> 365.43s - 365.45s
+   6. "video" -> 365.53s - 365.92s
+   7. "game" -> 365.98s - 366.19s
+   8. "where" -> 366.24s - 366.39s
+   9. "everyone" -> 366.62s - 367.00s
+  10. "else" -> 367.08s - 367.26s
+  11. "is" -> 367.40s - 367.46s
+  12. "playing" -> 367.56s - 367.86s
+  13. "on" -> 368.08s - 368.14s
+  14. "easy" -> 368.18s - 368.62s
+  15. "mode" -> 368.70s - 368.98s
+  16. "following" -> 369.42s - 369.78s
+  17. "the" -> 369.82s - 369.92s
+  18. "same" -> 369.98s - 370.20s
+  19. "basic" -> 370.28s - 370.62s
+  20. "strategies." -> 370.64s - 371.62s
 
 --------------------------------------------------
 
-SEGMENT 84: [348.44s - 351.74s]
+SEGMENT 88: [371.60s - 375.12s]
 Text: "But you're about to start playing on expert mode with cheat codes."
 Word-level timestamps:
-   1. "But" -> 348.44s - 348.50s
-   2. "you're" -> 348.54s - 348.70s
-   3. "about" -> 348.74s - 348.90s
-   4. "to" -> 348.94s - 349.02s
-   5. "start" -> 349.06s - 349.28s
-   6. "playing" -> 349.32s - 349.66s
-   7. "on" -> 349.74s - 349.80s
-   8. "expert" -> 349.90s - 350.20s
-   9. "mode" -> 350.26s - 350.48s
-  10. "with" -> 350.52s - 350.62s
-  11. "cheat" -> 350.70s - 350.96s
-  12. "codes." -> 351.00s - 351.74s
+   1. "But" -> 371.60s - 371.76s
+   2. "you're" -> 371.80s - 371.92s
+   3. "about" -> 371.96s - 372.12s
+   4. "to" -> 372.14s - 372.22s
+   5. "start" -> 372.26s - 372.46s
+   6. "playing" -> 372.52s - 372.80s
+   7. "on" -> 372.88s - 372.94s
+   8. "expert" -> 372.98s - 373.48s
+   9. "mode" -> 373.54s - 373.74s
+  10. "with" -> 373.78s - 373.90s
+  11. "cheat" -> 374.00s - 374.24s
+  12. "codes." -> 374.28s - 375.12s
 
 --------------------------------------------------
 
-SEGMENT 85: [351.72s - 358.95s]
+SEGMENT 89: [375.14s - 382.47s]
 Text: "While other guys are sending paragraph-long confessions about their feelings, you're sending one-liners that make her screenshot and send to her friends."
 Word-level timestamps:
-   1. "While" -> 351.72s - 351.98s
-   2. "other" -> 352.06s - 352.22s
-   3. "guys" -> 352.28s - 352.52s
-   4. "are" -> 352.56s - 352.67s
-   5. "sending" -> 352.70s - 352.96s
-   6. "paragraph-long" -> 353.06s - 353.85s
-   7. "confessions" -> 353.89s - 354.43s
-   8. "about" -> 354.47s - 354.65s
-   9. "their" -> 354.69s - 354.85s
-  10. "feelings," -> 354.89s - 355.29s
-  11. "you're" -> 355.65s - 355.81s
-  12. "sending" -> 355.85s - 356.11s
-  13. "one-liners" -> 356.21s - 356.71s
-  14. "that" -> 356.73s - 356.89s
-  15. "make" -> 356.95s - 357.09s
-  16. "her" -> 357.13s - 357.23s
-  17. "screenshot" -> 357.31s - 357.85s
-  18. "and" -> 357.97s - 358.05s
-  19. "send" -> 358.11s - 358.29s
-  20. "to" -> 358.31s - 358.35s
-  21. "her" -> 358.41s - 358.51s
-  22. "friends." -> 358.60s - 358.95s
+   1. "While" -> 375.14s - 375.31s
+   2. "other" -> 375.38s - 375.52s
+   3. "guys" -> 375.58s - 375.83s
+   4. "are" -> 375.89s - 375.97s
+   5. "sending" -> 376.03s - 376.31s
+   6. "paragraph-long" -> 376.41s - 377.17s
+   7. "confessions" -> 377.23s - 377.73s
+   8. "about" -> 377.79s - 377.97s
+   9. "their" -> 377.99s - 378.15s
+  10. "feelings," -> 378.21s - 378.61s
+  11. "you're" -> 379.01s - 379.17s
+  12. "sending" -> 379.21s - 379.49s
+  13. "one-liners" -> 379.61s - 380.07s
+  14. "that" -> 380.13s - 380.23s
+  15. "make" -> 380.31s - 380.45s
+  16. "her" -> 380.49s - 380.59s
+  17. "screenshot" -> 380.65s - 381.25s
+  18. "and" -> 381.53s - 381.61s
+  19. "send" -> 381.69s - 381.87s
+  20. "to" -> 381.89s - 381.93s
+  21. "her" -> 381.99s - 382.09s
+  22. "friends." -> 382.15s - 382.47s
 
 --------------------------------------------------
 
-SEGMENT 86: [359.56s - 363.96s]
-Text: "The uncomfortable truth is that attention is the new currency and most guys are broke."
+SEGMENT 90: [383.03s - 387.84s]
+Text: "The uncomfortable truth is that attention is the new currency, and most guys are broke."
 Word-level timestamps:
-   1. "The" -> 359.56s - 359.64s
-   2. "uncomfortable" -> 359.70s - 360.36s
-   3. "truth" -> 360.44s - 360.72s
-   4. "is" -> 360.80s - 360.86s
-   5. "that" -> 360.90s - 361.00s
-   6. "attention" -> 361.06s - 361.48s
-   7. "is" -> 361.54s - 361.60s
-   8. "the" -> 361.64s - 361.72s
-   9. "new" -> 361.80s - 361.92s
-  10. "currency" -> 362.02s - 362.50s
-  11. "and" -> 362.54s - 362.92s
-  12. "most" -> 363.00s - 363.22s
-  13. "guys" -> 363.28s - 363.48s
-  14. "are" -> 363.54s - 363.62s
-  15. "broke." -> 363.66s - 363.96s
+   1. "The" -> 383.03s - 383.13s
+   2. "uncomfortable" -> 383.25s - 383.81s
+   3. "truth" -> 383.89s - 384.19s
+   4. "is" -> 384.39s - 384.45s
+   5. "that" -> 384.49s - 384.61s
+   6. "attention" -> 384.67s - 385.19s
+   7. "is" -> 385.35s - 385.43s
+   8. "the" -> 385.47s - 385.55s
+   9. "new" -> 385.65s - 385.79s
+  10. "currency," -> 385.89s - 386.38s
+  11. "and" -> 386.80s - 386.88s
+  12. "most" -> 386.94s - 387.13s
+  13. "guys" -> 387.20s - 387.42s
+  14. "are" -> 387.48s - 387.54s
+  15. "broke." -> 387.58s - 387.84s
 
 --------------------------------------------------
 
-SEGMENT 87: [364.46s - 365.61s]
+SEGMENT 91: [388.32s - 389.52s]
 Text: "You're about to become wealthy."
 Word-level timestamps:
-   1. "You're" -> 364.46s - 364.62s
-   2. "about" -> 364.67s - 364.81s
-   3. "to" -> 364.85s - 364.89s
-   4. "become" -> 364.93s - 365.19s
-   5. "wealthy." -> 365.27s - 365.61s
+   1. "You're" -> 388.32s - 388.48s
+   2. "about" -> 388.52s - 388.68s
+   3. "to" -> 388.72s - 388.78s
+   4. "become" -> 388.84s - 389.10s
+   5. "wealthy." -> 389.16s - 389.52s
 
 --------------------------------------------------
 
-SEGMENT 88: [366.11s - 370.07s]
+SEGMENT 92: [389.96s - 394.02s]
 Text: "You don't become a texting master by playing it safe and sending boring messages."
 Word-level timestamps:
-   1. "You" -> 366.11s - 366.21s
-   2. "don't" -> 366.23s - 366.37s
-   3. "become" -> 366.41s - 366.65s
-   4. "a" -> 366.71s - 366.73s
-   5. "texting" -> 366.79s - 367.17s
-   6. "master" -> 367.23s - 367.59s
-   7. "by" -> 367.63s - 367.75s
-   8. "playing" -> 367.83s - 368.11s
-   9. "it" -> 368.15s - 368.23s
-  10. "safe" -> 368.31s - 368.61s
-  11. "and" -> 368.81s - 368.87s
-  12. "sending" -> 368.95s - 369.23s
-  13. "boring" -> 369.29s - 369.57s
-  14. "messages." -> 369.63s - 370.07s
+   1. "You" -> 389.96s - 390.06s
+   2. "don't" -> 390.10s - 390.24s
+   3. "become" -> 390.28s - 390.52s
+   4. "a" -> 390.58s - 390.60s
+   5. "texting" -> 390.68s - 391.08s
+   6. "master" -> 391.12s - 391.46s
+   7. "by" -> 391.50s - 391.62s
+   8. "playing" -> 391.70s - 391.96s
+   9. "it" -> 392.02s - 392.08s
+  10. "safe" -> 392.18s - 392.46s
+  11. "and" -> 392.72s - 392.80s
+  12. "sending" -> 392.90s - 393.18s
+  13. "boring" -> 393.24s - 393.52s
+  14. "messages." -> 393.58s - 394.02s
 
 --------------------------------------------------
 
-SEGMENT 89: [370.65s - 377.43s]
+SEGMENT 93: [394.56s - 401.61s]
 Text: "You become a texting master by embracing the risk of being polarizing, interesting, and unapologetically yourself."
 Word-level timestamps:
-   1. "You" -> 370.65s - 370.78s
-   2. "become" -> 370.82s - 371.06s
-   3. "a" -> 371.12s - 371.14s
-   4. "texting" -> 371.20s - 371.58s
-   5. "master" -> 371.64s - 372.00s
-   6. "by" -> 372.04s - 372.18s
-   7. "embracing" -> 372.24s - 372.74s
-   8. "the" -> 372.78s - 372.86s
-   9. "risk" -> 372.94s - 373.18s
-  10. "of" -> 373.24s - 373.28s
-  11. "being" -> 373.34s - 373.54s
-  12. "polarizing," -> 373.62s - 374.30s
-  13. "interesting," -> 374.70s - 375.18s
-  14. "and" -> 375.54s - 375.62s
-  15. "unapologetically" -> 375.68s - 376.50s
-  16. "yourself." -> 376.52s - 377.43s
+   1. "You" -> 394.56s - 394.68s
+   2. "become" -> 394.72s - 395.00s
+   3. "a" -> 395.06s - 395.08s
+   4. "texting" -> 395.16s - 395.58s
+   5. "master" -> 395.64s - 396.00s
+   6. "by" -> 396.08s - 396.22s
+   7. "embracing" -> 396.30s - 396.84s
+   8. "the" -> 396.90s - 396.98s
+   9. "risk" -> 397.04s - 397.28s
+  10. "of" -> 397.34s - 397.38s
+  11. "being" -> 397.46s - 397.67s
+  12. "polarizing," -> 397.75s - 398.43s
+  13. "interesting," -> 398.87s - 399.37s
+  14. "and" -> 399.71s - 399.79s
+  15. "unapologetically" -> 399.93s - 400.69s
+  16. "yourself." -> 400.73s - 401.61s
 
 --------------------------------------------------
 
-SEGMENT 90: [377.41s - 379.47s]
+SEGMENT 94: [401.59s - 403.79s]
 Text: "I want you to remember this for the rest of your life."
 Word-level timestamps:
-   1. "I" -> 377.41s - 377.55s
-   2. "want" -> 377.61s - 377.71s
-   3. "you" -> 377.73s - 377.81s
-   4. "to" -> 377.85s - 377.91s
-   5. "remember" -> 377.97s - 378.27s
-   6. "this" -> 378.31s - 378.45s
-   7. "for" -> 378.47s - 378.57s
-   8. "the" -> 378.59s - 378.67s
-   9. "rest" -> 378.73s - 378.93s
-  10. "of" -> 378.97s - 379.01s
-  11. "your" -> 379.03s - 379.15s
-  12. "life." -> 379.21s - 379.47s
+   1. "I" -> 401.59s - 401.73s
+   2. "want" -> 401.77s - 401.91s
+   3. "you" -> 401.93s - 402.05s
+   4. "to" -> 402.09s - 402.19s
+   5. "remember" -> 402.25s - 402.59s
+   6. "this" -> 402.65s - 402.79s
+   7. "for" -> 402.85s - 402.93s
+   8. "the" -> 402.97s - 403.03s
+   9. "rest" -> 403.09s - 403.27s
+  10. "of" -> 403.31s - 403.35s
+  11. "your" -> 403.39s - 403.51s
+  12. "life." -> 403.57s - 403.79s
 
 --------------------------------------------------
 
-SEGMENT 91: [379.99s - 382.86s]
+SEGMENT 95: [404.43s - 407.60s]
 Text: "Every time you reach for your phone to text her, you have a choice."
 Word-level timestamps:
-   1. "Every" -> 379.99s - 380.15s
-   2. "time" -> 380.19s - 380.35s
-   3. "you" -> 380.39s - 380.49s
-   4. "reach" -> 380.55s - 380.73s
-   5. "for" -> 380.77s - 380.85s
-   6. "your" -> 380.89s - 380.99s
-   7. "phone" -> 381.06s - 381.27s
-   8. "to" -> 381.31s - 381.39s
-   9. "text" -> 381.42s - 381.64s
-  10. "her," -> 381.68s - 381.78s
-  11. "you" -> 382.16s - 382.24s
-  12. "have" -> 382.28s - 382.38s
-  13. "a" -> 382.42s - 382.44s
-  14. "choice." -> 382.52s - 382.86s
+   1. "Every" -> 404.43s - 404.61s
+   2. "time" -> 404.65s - 404.86s
+   3. "you" -> 404.88s - 405.01s
+   4. "reach" -> 405.07s - 405.24s
+   5. "for" -> 405.28s - 405.36s
+   6. "your" -> 405.40s - 405.52s
+   7. "phone" -> 405.58s - 405.78s
+   8. "to" -> 405.82s - 405.92s
+   9. "text" -> 405.94s - 406.20s
+  10. "her," -> 406.24s - 406.38s
+  11. "you" -> 406.82s - 406.92s
+  12. "have" -> 406.98s - 407.10s
+  13. "a" -> 407.12s - 407.16s
+  14. "choice." -> 407.26s - 407.60s
 
 --------------------------------------------------
 
-SEGMENT 92: [383.46s - 388.51s]
+SEGMENT 96: [408.20s - 413.77s]
 Text: "You can either be another forgettable guy in her DMs, or you can be the guy who makes her day more interesting."
 Word-level timestamps:
-   1. "You" -> 383.46s - 383.54s
-   2. "can" -> 383.58s - 383.68s
-   3. "either" -> 383.70s - 383.90s
-   4. "be" -> 383.96s - 384.04s
-   5. "another" -> 384.10s - 384.38s
-   6. "forgettable" -> 384.44s - 384.88s
-   7. "guy" -> 384.96s - 385.16s
-   8. "in" -> 385.20s - 385.26s
-   9. "her" -> 385.30s - 385.40s
-  10. "DMs," -> 385.44s - 385.87s
-  11. "or" -> 386.31s - 386.37s
-  12. "you" -> 386.41s - 386.49s
-  13. "can" -> 386.53s - 386.61s
-  14. "be" -> 386.65s - 386.73s
-  15. "the" -> 386.75s - 386.83s
-  16. "guy" -> 386.89s - 387.09s
-  17. "who" -> 387.13s - 387.21s
-  18. "makes" -> 387.25s - 387.43s
-  19. "her" -> 387.47s - 387.57s
-  20. "day" -> 387.61s - 387.77s
-  21. "more" -> 387.81s - 387.97s
-  22. "interesting." -> 388.05s - 388.51s
+   1. "You" -> 408.20s - 408.30s
+   2. "can" -> 408.32s - 408.44s
+   3. "either" -> 408.52s - 408.72s
+   4. "be" -> 408.76s - 408.86s
+   5. "another" -> 408.94s - 409.24s
+   6. "forgettable" -> 409.32s - 409.85s
+   7. "guy" -> 409.91s - 410.19s
+   8. "in" -> 410.23s - 410.27s
+   9. "her" -> 410.33s - 410.43s
+  10. "DMs," -> 410.47s - 410.95s
+  11. "or" -> 411.45s - 411.51s
+  12. "you" -> 411.55s - 411.63s
+  13. "can" -> 411.65s - 411.75s
+  14. "be" -> 411.79s - 411.87s
+  15. "the" -> 411.91s - 411.97s
+  16. "guy" -> 412.03s - 412.25s
+  17. "who" -> 412.31s - 412.41s
+  18. "makes" -> 412.47s - 412.65s
+  19. "her" -> 412.69s - 412.79s
+  20. "day" -> 412.83s - 413.03s
+  21. "more" -> 413.09s - 413.23s
+  22. "interesting." -> 413.31s - 413.77s
 
 --------------------------------------------------
 
-SEGMENT 93: [389.03s - 395.69s]
+SEGMENT 97: [414.24s - 421.79s]
 Text: "Starting today, I want you to adopt the identity of someone whose texts are so engaging that women look forward to hearing from you."
 Word-level timestamps:
-   1. "Starting" -> 389.03s - 389.27s
-   2. "today," -> 389.31s - 389.57s
-   3. "I" -> 389.59s - 389.61s
-   4. "want" -> 390.11s - 390.23s
-   5. "you" -> 390.27s - 390.35s
-   6. "to" -> 390.41s - 390.47s
-   7. "adopt" -> 390.53s - 390.81s
-   8. "the" -> 390.86s - 390.95s
-   9. "identity" -> 391.07s - 391.54s
-  10. "of" -> 391.58s - 391.64s
-  11. "someone" -> 391.70s - 391.98s
-  12. "whose" -> 392.02s - 392.16s
-  13. "texts" -> 392.22s - 392.50s
-  14. "are" -> 392.58s - 392.66s
-  15. "so" -> 392.74s - 392.92s
-  16. "engaging" -> 393.00s - 393.46s
-  17. "that" -> 393.50s - 393.62s
-  18. "women" -> 393.68s - 393.90s
-  19. "look" -> 393.94s - 394.12s
-  20. "forward" -> 394.20s - 394.56s
-  21. "to" -> 394.60s - 394.66s
-  22. "hearing" -> 394.70s - 394.94s
-  23. "from" -> 395.00s - 395.12s
-  24. "you." -> 395.16s - 395.69s
+   1. "Starting" -> 414.24s - 414.54s
+   2. "today," -> 414.58s - 414.84s
+   3. "I" -> 414.86s - 414.88s
+   4. "want" -> 415.42s - 415.56s
+   5. "you" -> 415.60s - 415.72s
+   6. "to" -> 415.76s - 415.86s
+   7. "adopt" -> 415.94s - 416.30s
+   8. "the" -> 416.34s - 416.50s
+   9. "identity" -> 416.60s - 417.10s
+  10. "of" -> 417.16s - 417.20s
+  11. "someone" -> 417.30s - 417.62s
+  12. "whose" -> 417.66s - 417.86s
+  13. "texts" -> 417.94s - 418.32s
+  14. "are" -> 418.44s - 418.52s
+  15. "so" -> 418.62s - 418.82s
+  16. "engaging" -> 418.93s - 419.43s
+  17. "that" -> 419.49s - 419.59s
+  18. "women" -> 419.63s - 419.97s
+  19. "look" -> 420.01s - 420.21s
+  20. "forward" -> 420.29s - 420.63s
+  21. "to" -> 420.67s - 420.73s
+  22. "hearing" -> 420.79s - 421.05s
+  23. "from" -> 421.11s - 421.25s
+  24. "you." -> 421.29s - 421.79s
 
 --------------------------------------------------
 
-SEGMENT 94: [395.67s - 400.37s]
+SEGMENT 98: [421.77s - 427.32s]
 Text: "Not because you're desperate for their attention, but because you're genuinely entertaining and unpredictable."
 Word-level timestamps:
-   1. "Not" -> 395.67s - 395.90s
-   2. "because" -> 395.95s - 396.19s
-   3. "you're" -> 396.21s - 396.35s
-   4. "desperate" -> 396.39s - 396.73s
-   5. "for" -> 396.75s - 396.85s
-   6. "their" -> 396.87s - 397.01s
-   7. "attention," -> 397.05s - 397.47s
-   8. "but" -> 397.87s - 397.97s
-   9. "because" -> 398.03s - 398.27s
-  10. "you're" -> 398.29s - 398.45s
-  11. "genuinely" -> 398.47s - 398.95s
-  12. "entertaining" -> 399.03s - 399.55s
-  13. "and" -> 399.63s - 399.71s
-  14. "unpredictable." -> 399.79s - 400.37s
+   1. "Not" -> 421.77s - 421.99s
+   2. "because" -> 422.03s - 422.33s
+   3. "you're" -> 422.35s - 422.53s
+   4. "desperate" -> 422.59s - 422.99s
+   5. "for" -> 423.01s - 423.09s
+   6. "their" -> 423.13s - 423.27s
+   7. "attention," -> 423.31s - 423.71s
+   8. "but" -> 424.15s - 424.25s
+   9. "because" -> 424.31s - 424.57s
+  10. "you're" -> 424.62s - 424.81s
+  11. "genuinely" -> 424.89s - 425.42s
+  12. "entertaining" -> 425.56s - 426.18s
+  13. "and" -> 426.20s - 426.52s
+  14. "unpredictable." -> 426.68s - 427.32s
 
 --------------------------------------------------
 
-SEGMENT 95: [400.88s - 401.66s]
+SEGMENT 99: [427.80s - 428.62s]
 Text: "Here's your challenge."
 Word-level timestamps:
-   1. "Here's" -> 400.88s - 401.06s
-   2. "your" -> 401.08s - 401.22s
-   3. "challenge." -> 401.24s - 401.66s
+   1. "Here's" -> 427.80s - 428.00s
+   2. "your" -> 428.02s - 428.16s
+   3. "challenge." -> 428.20s - 428.62s
 
 --------------------------------------------------
 
-SEGMENT 96: [402.06s - 406.00s]
-Text: "For the next seven days, every text you send must pass the screenshot test."
+SEGMENT 100: [429.04s - 433.53s]
+Text: "For the next seven days, every text you send must pass this screenshot test."
 Word-level timestamps:
-   1. "For" -> 402.06s - 402.16s
-   2. "the" -> 402.18s - 402.26s
-   3. "next" -> 402.30s - 402.44s
-   4. "seven" -> 402.50s - 402.76s
-   5. "days," -> 402.80s - 403.04s
-   6. "every" -> 403.58s - 403.76s
-   7. "text" -> 403.80s - 404.02s
-   8. "you" -> 404.06s - 404.18s
-   9. "send" -> 404.22s - 404.40s
-  10. "must" -> 404.46s - 404.60s
-  11. "pass" -> 404.68s - 404.92s
-  12. "the" -> 404.98s - 405.10s
-  13. "screenshot" -> 405.14s - 405.67s
-  14. "test." -> 405.73s - 406.00s
+   1. "For" -> 429.04s - 429.12s
+   2. "the" -> 429.16s - 429.22s
+   3. "next" -> 429.28s - 429.46s
+   4. "seven" -> 429.52s - 429.78s
+   5. "days," -> 429.82s - 430.06s
+   6. "every" -> 430.60s - 430.80s
+   7. "text" -> 430.86s - 431.12s
+   8. "you" -> 431.16s - 431.28s
+   9. "send" -> 431.35s - 431.58s
+  10. "must" -> 431.62s - 431.93s
+  11. "pass" -> 432.00s - 432.33s
+  12. "this" -> 432.39s - 432.53s
+  13. "screenshot" -> 432.59s - 433.15s
+  14. "test." -> 433.19s - 433.53s
 
 --------------------------------------------------
 
-SEGMENT 97: [406.31s - 409.49s]
+SEGMENT 101: [433.95s - 437.19s]
 Text: "Would this be interesting enough for her to screenshot and show her friends?"
 Word-level timestamps:
-   1. "Would" -> 406.31s - 406.45s
-   2. "this" -> 406.47s - 406.57s
-   3. "be" -> 406.63s - 406.73s
-   4. "interesting" -> 406.85s - 407.27s
-   5. "enough" -> 407.33s - 407.53s
-   6. "for" -> 407.57s - 407.67s
-   7. "her" -> 407.71s - 407.79s
-   8. "to" -> 407.83s - 407.91s
-   9. "screenshot" -> 407.95s - 408.51s
-  10. "and" -> 408.67s - 408.75s
-  11. "show" -> 408.81s - 408.97s
-  12. "her" -> 409.01s - 409.11s
-  13. "friends?" -> 409.19s - 409.49s
+   1. "Would" -> 433.95s - 434.09s
+   2. "this" -> 434.11s - 434.25s
+   3. "be" -> 434.29s - 434.41s
+   4. "interesting" -> 434.53s - 434.95s
+   5. "enough" -> 435.01s - 435.23s
+   6. "for" -> 435.29s - 435.39s
+   7. "her" -> 435.43s - 435.53s
+   8. "to" -> 435.57s - 435.65s
+   9. "screenshot" -> 435.69s - 436.25s
+  10. "and" -> 436.45s - 436.53s
+  11. "show" -> 436.57s - 436.73s
+  12. "her" -> 436.77s - 436.87s
+  13. "friends?" -> 436.93s - 437.19s
 
 --------------------------------------------------
 
-SEGMENT 98: [410.09s - 411.28s]
+SEGMENT 102: [437.77s - 438.81s]
 Text: "If not, rewrite it."
 Word-level timestamps:
-   1. "If" -> 410.09s - 410.17s
-   2. "not," -> 410.25s - 410.45s
-   3. "rewrite" -> 410.89s - 411.18s
-   4. "it." -> 411.22s - 411.28s
+   1. "If" -> 437.77s - 437.85s
+   2. "not," -> 437.91s - 438.11s
+   3. "rewrite" -> 438.41s - 438.71s
+   4. "it." -> 438.75s - 438.81s
 
 --------------------------------------------------
 
-SEGMENT 99: [411.78s - 415.88s]
+SEGMENT 103: [439.28s - 443.76s]
 Text: "You become dangerous when you realize that the power was always in your hands."
 Word-level timestamps:
-   1. "You" -> 411.78s - 411.90s
-   2. "become" -> 411.92s - 412.20s
-   3. "dangerous" -> 412.28s - 412.72s
-   4. "when" -> 412.76s - 412.86s
-   5. "you" -> 412.90s - 413.02s
-   6. "realize" -> 413.08s - 413.50s
-   7. "that" -> 413.56s - 413.66s
-   8. "the" -> 413.68s - 413.76s
-   9. "power" -> 413.84s - 414.14s
-  10. "was" -> 414.18s - 414.30s
-  11. "always" -> 414.46s - 414.78s
-  12. "in" -> 414.84s - 414.88s
-  13. "your" -> 414.90s - 415.04s
-  14. "hands." -> 415.10s - 415.88s
+   1. "You" -> 439.28s - 439.38s
+   2. "become" -> 439.44s - 439.74s
+   3. "dangerous" -> 439.76s - 440.36s
+   4. "when" -> 440.40s - 440.52s
+   5. "you" -> 440.54s - 440.66s
+   6. "realize" -> 440.70s - 441.20s
+   7. "that" -> 441.24s - 441.34s
+   8. "the" -> 441.38s - 441.46s
+   9. "power" -> 441.52s - 441.86s
+  10. "was" -> 441.94s - 442.06s
+  11. "always" -> 442.08s - 442.60s
+  12. "in" -> 442.68s - 442.72s
+  13. "your" -> 442.76s - 442.90s
+  14. "hands." -> 442.96s - 443.76s
 
 --------------------------------------------------
 
-SEGMENT 100: [415.87s - 421.25s]
+SEGMENT 104: [443.74s - 449.94s]
 Text: "The moment you stop needing her validation through text, you become the kind of man she can't stop thinking about."
 Word-level timestamps:
-   1. "The" -> 415.87s - 416.05s
-   2. "moment" -> 416.08s - 416.33s
-   3. "you" -> 416.35s - 416.47s
-   4. "stop" -> 416.49s - 416.73s
-   5. "needing" -> 416.79s - 417.03s
-   6. "her" -> 417.09s - 417.17s
-   7. "validation" -> 417.21s - 417.79s
-   8. "through" -> 417.83s - 418.01s
-   9. "text," -> 418.07s - 418.41s
-  10. "you" -> 418.73s - 418.83s
-  11. "become" -> 418.87s - 419.11s
-  12. "the" -> 419.15s - 419.23s
-  13. "kind" -> 419.27s - 419.47s
-  14. "of" -> 419.51s - 419.55s
-  15. "man" -> 419.61s - 419.83s
-  16. "she" -> 419.87s - 420.05s
-  17. "can't" -> 420.13s - 420.35s
-  18. "stop" -> 420.39s - 420.63s
-  19. "thinking" -> 420.67s - 420.95s
-  20. "about." -> 421.01s - 421.25s
+   1. "The" -> 443.74s - 443.92s
+   2. "moment" -> 443.98s - 444.22s
+   3. "you" -> 444.26s - 444.40s
+   4. "stop" -> 444.44s - 444.75s
+   5. "needing" -> 444.79s - 445.13s
+   6. "her" -> 445.19s - 445.27s
+   7. "validation" -> 445.33s - 445.93s
+   8. "through" -> 445.97s - 446.15s
+   9. "text," -> 446.23s - 446.61s
+  10. "you" -> 447.03s - 447.13s
+  11. "become" -> 447.17s - 447.43s
+  12. "the" -> 447.45s - 447.55s
+  13. "kind" -> 447.59s - 447.81s
+  14. "of" -> 447.85s - 447.89s
+  15. "man" -> 447.93s - 448.29s
+  16. "she" -> 448.33s - 448.60s
+  17. "can't" -> 448.68s - 448.94s
+  18. "stop" -> 449.00s - 449.24s
+  19. "thinking" -> 449.28s - 449.62s
+  20. "about." -> 449.70s - 449.94s
 
 --------------------------------------------------
 
-SEGMENT 101: [421.77s - 425.38s]
+SEGMENT 105: [450.46s - 454.73s]
 Text: "The world feels this energy shift, and women are naturally drawn to it."
 Word-level timestamps:
-   1. "The" -> 421.77s - 421.87s
-   2. "world" -> 421.91s - 422.17s
-   3. "feels" -> 422.23s - 422.45s
-   4. "this" -> 422.51s - 422.63s
-   5. "energy" -> 422.69s - 422.97s
-   6. "shift," -> 423.03s - 423.33s
-   7. "and" -> 423.61s - 423.67s
-   8. "women" -> 423.77s - 424.01s
-   9. "are" -> 424.15s - 424.25s
-  10. "naturally" -> 424.33s - 424.80s
-  11. "drawn" -> 424.86s - 425.12s
-  12. "to" -> 425.16s - 425.26s
-  13. "it." -> 425.32s - 425.38s
+   1. "The" -> 450.46s - 450.54s
+   2. "world" -> 450.60s - 450.92s
+   3. "feels" -> 451.02s - 451.30s
+   4. "this" -> 451.32s - 451.52s
+   5. "energy" -> 451.54s - 452.06s
+   6. "shift," -> 452.14s - 452.85s
+   7. "and" -> 452.87s - 452.97s
+   8. "women" -> 452.99s - 453.33s
+   9. "are" -> 453.35s - 453.61s
+  10. "naturally" -> 453.69s - 454.11s
+  11. "drawn" -> 454.17s - 454.41s
+  12. "to" -> 454.45s - 454.57s
+  13. "it." -> 454.65s - 454.73s
 
 --------------------------------------------------
 
-SEGMENT 102: [425.88s - 429.90s]
+SEGMENT 106: [455.21s - 459.52s]
 Text: "If you're still here watching this, I genuinely love you for taking your growth seriously."
 Word-level timestamps:
-   1. "If" -> 425.88s - 425.94s
-   2. "you're" -> 425.96s - 426.10s
-   3. "still" -> 426.14s - 426.32s
-   4. "here" -> 426.36s - 426.48s
-   5. "watching" -> 426.54s - 426.84s
-   6. "this," -> 426.88s - 427.06s
-   7. "I" -> 427.48s - 427.54s
-   8. "genuinely" -> 427.58s - 428.02s
-   9. "love" -> 428.12s - 428.30s
-  10. "you" -> 428.32s - 428.42s
-  11. "for" -> 428.46s - 428.54s
-  12. "taking" -> 428.60s - 428.86s
-  13. "your" -> 428.88s - 429.00s
-  14. "growth" -> 429.04s - 429.30s
-  15. "seriously." -> 429.36s - 429.90s
+   1. "If" -> 455.21s - 455.25s
+   2. "you're" -> 455.29s - 455.43s
+   3. "still" -> 455.45s - 455.61s
+   4. "here" -> 455.65s - 455.79s
+   5. "watching" -> 455.83s - 456.15s
+   6. "this," -> 456.19s - 456.36s
+   7. "I" -> 456.76s - 456.82s
+   8. "genuinely" -> 456.88s - 457.32s
+   9. "love" -> 457.40s - 457.58s
+  10. "you" -> 457.60s - 457.72s
+  11. "for" -> 457.76s - 457.86s
+  12. "taking" -> 457.90s - 458.16s
+  13. "your" -> 458.18s - 458.30s
+  14. "growth" -> 458.34s - 458.54s
+  15. "seriously." -> 458.60s - 459.52s
 
 --------------------------------------------------
 
-SEGMENT 103: [430.40s - 431.98s]
+SEGMENT 107: [459.50s - 460.93s]
 Text: "Look, I know this isn't easy."
 Word-level timestamps:
-   1. "Look," -> 430.40s - 430.62s
-   2. "I" -> 431.04s - 431.10s
-   3. "know" -> 431.14s - 431.24s
-   4. "this" -> 431.28s - 431.42s
-   5. "isn't" -> 431.48s - 431.64s
-   6. "easy." -> 431.72s - 431.98s
+   1. "Look," -> 459.50s - 459.72s
+   2. "I" -> 460.04s - 460.08s
+   3. "know" -> 460.10s - 460.20s
+   4. "this" -> 460.25s - 460.37s
+   5. "isn't" -> 460.43s - 460.61s
+   6. "easy." -> 460.67s - 460.93s
 
 --------------------------------------------------
 
-SEGMENT 104: [432.52s - 437.01s]
+SEGMENT 108: [461.41s - 466.08s]
 Text: "I know it feels uncomfortable to challenge everything you've been taught about how to communicate with women."
 Word-level timestamps:
-   1. "I" -> 432.52s - 432.58s
-   2. "know" -> 432.61s - 432.73s
-   3. "it" -> 432.79s - 432.85s
-   4. "feels" -> 432.88s - 433.11s
-   5. "uncomfortable" -> 433.14s - 433.85s
-   6. "to" -> 433.89s - 433.97s
-   7. "challenge" -> 434.03s - 434.41s
-   8. "everything" -> 434.47s - 434.95s
-   9. "you've" -> 434.97s - 435.13s
-  10. "been" -> 435.17s - 435.29s
-  11. "taught" -> 435.31s - 435.53s
-  12. "about" -> 435.57s - 435.75s
-  13. "how" -> 435.83s - 435.95s
-  14. "to" -> 435.99s - 436.03s
-  15. "communicate" -> 436.07s - 436.57s
-  16. "with" -> 436.61s - 436.71s
-  17. "women." -> 436.75s - 437.01s
+   1. "I" -> 461.41s - 461.45s
+   2. "know" -> 461.49s - 461.61s
+   3. "it" -> 461.67s - 461.73s
+   4. "feels" -> 461.79s - 462.03s
+   5. "uncomfortable" -> 462.07s - 462.75s
+   6. "to" -> 462.81s - 462.87s
+   7. "challenge" -> 462.93s - 463.31s
+   8. "everything" -> 463.35s - 463.91s
+   9. "you've" -> 463.95s - 464.11s
+  10. "been" -> 464.15s - 464.27s
+  11. "taught" -> 464.33s - 464.57s
+  12. "about" -> 464.61s - 464.79s
+  13. "how" -> 464.87s - 464.97s
+  14. "to" -> 465.01s - 465.06s
+  15. "communicate" -> 465.12s - 465.64s
+  16. "with" -> 465.68s - 465.78s
+  17. "women." -> 465.86s - 466.08s
 
 --------------------------------------------------
 
-SEGMENT 105: [437.47s - 441.13s]
-Text: "But that discomfort is your old identity dying, so your new one can be born."
+SEGMENT 109: [466.50s - 470.75s]
+Text: "But that discomfort is your old identity, dying so your new one can be born."
 Word-level timestamps:
-   1. "But" -> 437.47s - 437.57s
-   2. "that" -> 437.59s - 437.73s
-   3. "discomfort" -> 437.77s - 438.27s
-   4. "is" -> 438.35s - 438.41s
-   5. "your" -> 438.43s - 438.55s
-   6. "old" -> 438.67s - 438.81s
-   7. "identity" -> 438.93s - 439.35s
-   8. "dying," -> 439.41s - 439.69s
-   9. "so" -> 439.91s - 440.01s
-  10. "your" -> 440.05s - 440.17s
-  11. "new" -> 440.25s - 440.37s
-  12. "one" -> 440.47s - 440.55s
-  13. "can" -> 440.59s - 440.71s
-  14. "be" -> 440.75s - 440.83s
-  15. "born." -> 440.87s - 441.13s
+   1. "But" -> 466.50s - 466.60s
+   2. "that" -> 466.62s - 466.78s
+   3. "discomfort" -> 466.82s - 467.38s
+   4. "is" -> 467.54s - 467.60s
+   5. "your" -> 467.64s - 467.78s
+   6. "old" -> 467.94s - 468.08s
+   7. "identity," -> 468.18s - 468.68s
+   8. "dying" -> 468.88s - 469.26s
+   9. "so" -> 469.32s - 469.44s
+  10. "your" -> 469.48s - 469.60s
+  11. "new" -> 469.70s - 469.87s
+  12. "one" -> 470.00s - 470.12s
+  13. "can" -> 470.19s - 470.29s
+  14. "be" -> 470.33s - 470.41s
+  15. "born." -> 470.47s - 470.75s
 
 --------------------------------------------------
 
-SEGMENT 106: [441.63s - 442.60s]
+SEGMENT 110: [471.19s - 472.21s]
 Text: "You now have the blueprint."
 Word-level timestamps:
-   1. "You" -> 441.63s - 441.75s
-   2. "now" -> 441.80s - 441.90s
-   3. "have" -> 441.94s - 442.04s
-   4. "the" -> 442.08s - 442.14s
-   5. "blueprint." -> 442.18s - 442.60s
+   1. "You" -> 471.19s - 471.29s
+   2. "now" -> 471.35s - 471.47s
+   3. "have" -> 471.53s - 471.65s
+   4. "the" -> 471.67s - 471.73s
+   5. "blueprint." -> 471.77s - 472.21s
 
 --------------------------------------------------
 
-SEGMENT 107: [443.08s - 444.86s]
+SEGMENT 111: [472.69s - 474.01s]
 Text: "You understand the psychology."
 Word-level timestamps:
-   1. "You" -> 443.08s - 443.20s
-   2. "understand" -> 443.22s - 443.64s
-   3. "the" -> 443.68s - 443.74s
-   4. "psychology." -> 443.78s - 444.86s
+   1. "You" -> 472.69s - 472.79s
+   2. "understand" -> 472.83s - 473.23s
+   3. "the" -> 473.27s - 473.33s
+   4. "psychology." -> 473.37s - 474.01s
 
 --------------------------------------------------
 
-SEGMENT 108: [444.84s - 445.80s]
+SEGMENT 112: [474.45s - 475.76s]
 Text: "You know the techniques."
 Word-level timestamps:
-   1. "You" -> 444.84s - 445.04s
-   2. "know" -> 445.06s - 445.16s
-   3. "the" -> 445.22s - 445.28s
-   4. "techniques." -> 445.34s - 445.80s
+   1. "You" -> 474.45s - 474.53s
+   2. "know" -> 474.56s - 474.65s
+   3. "the" -> 474.69s - 474.75s
+   4. "techniques." -> 474.81s - 475.76s
 
 --------------------------------------------------
 
-SEGMENT 109: [446.40s - 449.39s]
-Text: "The only question left is, are you going to use this knowledge?"
+SEGMENT 113: [475.74s - 483.20s]
+Text: "The only question left is, are you going to use this knowledge or are you going to go back to sending the same boring text that every other guy sends?"
 Word-level timestamps:
-   1. "The" -> 446.40s - 446.48s
-   2. "only" -> 446.54s - 446.70s
-   3. "question" -> 446.78s - 447.10s
-   4. "left" -> 447.16s - 447.36s
-   5. "is," -> 447.46s - 447.58s
-   6. "are" -> 448.05s - 448.12s
-   7. "you" -> 448.17s - 448.25s
-   8. "going" -> 448.29s - 448.47s
-   9. "to" -> 448.51s - 448.55s
-  10. "use" -> 448.67s - 448.79s
-  11. "this" -> 448.83s - 448.95s
-  12. "knowledge?" -> 449.01s - 449.39s
+   1. "The" -> 475.74s - 475.94s
+   2. "only" -> 476.00s - 476.18s
+   3. "question" -> 476.22s - 476.56s
+   4. "left" -> 476.64s - 476.88s
+   5. "is," -> 477.00s - 477.12s
+   6. "are" -> 477.68s - 477.76s
+   7. "you" -> 477.78s - 477.86s
+   8. "going" -> 477.88s - 478.04s
+   9. "to" -> 478.06s - 478.12s
+  10. "use" -> 478.24s - 478.34s
+  11. "this" -> 478.40s - 478.52s
+  12. "knowledge" -> 478.60s - 478.96s
+  13. "or" -> 479.34s - 479.38s
+  14. "are" -> 479.40s - 479.48s
+  15. "you" -> 479.52s - 479.58s
+  16. "going" -> 479.62s - 479.72s
+  17. "to" -> 479.76s - 479.80s
+  18. "go" -> 479.82s - 479.96s
+  19. "back" -> 480.02s - 480.24s
+  20. "to" -> 480.28s - 480.38s
+  21. "sending" -> 480.46s - 480.74s
+  22. "the" -> 480.78s - 480.84s
+  23. "same" -> 480.92s - 481.14s
+  24. "boring" -> 481.20s - 481.52s
+  25. "text" -> 481.58s - 481.90s
+  26. "that" -> 481.96s - 482.10s
+  27. "every" -> 482.26s - 482.46s
+  28. "other" -> 482.50s - 482.66s
+  29. "guy" -> 482.70s - 482.88s
+  30. "sends?" -> 482.94s - 483.20s
 
 --------------------------------------------------
 
-SEGMENT 110: [449.83s - 453.68s]
-Text: "Or are you going to go back to sending the same boring text that every other guy sends?"
-Word-level timestamps:
-   1. "Or" -> 449.83s - 449.89s
-   2. "are" -> 449.93s - 450.01s
-   3. "you" -> 450.05s - 450.13s
-   4. "going" -> 450.17s - 450.33s
-   5. "to" -> 450.37s - 450.43s
-   6. "go" -> 450.49s - 450.61s
-   7. "back" -> 450.67s - 450.83s
-   8. "to" -> 450.87s - 450.95s
-   9. "sending" -> 451.01s - 451.25s
-  10. "the" -> 451.29s - 451.37s
-  11. "same" -> 451.41s - 451.65s
-  12. "boring" -> 451.71s - 452.05s
-  13. "text" -> 452.09s - 452.39s
-  14. "that" -> 452.43s - 452.55s
-  15. "every" -> 452.67s - 452.85s
-  16. "other" -> 452.93s - 453.09s
-  17. "guy" -> 453.13s - 453.33s
-  18. "sends?" -> 453.39s - 453.68s
-
---------------------------------------------------
-
-SEGMENT 111: [454.26s - 461.79s]
+SEGMENT 114: [483.81s - 491.59s]
 Text: "This was your wake up call about texting mastery, and I'll see you in the next video where we're going to dive even deeper into the psychology of attraction."
 Word-level timestamps:
-   1. "This" -> 454.26s - 454.38s
-   2. "was" -> 454.42s - 454.54s
-   3. "your" -> 454.56s - 454.68s
-   4. "wake" -> 454.72s - 454.88s
-   5. "up" -> 454.94s - 455.02s
-   6. "call" -> 455.08s - 455.30s
-   7. "about" -> 455.34s - 455.52s
-   8. "texting" -> 455.60s - 455.98s
-   9. "mastery," -> 456.02s - 456.56s
-  10. "and" -> 456.88s - 456.96s
-  11. "I'll" -> 457.00s - 457.14s
-  12. "see" -> 457.18s - 457.32s
-  13. "you" -> 457.34s - 457.44s
-  14. "in" -> 457.48s - 457.54s
-  15. "the" -> 457.58s - 457.64s
-  16. "next" -> 457.70s - 457.88s
-  17. "video" -> 457.94s - 458.32s
-  18. "where" -> 458.38s - 458.50s
-  19. "we're" -> 458.54s - 458.68s
-  20. "going" -> 458.72s - 458.90s
-  21. "to" -> 458.94s - 459.00s
-  22. "dive" -> 459.06s - 459.35s
-  23. "even" -> 459.37s - 459.61s
-  24. "deeper" -> 459.71s - 460.03s
-  25. "into" -> 460.11s - 460.25s
-  26. "the" -> 460.29s - 460.35s
-  27. "psychology" -> 460.39s - 461.11s
-  28. "of" -> 461.17s - 461.21s
-  29. "attraction." -> 461.27s - 461.79s
+   1. "This" -> 483.81s - 483.95s
+   2. "was" -> 484.01s - 484.13s
+   3. "your" -> 484.15s - 484.29s
+   4. "wake" -> 484.33s - 484.53s
+   5. "up" -> 484.57s - 484.67s
+   6. "call" -> 484.73s - 484.97s
+   7. "about" -> 485.03s - 485.23s
+   8. "texting" -> 485.25s - 485.73s
+   9. "mastery," -> 485.77s - 486.31s
+  10. "and" -> 486.63s - 486.71s
+  11. "I'll" -> 486.73s - 486.87s
+  12. "see" -> 486.91s - 487.07s
+  13. "you" -> 487.09s - 487.19s
+  14. "in" -> 487.23s - 487.29s
+  15. "the" -> 487.31s - 487.39s
+  16. "next" -> 487.45s - 487.63s
+  17. "video" -> 487.67s - 488.03s
+  18. "where" -> 488.07s - 488.19s
+  19. "we're" -> 488.21s - 488.33s
+  20. "going" -> 488.37s - 488.47s
+  21. "to" -> 488.49s - 488.53s
+  22. "dive" -> 488.61s - 488.93s
+  23. "even" -> 488.97s - 489.37s
+  24. "deeper" -> 489.47s - 489.79s
+  25. "into" -> 489.81s - 490.15s
+  26. "the" -> 490.19s - 490.25s
+  27. "psychology" -> 490.29s - 490.95s
+  28. "of" -> 490.99s - 491.03s
+  29. "attraction." -> 491.09s - 491.59s
 
 --------------------------------------------------
 
-SEGMENT 112: [462.29s - 464.45s]
+SEGMENT 115: [492.01s - 494.30s]
 Text: "Remember, you're not just learning to text better."
 Word-level timestamps:
-   1. "Remember," -> 462.29s - 462.65s
-   2. "you're" -> 463.03s - 463.17s
-   3. "not" -> 463.19s - 463.31s
-   4. "just" -> 463.35s - 463.49s
-   5. "learning" -> 463.55s - 463.79s
-   6. "to" -> 463.83s - 463.89s
-   7. "text" -> 463.95s - 464.17s
-   8. "better." -> 464.21s - 464.45s
+   1. "Remember," -> 492.01s - 492.36s
+   2. "you're" -> 492.83s - 492.98s
+   3. "not" -> 493.02s - 493.12s
+   4. "just" -> 493.18s - 493.36s
+   5. "learning" -> 493.38s - 493.68s
+   6. "to" -> 493.72s - 493.78s
+   7. "text" -> 493.82s - 494.04s
+   8. "better." -> 494.08s - 494.30s
 
 --------------------------------------------------
 
-SEGMENT 113: [464.96s - 471.11s]
+SEGMENT 116: [494.80s - 502.45s]
 Text: "You're learning to become the kind of man who naturally attracts high quality women through authentic confidence and genuine charisma."
 Word-level timestamps:
-   1. "You're" -> 464.96s - 465.12s
-   2. "learning" -> 465.16s - 465.42s
-   3. "to" -> 465.44s - 465.48s
-   4. "become" -> 465.54s - 465.78s
-   5. "the" -> 465.84s - 465.90s
-   6. "kind" -> 465.96s - 466.18s
-   7. "of" -> 466.22s - 466.26s
-   8. "man" -> 466.34s - 466.56s
-   9. "who" -> 466.60s - 466.72s
-  10. "naturally" -> 466.78s - 467.24s
-  11. "attracts" -> 467.34s - 467.76s
-  12. "high" -> 467.84s - 468.00s
-  13. "quality" -> 468.06s - 468.44s
-  14. "women" -> 468.50s - 468.74s
-  15. "through" -> 468.78s - 468.98s
-  16. "authentic" -> 469.04s - 469.38s
-  17. "confidence" -> 469.42s - 469.94s
-  18. "and" -> 470.11s - 470.17s
-  19. "genuine" -> 470.23s - 470.61s
-  20. "charisma." -> 470.65s - 471.11s
+   1. "You're" -> 494.80s - 494.96s
+   2. "learning" -> 495.02s - 495.30s
+   3. "to" -> 495.38s - 495.44s
+   4. "become" -> 495.50s - 495.78s
+   5. "the" -> 495.82s - 495.92s
+   6. "kind" -> 495.98s - 496.20s
+   7. "of" -> 496.26s - 496.30s
+   8. "man" -> 496.32s - 496.70s
+   9. "who" -> 496.76s - 496.88s
+  10. "naturally" -> 497.04s - 497.54s
+  11. "attracts" -> 497.62s - 498.04s
+  12. "high" -> 498.16s - 498.34s
+  13. "quality" -> 498.40s - 498.80s
+  14. "women" -> 498.86s - 499.12s
+  15. "through" -> 499.26s - 499.46s
+  16. "authentic" -> 499.50s - 500.04s
+  17. "confidence" -> 500.10s - 500.66s
+  18. "and" -> 501.02s - 501.10s
+  19. "genuine" -> 501.16s - 501.52s
+  20. "charisma." -> 501.56s - 502.45s
 
 --------------------------------------------------
 
-SEGMENT 114: [471.57s - 472.77s]
+SEGMENT 117: [502.47s - 503.57s]
 Text: "I'll see you next time."
 Word-level timestamps:
-   1. "I'll" -> 471.57s - 471.71s
-   2. "see" -> 471.75s - 471.85s
-   3. "you" -> 471.87s - 471.95s
-   4. "next" -> 472.01s - 472.15s
-   5. "time." -> 472.21s - 472.77s
+   1. "I'll" -> 502.47s - 502.59s
+   2. "see" -> 502.61s - 502.71s
+   3. "you" -> 502.75s - 502.83s
+   4. "next" -> 502.87s - 503.01s
+   5. "time." -> 503.07s - 503.57s
 
 --------------------------------------------------
 
