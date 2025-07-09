@@ -1,4 +1,4 @@
-name: WhisperX Word-Level Transcription
+name: Transcript
 
 on:
   workflow_run:
