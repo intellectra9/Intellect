@@ -2,7 +2,7 @@ name: Generate Images
 
 on:
   workflow_run:
-    workflows: ["voiceover.yml"]  # Replace with the actual name of your voiceover workflow
+    workflows: ["Voiceover"]  # Replace with the actual name of your voiceover workflow
     types:
       - completed
   workflow_dispatch:
