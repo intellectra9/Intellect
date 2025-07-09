@@ -2,7 +2,7 @@ name: Generate Sentence Level Transcription
 
 on:
   workflow_run:
-    workflows: ["transcript.yml"]  # Replace with the actual name of your transcript workflow
+    workflows: ["Transcript"]  # Replace with the actual name of your transcript workflow
     types:
       - completed
   workflow_dispatch:
