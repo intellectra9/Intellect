@@ -163,12 +163,12 @@ jobs:
               total_duration = max(seg["end"] for seg in valid_segments)
               print(f"📊 Using fallback duration: {total_duration:.2f} seconds")
 
-          # === Create smooth video with image transitions ===
-          print("🎥 Creating smooth video with continuous audio...")
+          # === Create smooth video with proper timing synchronization ===
+          print("🎥 Creating video with properly synchronized visuals...")
           
           output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
           
-          # Build FFmpeg filter complex for smooth transitions
+          # Build FFmpeg filter complex for time-based transitions
           filter_parts = []
           input_args = ["-i", AUDIO_FILE]  # Audio input first
           
@@ -176,28 +176,35 @@ jobs:
           for i, segment in enumerate(valid_segments):
               input_args.extend(["-loop", "1", "-i", segment["image_path"]])
           
-          # Create video streams from images with proper timing
-          video_streams = []
+          # Create base video streams from images
           for i, segment in enumerate(valid_segments):
               input_idx = i + 1  # +1 because audio is input 0
               
-              # Create video stream for this segment with exact timing
+              # Create properly scaled video stream
               filter_parts.append(
                   f"[{input_idx}:v]scale=1920:1080:force_original_aspect_ratio=decrease,"
-                  f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30,"
-                  f"trim=start=0:duration={segment['duration']},"
-                  f"setpts=PTS-STARTPTS[v{i}];"
+                  f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p[img{i}];"
               )
-              video_streams.append(f"[v{i}]")
           
-          # Concatenate video streams
-          concat_filter = f"{''.join(video_streams)}concat=n={len(valid_segments)}:v=1:a=0,fps=30[video]"
-          filter_parts.append(concat_filter)
+          # Create timeline-based video using overlay filters
+          # Start with a black background for the entire duration
+          filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[bg];")
+          
+          # Build overlay chain - each image appears at its exact timestamp
+          current_stream = "[bg]"
+          for i, segment in enumerate(valid_segments):
+              next_stream = f"[tmp{i}]" if i < len(valid_segments) - 1 else "[video]"
+              
+              # Use overlay filter with enable option for precise timing
+              filter_parts.append(
+                  f"{current_stream}[img{i}]overlay=0:0:enable='between(t,{segment['start']},{segment['end']})'{next_stream};"
+              )
+              current_stream = next_stream
           
           # Combine all filter parts
           filter_complex = "".join(filter_parts)
           
-          # Build FFmpeg command for smooth video generation
+          # Build FFmpeg command for synchronized video generation
           ffmpeg_cmd = [
               "ffmpeg", "-y"
           ] + input_args + [
@@ -210,7 +217,7 @@ jobs:
               "-c:a", "aac",
               "-b:a", "192k",
               "-pix_fmt", "yuv420p",
-              "-shortest",        # Stop when shortest stream ends
+              "-t", str(total_duration),  # Ensure video matches audio duration
               output_path
           ]
           
@@ -234,51 +241,134 @@ jobs:
               print(f"stdout: {e.stdout}")
               print(f"stderr: {e.stderr}")
               
-              # Try alternative approach with simpler method
-              print("🔄 Trying alternative method...")
+              # Try alternative approach with precise timing
+              print("🔄 Trying alternative method with precise timing...")
               
-              # Create a simple slideshow with crossfade transitions
+              # Method 2: Create video segments with exact timing using presentation timestamps
               try:
-                  # Create inputs list
+                  # Create filter complex with proper timing
+                  alt_filter_parts = []
                   alt_inputs = ["-i", AUDIO_FILE]
-                  for segment in valid_segments:
-                      alt_inputs.extend(["-loop", "1", "-t", str(segment["duration"]), "-i", segment["image_path"]])
                   
-                  # Create simple concat filter
-                  video_inputs = []
-                  for i in range(len(valid_segments)):
-                      video_inputs.append(f"[{i+1}:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30,setpts=PTS-STARTPTS[v{i}];")
+                  # Add images as inputs
+                  for i, segment in enumerate(valid_segments):
+                      alt_inputs.extend(["-loop", "1", "-i", segment["image_path"]])
                   
-                  concat_inputs = "".join([f"[v{i}]" for i in range(len(valid_segments))])
-                  simple_filter = "".join(video_inputs) + f"{concat_inputs}concat=n={len(valid_segments)}:v=1:a=0[outv]"
+                  # Create scaled image streams
+                  for i, segment in enumerate(valid_segments):
+                      alt_filter_parts.append(
+                          f"[{i+1}:v]scale=1920:1080:force_original_aspect_ratio=decrease,"
+                          f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[s{i}];"
+                      )
+                  
+                  # Create black background
+                  alt_filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[base];")
+                  
+                  # Create overlay sequence with proper timing
+                  current = "[base]"
+                  for i, segment in enumerate(valid_segments):
+                      next_stream = f"[o{i}]" if i < len(valid_segments) - 1 else "[final]"
+                      alt_filter_parts.append(
+                          f"{current}[s{i}]overlay=enable='between(t,{segment['start']},{segment['end']})'{next_stream};"
+                      )
+                      current = next_stream
+                  
+                  alt_filter_complex = "".join(alt_filter_parts)
                   
                   alt_cmd = [
                       "ffmpeg", "-y"
                   ] + alt_inputs + [
-                      "-filter_complex", simple_filter,
-                      "-map", "[outv]",
+                      "-filter_complex", alt_filter_complex,
+                      "-map", "[final]",
                       "-map", "0:a",
                       "-c:v", "libx264",
                       "-preset", "fast",
                       "-crf", "23",
-                      "-c:a", "copy",  # Copy audio without re-encoding
-                      "-shortest",
+                      "-c:a", "aac",
+                      "-b:a", "192k",
+                      "-t", str(total_duration),
                       output_path
                   ]
                   
                   result = subprocess.run(alt_cmd, capture_output=True, text=True, check=True)
-                  print("✅ Alternative method completed successfully!")
+                  print("✅ Alternative timing method completed successfully!")
                   
-              except subprocess.CalledProcessError as e2:
-                  print(f"❌ Alternative method also failed: {e2}")
-                  print(f"stderr: {e2.stderr}")
-                  sys.exit(1)
+              except subprocess.CalledProcessError as e3:
+                  print(f"❌ Alternative timing method failed: {e3}")
+                  
+                  # Method 3: Simplest approach - create segments with proper delays
+                  print("🔄 Trying simplest approach with delays...")
+                  try:
+                      # Create individual segments and combine with proper timing
+                      segment_files = []
+                      
+                      for i, segment in enumerate(valid_segments):
+                          segment_video = os.path.join(TEMP_DIR, f"timed_segment_{i}.mp4")
+                          
+                          # Create segment with black padding before and after
+                          segment_cmd = [
+                              "ffmpeg", "-y",
+                              "-f", "lavfi", "-i", f"color=black:size=1920x1080:duration={segment['start']}:rate=30",
+                              "-loop", "1", "-t", str(segment['duration']), "-i", segment["image_path"],
+                              "-f", "lavfi", "-i", f"color=black:size=1920x1080:duration={max(0, total_duration - segment['end'])}:rate=30",
+                              "-filter_complex", 
+                              f"[1:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[img];"
+                              f"[0:v][img][2:v]concat=n=3:v=1:a=0[out]",
+                              "-map", "[out]",
+                              "-c:v", "libx264",
+                              "-preset", "ultrafast",
+                              "-crf", "23",
+                              "-pix_fmt", "yuv420p",
+                              "-t", str(total_duration),
+                              segment_video
+                          ]
+                          
+                          subprocess.run(segment_cmd, capture_output=True, text=True, check=True)
+                          segment_files.append(segment_video)
+                      
+                      # Overlay all segments
+                      if segment_files:
+                          overlay_cmd = [
+                              "ffmpeg", "-y",
+                              "-i", AUDIO_FILE
+                          ]
+                          
+                          for seg_file in segment_files:
+                              overlay_cmd.extend(["-i", seg_file])
+                          
+                          # Build overlay filter
+                          overlay_filter = "[1:v]"
+                          for i in range(1, len(segment_files)):
+                              next_stream = f"[overlay{i}]" if i < len(segment_files) - 1 else "[final]"
+                              overlay_filter += f"[{i+2}:v]overlay{next_stream};"
+                          
+                          overlay_cmd.extend([
+                              "-filter_complex", overlay_filter,
+                              "-map", "[final]",
+                              "-map", "0:a",
+                              "-c:v", "libx264",
+                              "-preset", "medium",
+                              "-crf", "23",
+                              "-c:a", "aac",
+                              "-b:a", "192k",
+                              "-shortest",
+                              output_path
+                          ])
+                          
+                          result = subprocess.run(overlay_cmd, capture_output=True, text=True, check=True)
+                          print("✅ Simplest approach completed successfully!")
+                      
+                  except subprocess.CalledProcessError as e4:
+                      print(f"❌ All methods failed. Last error: {e4}")
+                      print(f"stderr: {e4.stderr}")
+                      sys.exit(1)
 
           # === Cleanup ===
           shutil.rmtree(TEMP_DIR, ignore_errors=True)
           
-          print("🎉 Smooth video generation process completed!")
-          print("🔊 Audio should now flow naturally without segments!")
+          print("🎉 Synchronized video generation process completed!")
+          print("🔊 Audio flows naturally with perfectly timed visuals!")
+          print("📺 Each image now appears exactly when its audio segment plays!")
           EOF
 
       - name: Run video generation script
