@@ -186,18 +186,22 @@ jobs:
                   f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p[img{i}];"
               )
           
-          # Create timeline-based video using overlay filters
-          # Start with a black background for the entire duration
+          # Create timeline-based video using overlay filters with seamless transitions
+          # Start with the first image as background (extended to cover gaps)
           filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[bg];")
           
-          # Build overlay chain - each image appears at its exact timestamp
+          # Build overlay chain - each image stays visible until next image starts
           current_stream = "[bg]"
           for i, segment in enumerate(valid_segments):
               next_stream = f"[tmp{i}]" if i < len(valid_segments) - 1 else "[video]"
               
-              # Use overlay filter with enable option for precise timing
+              # Calculate when this image should stop showing
+              # It should show until the next image starts, not just until its end time
+              next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
+              
+              # Use overlay filter with extended timing to fill gaps
               filter_parts.append(
-                  f"{current_stream}[img{i}]overlay=0:0:enable='between(t,{segment['start']},{segment['end']})'{next_stream};"
+                  f"{current_stream}[img{i}]overlay=0:0:enable='gte(t,{segment['start']})*lt(t,{next_start})'{next_stream};"
               )
               current_stream = next_stream
           
@@ -264,12 +268,17 @@ jobs:
                   # Create black background
                   alt_filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[base];")
                   
-                  # Create overlay sequence with proper timing
+                  # Create overlay sequence with seamless transitions
                   current = "[base]"
                   for i, segment in enumerate(valid_segments):
                       next_stream = f"[o{i}]" if i < len(valid_segments) - 1 else "[final]"
+                      
+                      # Calculate when this image should stop (when next image starts)
+                      next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
+                      
+                      # Each image shows from its start until the next image starts
                       alt_filter_parts.append(
-                          f"{current}[s{i}]overlay=enable='between(t,{segment['start']},{segment['end']})'{next_stream};"
+                          f"{current}[s{i}]overlay=enable='gte(t,{segment['start']})*lt(t,{next_start})'{next_stream};"
                       )
                       current = next_stream
                   
@@ -296,79 +305,77 @@ jobs:
               except subprocess.CalledProcessError as e3:
                   print(f"❌ Alternative timing method failed: {e3}")
                   
-                  # Method 3: Simplest approach - create segments with proper delays
-                  print("🔄 Trying simplest approach with delays...")
+                  # Method 3: Create a seamless video with proper image persistence
+                  print("🔄 Trying seamless transition method...")
                   try:
-                      # Create individual segments and combine with proper timing
-                      segment_files = []
+                      # Create a more sophisticated approach using timeline
+                      timeline_inputs = ["-i", AUDIO_FILE]
+                      timeline_filter = []
                       
+                      # Add all images as inputs
                       for i, segment in enumerate(valid_segments):
-                          segment_video = os.path.join(TEMP_DIR, f"timed_segment_{i}.mp4")
-                          
-                          # Create segment with black padding before and after
-                          segment_cmd = [
-                              "ffmpeg", "-y",
-                              "-f", "lavfi", "-i", f"color=black:size=1920x1080:duration={segment['start']}:rate=30",
-                              "-loop", "1", "-t", str(segment['duration']), "-i", segment["image_path"],
-                              "-f", "lavfi", "-i", f"color=black:size=1920x1080:duration={max(0, total_duration - segment['end'])}:rate=30",
-                              "-filter_complex", 
-                              f"[1:v]scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[img];"
-                              f"[0:v][img][2:v]concat=n=3:v=1:a=0[out]",
-                              "-map", "[out]",
-                              "-c:v", "libx264",
-                              "-preset", "ultrafast",
-                              "-crf", "23",
-                              "-pix_fmt", "yuv420p",
-                              "-t", str(total_duration),
-                              segment_video
-                          ]
-                          
-                          subprocess.run(segment_cmd, capture_output=True, text=True, check=True)
-                          segment_files.append(segment_video)
+                          timeline_inputs.extend(["-loop", "1", "-i", segment["image_path"]])
                       
-                      # Overlay all segments
-                      if segment_files:
-                          overlay_cmd = [
-                              "ffmpeg", "-y",
-                              "-i", AUDIO_FILE
-                          ]
-                          
-                          for seg_file in segment_files:
-                              overlay_cmd.extend(["-i", seg_file])
-                          
-                          # Build overlay filter
-                          overlay_filter = "[1:v]"
-                          for i in range(1, len(segment_files)):
-                              next_stream = f"[overlay{i}]" if i < len(segment_files) - 1 else "[final]"
-                              overlay_filter += f"[{i+2}:v]overlay{next_stream};"
-                          
-                          overlay_cmd.extend([
-                              "-filter_complex", overlay_filter,
-                              "-map", "[final]",
-                              "-map", "0:a",
-                              "-c:v", "libx264",
-                              "-preset", "medium",
-                              "-crf", "23",
-                              "-c:a", "aac",
-                              "-b:a", "192k",
-                              "-shortest",
-                              output_path
-                          ])
-                          
-                          result = subprocess.run(overlay_cmd, capture_output=True, text=True, check=True)
-                          print("✅ Simplest approach completed successfully!")
+                      # Scale all images
+                      for i in range(len(valid_segments)):
+                          timeline_filter.append(
+                              f"[{i+1}:v]scale=1920:1080:force_original_aspect_ratio=decrease,"
+                              f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[img{i}];"
+                          )
                       
-                  except subprocess.CalledProcessError as e4:
-                      print(f"❌ All methods failed. Last error: {e4}")
-                      print(f"stderr: {e4.stderr}")
+                      # Create a base timeline and build seamless transitions
+                      timeline_filter.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[base];")
+                      
+                      # Build the transition logic
+                      current_stream = "[base]"
+                      for i, segment in enumerate(valid_segments):
+                          next_stream = f"[layer{i}]" if i < len(valid_segments) - 1 else "[seamless]"
+                          
+                          # Each image appears at its start time and stays until next image starts
+                          if i < len(valid_segments) - 1:
+                              next_start = valid_segments[i + 1]["start"]
+                              enable_condition = f"gte(t,{segment['start']})*lt(t,{next_start})"
+                          else:
+                              # Last image stays until the end
+                              enable_condition = f"gte(t,{segment['start']})"
+                          
+                          timeline_filter.append(
+                              f"{current_stream}[img{i}]overlay=0:0:enable='{enable_condition}'{next_stream};"
+                          )
+                          current_stream = next_stream
+                      
+                      timeline_filter_str = "".join(timeline_filter)
+                      
+                      seamless_cmd = [
+                          "ffmpeg", "-y"
+                      ] + timeline_inputs + [
+                          "-filter_complex", timeline_filter_str,
+                          "-map", "[seamless]",
+                          "-map", "0:a",
+                          "-c:v", "libx264",
+                          "-preset", "medium",
+                          "-crf", "23",
+                          "-c:a", "aac",
+                          "-b:a", "192k",
+                          "-t", str(total_duration),
+                          output_path
+                      ]
+                      
+                      result = subprocess.run(seamless_cmd, capture_output=True, text=True, check=True)
+                      print("✅ Seamless transition method completed successfully!")
+                      
+                  except subprocess.CalledProcessError as e5:
+                      print(f"❌ Seamless method failed: {e5}")
+                      print(f"stderr: {e5.stderr}")
                       sys.exit(1)
 
           # === Cleanup ===
           shutil.rmtree(TEMP_DIR, ignore_errors=True)
           
-          print("🎉 Synchronized video generation process completed!")
+          print("🎉 Seamless video generation process completed!")
           print("🔊 Audio flows naturally with perfectly timed visuals!")
-          print("📺 Each image now appears exactly when its audio segment plays!")
+          print("📺 Images transition seamlessly without black gaps!")
+          print("🎬 Previous image stays visible until next image starts!")
           EOF
 
       - name: Run video generation script
