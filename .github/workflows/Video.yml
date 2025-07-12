@@ -1,10 +1,10 @@
-name: Generate Smooth Video
+name: Generate Fast Smooth Video
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: write  # Allows pushing changes back
+  contents: write
 
 jobs:
   generate-video:
@@ -19,16 +19,13 @@ jobs:
         with:  
           python-version: '3.10'  
 
-      - name: Install system dependencies
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
-
-      - name: Install Python dependencies  
-        run: |  
           pip install requests pillow
 
-      - name: Create seamless video generation script
+      - name: Create fast smooth video script
         run: |
           cat > generate_video.py << 'EOF'
           import os  
@@ -36,7 +33,6 @@ jobs:
           import subprocess
           import sys
           from PIL import Image
-          import tempfile
           import shutil
 
           # === Config ===  
@@ -47,320 +43,173 @@ jobs:
           OUTPUT_FILE = "final_video.mp4"
           TEMP_DIR = "temp_video_generation"
 
-          # Create necessary directories
           os.makedirs(OUTPUT_DIR, exist_ok=True)
           os.makedirs(TEMP_DIR, exist_ok=True)
 
-          print("🎬 Starting seamless video generation process...")
+          print("🚀 Fast smooth video generation...")
 
-          # === Validate required files ===
-          required_files = [AUDIO_FILE, EDIT_JSON]
-          for file_path in required_files:
-              if not os.path.exists(file_path):
-                  print(f"❌ Required file not found: {file_path}")
-                  sys.exit(1)
-
-          if not os.path.exists(IMAGES_DIR):
-              print(f"❌ Images directory not found: {IMAGES_DIR}")
+          # === Load and validate ===
+          if not all(os.path.exists(f) for f in [AUDIO_FILE, EDIT_JSON, IMAGES_DIR]):
+              print("❌ Missing required files")
               sys.exit(1)
 
-          print("✅ All required files and directories found")
-
-          # === Load edit.json ===
           with open(EDIT_JSON, "r") as f:
               edit_data = json.load(f)
 
           sentence_transcriptions = edit_data.get("sentence_transcriptions", [])
           if not sentence_transcriptions:
-              print("❌ No sentence transcriptions found in edit.json")
+              print("❌ No sentence transcriptions found")
               sys.exit(1)
 
-          print(f"📝 Found {len(sentence_transcriptions)} sentence transcriptions")
-
-          # === Process images and validate segments ===
+          # === Process segments quickly ===
           valid_segments = []
-          missing_images = []
-
           for i, segment in enumerate(sentence_transcriptions):
               segment_id = segment.get("id", f"i{i+1}")
               start_time = segment.get("start", 0)
               end_time = segment.get("end", 0)
-              duration = end_time - start_time
-
-              if duration <= 0:
-                  print(f"⚠️ Skipping segment {segment_id} with invalid duration: {duration}")
+              
+              if end_time <= start_time:
                   continue
 
-              # Find corresponding image
-              image_filename = f"{segment_id}.png"
-              image_path = os.path.join(IMAGES_DIR, image_filename)
-
+              image_path = os.path.join(IMAGES_DIR, f"{segment_id}.png")
               if not os.path.exists(image_path):
-                  missing_images.append(image_filename)
-                  print(f"⚠️ Image not found: {image_path}")
+                  print(f"⚠️ Missing: {segment_id}.png")
                   continue
 
-              print(f"🖼️ Processing segment {segment_id}: {start_time}s - {end_time}s ({duration:.2f}s)")
-
-              # Process image to standard dimensions
+              # Quick image processing
               try:
                   with Image.open(image_path) as img:
-                      # Convert to RGB if necessary
                       if img.mode != 'RGB':
                           img = img.convert('RGB')
-                      
-                      # Resize maintaining aspect ratio
                       img.thumbnail((1920, 1080), Image.Resampling.LANCZOS)
                       
-                      # Create new image with black background
                       new_img = Image.new('RGB', (1920, 1080), (0, 0, 0))
-                      
-                      # Center the image
                       x = (1920 - img.width) // 2
                       y = (1080 - img.height) // 2
                       new_img.paste(img, (x, y))
                       
-                      # Save processed image
-                      processed_image_path = os.path.join(TEMP_DIR, f"processed_{segment_id}.png")
-                      new_img.save(processed_image_path)
+                      processed_path = os.path.join(TEMP_DIR, f"processed_{segment_id}.png")
+                      new_img.save(processed_path)
 
                   valid_segments.append({
                       "id": segment_id,
-                      "image_path": processed_image_path,
+                      "image_path": processed_path,
                       "start": start_time,
-                      "end": end_time,
-                      "duration": duration
+                      "end": end_time
                   })
-
               except Exception as e:
-                  print(f"❌ Error processing image {image_path}: {e}")
-                  missing_images.append(image_filename)
-
-          if missing_images:
-              print(f"⚠️ Missing images: {', '.join(missing_images)}")
+                  print(f"❌ Error processing {segment_id}: {e}")
 
           if not valid_segments:
-              print("❌ No valid video segments found")
+              print("❌ No valid segments")
               sys.exit(1)
 
-          # Sort segments by start time
           valid_segments.sort(key=lambda x: x["start"])
-          print(f"✅ Processed {len(valid_segments)} video segments")
+          print(f"✅ {len(valid_segments)} segments ready")
 
-          # === Get total audio duration ===
-          print("🔍 Getting audio duration...")
+          # === Get audio duration fast ===
           try:
-              duration_cmd = [
+              result = subprocess.run([
                   "ffprobe", "-v", "quiet", "-show_entries", "format=duration", 
                   "-of", "csv=p=0", AUDIO_FILE
-              ]
-              result = subprocess.run(duration_cmd, capture_output=True, text=True, check=True)
+              ], capture_output=True, text=True, check=True)
               total_duration = float(result.stdout.strip())
-              print(f"📊 Total audio duration: {total_duration:.2f} seconds")
-          except Exception as e:
-              print(f"❌ Error getting audio duration: {e}")
+          except:
               total_duration = max(seg["end"] for seg in valid_segments)
-              print(f"📊 Using fallback duration: {total_duration:.2f} seconds")
 
-          # === Create seamless timing plan ===
-          print("🔧 Creating seamless timing plan...")
-
-          # Extend segments to fill gaps and ensure smooth transitions
-          seamless_segments = []
+          # === Fix timing gaps (key optimization) ===
+          # This is the ONLY change needed to fix black screens!
           for i, segment in enumerate(valid_segments):
-              # Start time remains the same
-              segment_start = segment["start"]
+              if i == 0 and segment["start"] > 0:
+                  segment["start"] = 0  # Start first image at 0
               
-              # End time: extend to next segment's start, or to total duration if last
               if i < len(valid_segments) - 1:
-                  segment_end = valid_segments[i + 1]["start"]
+                  next_start = valid_segments[i + 1]["start"]
+                  # Extend current image until next one starts
+                  segment["end"] = next_start
               else:
-                  segment_end = total_duration
-              
-              # Handle first segment - it should start from 0 if there's a gap
-              if i == 0 and segment_start > 0:
-                  segment_start = 0
-              
-              seamless_segments.append({
-                  "id": segment["id"],
-                  "image_path": segment["image_path"],
-                  "start": segment_start,
-                  "end": segment_end,
-                  "duration": segment_end - segment_start
-              })
-              
-              print(f"📍 Seamless segment {segment['id']}: {segment_start:.2f}s - {segment_end:.2f}s")
+                  # Last image extends to end
+                  segment["end"] = total_duration
 
-          # === Generate video with seamless transitions ===
-          print("🎥 Creating seamless video...")
-
+          # === Generate video in single FFmpeg call ===
+          print("🎬 Generating video (single pass)...")
+          
           output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
-
-          # Build FFmpeg command for seamless video using overlay method
           input_args = ["-i", AUDIO_FILE]
-          overlay_filter = []
-
-          # Add images as inputs
-          for i, segment in enumerate(seamless_segments):
+          
+          # Add image inputs
+          for segment in valid_segments:
               input_args.extend(["-loop", "1", "-i", segment["image_path"]])
 
-          # Scale all images
-          for i in range(len(seamless_segments)):
-              overlay_filter.append(
+          # Build fast filter
+          filter_parts = []
+          
+          # Scale images efficiently
+          for i in range(len(valid_segments)):
+              filter_parts.append(
                   f"[{i+1}:v]scale=1920:1080:force_original_aspect_ratio=decrease,"
-                  f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[img{i}];"
+                  f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[v{i}];"
               )
 
-          # Create base black video
-          overlay_filter.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[base];")
-
-          # Build overlay chain with seamless timing
-          current_stream = "[base]"
-          for i, segment in enumerate(seamless_segments):
-              next_stream = f"[overlay{i}]" if i < len(seamless_segments) - 1 else "[final]"
+          # Create base and overlay (simplified)
+          filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[base];")
+          
+          current = "[base]"
+          for i, segment in enumerate(valid_segments):
+              next_stream = f"[out{i}]" if i < len(valid_segments) - 1 else "[video]"
               
-              # Each image shows for its full seamless duration
-              overlay_filter.append(
-                  f"{current_stream}[img{i}]overlay=0:0:enable='between(t,{segment['start']},{segment['end']})'{next_stream};"
+              # Simple, fast enable condition
+              filter_parts.append(
+                  f"{current}[v{i}]overlay=enable='gte(t,{segment['start']})*lt(t,{segment['end']})'{next_stream};"
               )
-              current_stream = next_stream
+              current = next_stream
 
-          overlay_filter_str = "".join(overlay_filter)
+          filter_complex = "".join(filter_parts)
 
-          # Build complete FFmpeg command
-          ffmpeg_cmd = [
+          # Fast FFmpeg command
+          cmd = [
               "ffmpeg", "-y"
           ] + input_args + [
-              "-filter_complex", overlay_filter_str,
-              "-map", "[final]",
+              "-filter_complex", filter_complex,
+              "-map", "[video]",
               "-map", "0:a",
               "-c:v", "libx264",
-              "-preset", "medium",
+              "-preset", "fast",  # Fast preset
               "-crf", "23",
               "-c:a", "aac",
               "-b:a", "192k",
-              "-pix_fmt", "yuv420p",
               "-t", str(total_duration),
               output_path
           ]
 
-          print("🔧 Running seamless FFmpeg generation...")
-          print(f"Command preview: ffmpeg -y -i {AUDIO_FILE} [+{len(seamless_segments)} image inputs]")
-
+          print("⚡ Running fast generation...")
           try:
-              result = subprocess.run(ffmpeg_cmd, capture_output=True, text=True, check=True)
-              print("✅ Seamless video generation completed successfully!")
-              print(f"📁 Output saved to: {output_path}")
+              subprocess.run(cmd, capture_output=True, text=True, check=True)
+              print("✅ Fast generation completed!")
               
-              # Print file info
               if os.path.exists(output_path):
-                  file_size = os.path.getsize(output_path)
-                  print(f"📊 File size: {file_size / (1024*1024):.2f} MB")
-                  
-                  # Verify output duration
-                  verify_cmd = [
-                      "ffprobe", "-v", "quiet", "-show_entries", "format=duration", 
-                      "-of", "csv=p=0", output_path
-                  ]
-                  try:
-                      verify_result = subprocess.run(verify_cmd, capture_output=True, text=True, check=True)
-                      output_duration = float(verify_result.stdout.strip())
-                      print(f"📊 Output duration: {output_duration:.2f} seconds")
-                  except:
-                      print("📊 Could not verify output duration")
-              else:
-                  print("❌ Output file was not created")
-                  
+                  size_mb = os.path.getsize(output_path) / (1024*1024)
+                  print(f"📊 Output: {size_mb:.2f} MB")
+              
           except subprocess.CalledProcessError as e:
-              print(f"❌ FFmpeg error: {e}")
+              print(f"❌ Generation failed: {e}")
               print(f"stderr: {e.stderr}")
-              
-              # Try alternative concat method
-              print("🔄 Trying concat method as fallback...")
-              
-              try:
-                  # Create video segments with precise timing
-                  segment_files = []
-                  for i, segment in enumerate(seamless_segments):
-                      segment_output = os.path.join(TEMP_DIR, f"segment_{i}.mp4")
-                      segment_duration = segment["duration"]
-                      
-                      # Create individual segment
-                      segment_cmd = [
-                          "ffmpeg", "-y",
-                          "-loop", "1", "-i", segment["image_path"],
-                          "-t", str(segment_duration),
-                          "-c:v", "libx264",
-                          "-preset", "fast",
-                          "-crf", "23",
-                          "-vf", "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30",
-                          "-pix_fmt", "yuv420p",
-                          segment_output
-                      ]
-                      
-                      subprocess.run(segment_cmd, capture_output=True, text=True, check=True)
-                      segment_files.append(segment_output)
-                      print(f"✅ Created segment {i+1}/{len(seamless_segments)}")
-                  
-                  # Create concat file
-                  concat_file = os.path.join(TEMP_DIR, "concat_list.txt")
-                  with open(concat_file, "w") as f:
-                      for segment_file in segment_files:
-                          f.write(f"file '{segment_file}'\n")
-                  
-                  # Concatenate segments and add audio
-                  concat_cmd = [
-                      "ffmpeg", "-y",
-                      "-f", "concat",
-                      "-safe", "0",
-                      "-i", concat_file,
-                      "-i", AUDIO_FILE,
-                      "-c:v", "copy",
-                      "-c:a", "aac",
-                      "-b:a", "192k",
-                      "-t", str(total_duration),
-                      output_path
-                  ]
-                  
-                  subprocess.run(concat_cmd, capture_output=True, text=True, check=True)
-                  print("✅ Concat fallback method completed successfully!")
-                  
-              except subprocess.CalledProcessError as e2:
-                  print(f"❌ Concat fallback failed: {e2}")
-                  print(f"stderr: {e2.stderr}")
-                  sys.exit(1)
+              sys.exit(1)
 
-          # === Cleanup ===
+          # Quick cleanup
           shutil.rmtree(TEMP_DIR, ignore_errors=True)
-
-          print("🎉 Seamless video generation completed!")
-          print("✨ No more black screen transitions!")
-          print("🔄 Images flow seamlessly from one to the next!")
-          print("📺 Perfect audio-visual synchronization achieved!")
+          print("🎉 Fast smooth video ready!")
           EOF
 
-      - name: Run seamless video generation
+      - name: Run fast video generation
         run: python3 generate_video.py
-
-      - name: Verify video output
-        run: |
-          if [ -f "Video/final_video.mp4" ]; then
-            echo "✅ Video file created successfully"
-            ls -lh Video/final_video.mp4
-            
-            # Check video properties
-            ffprobe -v quiet -print_format json -show_format -show_streams Video/final_video.mp4 | jq '.format.duration, .streams[0].width, .streams[0].height' 2>/dev/null || echo "Video properties check completed"
-          else
-            echo "❌ Video file not found!"
-            exit 1
-          fi
 
       - name: Configure Git  
         run: |  
           git config --global user.name "intellect9"  
           git config --global user.email "intellectra9@outlook.com"  
 
-      - name: Commit and push seamless video  
+      - name: Commit and push  
         env:  
           GH_PAT: ${{ secrets.GH_PAT }}  
         run: |  
@@ -370,19 +219,7 @@ jobs:
 
           git add Video/  
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")  
-          git commit -m "🎬 Generated seamless video (no black transitions): ${timestamp}" || echo "No changes to commit"  
+          git commit -m "🚀 Fast smooth video: ${timestamp}" || echo "No changes to commit"  
 
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git  
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ secrets.GH_PAT }}  
           git push origin HEAD:main
-
-      - name: Video generation summary
-        run: |
-          echo "🎯 Video Generation Summary:"
-          echo "================================"
-          echo "✅ Seamless transitions implemented"
-          echo "✅ No black screen gaps"
-          echo "✅ Images extended to fill timeline"
-          echo "✅ Audio-visual synchronization"
-          echo "✅ Fallback methods for reliability"
-          echo "================================"
-          echo "🎬 Your smooth video is ready!"
