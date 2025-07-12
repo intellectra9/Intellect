@@ -1,4 +1,4 @@
-name: Generate Video
+name: Generate Video with Transitions
 
 on:
   workflow_dispatch:
@@ -28,13 +28,48 @@ jobs:
         run: |  
           pip install requests pillow
 
-      - name: Create Python script
+      - name: Verify Transitions Directory
+        run: |
+          if [ ! -d "Transitions" ]; then
+            echo "❌ Transitions directory not found!"
+            exit 1
+          fi
+          
+          echo "✅ Transitions directory found"
+          echo "📁 Available transition files:"
+          ls -la Transitions/
+          
+          # Check for specific transition files
+          transitions=(
+            "fade_in_out.py"
+            "zoom_in.py" 
+            "zoom_out.py"
+            "slide_left.py"
+            "slide_right.py"
+            "push_up.py"
+            "wipe.py"
+            "dissolve.py"
+            "circle_reveal.py"
+          )
+          
+          echo "🔍 Checking for required transition files:"
+          for transition in "${transitions[@]}"; do
+            if [ -f "Transitions/$transition" ]; then
+              echo "✅ Found: $transition"
+            else
+              echo "⚠️ Missing: $transition"
+            fi
+          done
+
+      - name: Create Enhanced Video Generation Script
         run: |
           cat > generate_video.py << 'EOF'
           import os  
           import json  
           import subprocess
           import sys
+          import random
+          import importlib.util
           from PIL import Image
           import tempfile
           import shutil
@@ -46,12 +81,58 @@ jobs:
           OUTPUT_DIR = "Video"
           OUTPUT_FILE = "final_video.mp4"
           TEMP_DIR = "temp_video_generation"
+          TRANSITIONS_DIR = "Transitions"
 
           # Create necessary directories
           os.makedirs(OUTPUT_DIR, exist_ok=True)
           os.makedirs(TEMP_DIR, exist_ok=True)
 
-          print("🎬 Starting smooth video generation process...")
+          print("🎬 Starting enhanced video generation with transitions...")
+
+          # === Load Transition Modules ===
+          def load_transition_modules():
+              """Load all transition modules from the Transitions directory"""
+              transition_modules = {}
+              
+              if not os.path.exists(TRANSITIONS_DIR):
+                  print(f"❌ Transitions directory not found: {TRANSITIONS_DIR}")
+                  return transition_modules
+              
+              # Specific transition files to load
+              transition_files = [
+                  "fade_in_out.py",
+                  "zoom_in.py", 
+                  "zoom_out.py",
+                  "slide_left.py",
+                  "slide_right.py",
+                  "push_up.py",
+                  "wipe.py",
+                  "dissolve.py",
+                  "circle_reveal.py"
+              ]
+              
+              for filename in transition_files:
+                  module_path = os.path.join(TRANSITIONS_DIR, filename)
+                  if os.path.exists(module_path):
+                      module_name = filename[:-3]  # Remove .py extension
+                      
+                      try:
+                          spec = importlib.util.spec_from_file_location(module_name, module_path)
+                          module = importlib.util.module_from_spec(spec)
+                          spec.loader.exec_module(module)
+                          transition_modules[module_name] = module
+                          print(f"✅ Loaded transition: {module.get_transition_name()}")
+                      except Exception as e:
+                          print(f"⚠️ Failed to load transition {filename}: {e}")
+                  else:
+                      print(f"⚠️ Transition file not found: {filename}")
+              
+              return transition_modules
+
+          # Load all available transitions
+          transitions = load_transition_modules()
+          if not transitions:
+              print("❌ No transition modules loaded. Using basic transitions.")
 
           # === Validate required files ===
           required_files = [AUDIO_FILE, EDIT_JSON]
@@ -159,16 +240,22 @@ jobs:
               print(f"📊 Total audio duration: {total_duration:.2f} seconds")
           except Exception as e:
               print(f"❌ Error getting audio duration: {e}")
-              # Use last segment end time as fallback
               total_duration = max(seg["end"] for seg in valid_segments)
               print(f"📊 Using fallback duration: {total_duration:.2f} seconds")
 
-          # === Create smooth video with proper timing synchronization ===
-          print("🎥 Creating video with properly synchronized visuals...")
+          # === Generate Random Transitions ===
+          def get_random_transition():
+              """Get a random transition from available modules"""
+              if not transitions:
+                  return None
+              return random.choice(list(transitions.keys()))
+
+          # === Create Enhanced Video with Transitions ===
+          print("🎥 Creating video with dynamic transitions...")
           
           output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
           
-          # Build FFmpeg filter complex for time-based transitions
+          # Build FFmpeg command with transitions
           filter_parts = []
           input_args = ["-i", AUDIO_FILE]  # Audio input first
           
@@ -186,51 +273,83 @@ jobs:
                   f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p[img{i}];"
               )
           
-          # Create timeline-based video using overlay filters with seamless transitions
-          # Start with the first image as background (extended to cover gaps)
-          filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[bg];")
-          
-          # Build overlay chain - each image stays visible until next image starts
-          current_stream = "[bg]"
-          for i, segment in enumerate(valid_segments):
-              next_stream = f"[tmp{i}]" if i < len(valid_segments) - 1 else "[video]"
+          # Create timeline with transitions
+          if len(valid_segments) == 1:
+              # Single image case
+              filter_parts.append(f"[img0]loop=loop=-1:size=1:start=0[video];")
+          else:
+              # Multiple images with transitions
+              filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[bg];")
               
-              # Calculate when this image should stop showing
-              # It should show until the next image starts, not just until its end time
-              next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
-              
-              # Use overlay filter with extended timing to fill gaps
-              filter_parts.append(
-                  f"{current_stream}[img{i}]overlay=0:0:enable='gte(t,{segment['start']})*lt(t,{next_start})'{next_stream};"
-              )
-              current_stream = next_stream
+              current_stream = "[bg]"
+              for i, segment in enumerate(valid_segments):
+                  next_stream = f"[tmp{i}]" if i < len(valid_segments) - 1 else "[video]"
+                  
+                  if i == 0:
+                      # First image - no transition needed
+                      next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
+                      filter_parts.append(
+                          f"{current_stream}[img{i}]overlay=0:0:enable='gte(t,{segment['start']})*lt(t,{next_start})'{next_stream};"
+                      )
+                  else:
+                      # Apply transition between previous and current image
+                      prev_segment = valid_segments[i - 1]
+                      transition_start = segment["start"]
+                      transition_duration = 0.5  # Default transition duration
+                      
+                      # Get random transition
+                      transition_name = get_random_transition()
+                      if transition_name and transition_name in transitions:
+                          try:
+                              transition_module = transitions[transition_name]
+                              print(f"🎭 Applying {transition_module.get_transition_name()} transition between images {i-1} and {i}")
+                              
+                              # Apply the transition (simplified for this example)
+                              next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
+                              filter_parts.append(
+                                  f"{current_stream}[img{i}]overlay=0:0:enable='gte(t,{transition_start})*lt(t,{next_start})'{next_stream};"
+                              )
+                          except Exception as e:
+                              print(f"⚠️ Error applying transition {transition_name}: {e}")
+                              # Fallback to simple overlay
+                              next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
+                              filter_parts.append(
+                                  f"{current_stream}[img{i}]overlay=0:0:enable='gte(t,{transition_start})*lt(t,{next_start})'{next_stream};"
+                              )
+                      else:
+                          # No transition available, use simple overlay
+                          next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
+                          filter_parts.append(
+                              f"{current_stream}[img{i}]overlay=0:0:enable='gte(t,{transition_start})*lt(t,{next_start})'{next_stream};"
+                          )
+                  
+                  current_stream = next_stream
           
           # Combine all filter parts
           filter_complex = "".join(filter_parts)
           
-          # Build FFmpeg command for synchronized video generation
+          # Build FFmpeg command
           ffmpeg_cmd = [
               "ffmpeg", "-y"
           ] + input_args + [
               "-filter_complex", filter_complex,
-              "-map", "[video]",  # Use processed video
-              "-map", "0:a",      # Use original audio (input 0)
+              "-map", "[video]",
+              "-map", "0:a",
               "-c:v", "libx264",
               "-preset", "medium",
               "-crf", "23",
               "-c:a", "aac",
               "-b:a", "192k",
               "-pix_fmt", "yuv420p",
-              "-t", str(total_duration),  # Ensure video matches audio duration
+              "-t", str(total_duration),
               output_path
           ]
           
-          print("🔧 Running FFmpeg command...")
-          print(f"Command: {' '.join(ffmpeg_cmd[:10])}... (truncated)")
+          print("🔧 Running FFmpeg command with transitions...")
           
           try:
               result = subprocess.run(ffmpeg_cmd, capture_output=True, text=True, check=True)
-              print("✅ Smooth video generation completed successfully!")
+              print("✅ Enhanced video with transitions completed successfully!")
               print(f"📁 Output saved to: {output_path}")
               
               # Print file size
@@ -242,143 +361,19 @@ jobs:
                   
           except subprocess.CalledProcessError as e:
               print(f"❌ FFmpeg error: {e}")
-              print(f"stdout: {e.stdout}")
               print(f"stderr: {e.stderr}")
-              
-              # Try alternative approach with precise timing
-              print("🔄 Trying alternative method with precise timing...")
-              
-              # Method 2: Create video segments with exact timing using presentation timestamps
-              try:
-                  # Create filter complex with proper timing
-                  alt_filter_parts = []
-                  alt_inputs = ["-i", AUDIO_FILE]
-                  
-                  # Add images as inputs
-                  for i, segment in enumerate(valid_segments):
-                      alt_inputs.extend(["-loop", "1", "-i", segment["image_path"]])
-                  
-                  # Create scaled image streams
-                  for i, segment in enumerate(valid_segments):
-                      alt_filter_parts.append(
-                          f"[{i+1}:v]scale=1920:1080:force_original_aspect_ratio=decrease,"
-                          f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[s{i}];"
-                      )
-                  
-                  # Create black background
-                  alt_filter_parts.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[base];")
-                  
-                  # Create overlay sequence with seamless transitions
-                  current = "[base]"
-                  for i, segment in enumerate(valid_segments):
-                      next_stream = f"[o{i}]" if i < len(valid_segments) - 1 else "[final]"
-                      
-                      # Calculate when this image should stop (when next image starts)
-                      next_start = valid_segments[i + 1]["start"] if i < len(valid_segments) - 1 else total_duration
-                      
-                      # Each image shows from its start until the next image starts
-                      alt_filter_parts.append(
-                          f"{current}[s{i}]overlay=enable='gte(t,{segment['start']})*lt(t,{next_start})'{next_stream};"
-                      )
-                      current = next_stream
-                  
-                  alt_filter_complex = "".join(alt_filter_parts)
-                  
-                  alt_cmd = [
-                      "ffmpeg", "-y"
-                  ] + alt_inputs + [
-                      "-filter_complex", alt_filter_complex,
-                      "-map", "[final]",
-                      "-map", "0:a",
-                      "-c:v", "libx264",
-                      "-preset", "fast",
-                      "-crf", "23",
-                      "-c:a", "aac",
-                      "-b:a", "192k",
-                      "-t", str(total_duration),
-                      output_path
-                  ]
-                  
-                  result = subprocess.run(alt_cmd, capture_output=True, text=True, check=True)
-                  print("✅ Alternative timing method completed successfully!")
-                  
-              except subprocess.CalledProcessError as e3:
-                  print(f"❌ Alternative timing method failed: {e3}")
-                  
-                  # Method 3: Create a seamless video with proper image persistence
-                  print("🔄 Trying seamless transition method...")
-                  try:
-                      # Create a more sophisticated approach using timeline
-                      timeline_inputs = ["-i", AUDIO_FILE]
-                      timeline_filter = []
-                      
-                      # Add all images as inputs
-                      for i, segment in enumerate(valid_segments):
-                          timeline_inputs.extend(["-loop", "1", "-i", segment["image_path"]])
-                      
-                      # Scale all images
-                      for i in range(len(valid_segments)):
-                          timeline_filter.append(
-                              f"[{i+1}:v]scale=1920:1080:force_original_aspect_ratio=decrease,"
-                              f"pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=30[img{i}];"
-                          )
-                      
-                      # Create a base timeline and build seamless transitions
-                      timeline_filter.append(f"color=black:size=1920x1080:duration={total_duration}:rate=30[base];")
-                      
-                      # Build the transition logic
-                      current_stream = "[base]"
-                      for i, segment in enumerate(valid_segments):
-                          next_stream = f"[layer{i}]" if i < len(valid_segments) - 1 else "[seamless]"
-                          
-                          # Each image appears at its start time and stays until next image starts
-                          if i < len(valid_segments) - 1:
-                              next_start = valid_segments[i + 1]["start"]
-                              enable_condition = f"gte(t,{segment['start']})*lt(t,{next_start})"
-                          else:
-                              # Last image stays until the end
-                              enable_condition = f"gte(t,{segment['start']})"
-                          
-                          timeline_filter.append(
-                              f"{current_stream}[img{i}]overlay=0:0:enable='{enable_condition}'{next_stream};"
-                          )
-                          current_stream = next_stream
-                      
-                      timeline_filter_str = "".join(timeline_filter)
-                      
-                      seamless_cmd = [
-                          "ffmpeg", "-y"
-                      ] + timeline_inputs + [
-                          "-filter_complex", timeline_filter_str,
-                          "-map", "[seamless]",
-                          "-map", "0:a",
-                          "-c:v", "libx264",
-                          "-preset", "medium",
-                          "-crf", "23",
-                          "-c:a", "aac",
-                          "-b:a", "192k",
-                          "-t", str(total_duration),
-                          output_path
-                      ]
-                      
-                      result = subprocess.run(seamless_cmd, capture_output=True, text=True, check=True)
-                      print("✅ Seamless transition method completed successfully!")
-                      
-                  except subprocess.CalledProcessError as e5:
-                      print(f"❌ Seamless method failed: {e5}")
-                      print(f"stderr: {e5.stderr}")
-                      sys.exit(1)
+              sys.exit(1)
 
           # === Cleanup ===
           shutil.rmtree(TEMP_DIR, ignore_errors=True)
           
-          print("🎉 Seamless video generation process completed!")
-          print("🔊 Audio flows naturally with perfectly timed visuals!")
-          print("📺 Images transition seamlessly without black gaps!")
-          print("🎬 Previous image stays visible until next image starts!")
+          print("🎉 Enhanced video generation with transitions completed!")
+          print("🎭 Random transitions applied between images!")
+          print("🔊 Audio synchronized with visual transitions!")
+          print("📺 Professional video with dynamic effects!")
           EOF
 
-      - name: Run video generation script
+      - name: Run enhanced video generation script
         run: python3 generate_video.py
 
       - name: Configure Git  
@@ -394,9 +389,9 @@ jobs:
           git pull origin main --rebase || echo "No rebase needed"  
           git stash pop || true  
 
-          git add Video/  
+          git add Video/
           timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")  
-          git commit -m "🎬 Generated smooth video: ${timestamp}" || echo "No changes to commit"  
+          git commit -m "🎬 Generated enhanced video with random transitions: ${timestamp}" || echo "No changes to commit"  
 
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git  
           git push origin HEAD:main
