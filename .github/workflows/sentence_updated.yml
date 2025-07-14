@@ -1,0 +1,283 @@
+name: Sentence Level Transcription
+
+on:
+  workflow_run:
+    workflows: ["Transcript"]  # Replace with the actual name of your transcript workflow
+    types:
+      - completed
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Visuals/**'
+      - 'Trans/**'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-transcription:
+    runs-on: ubuntu-latest
+    
+    # Only run if the triggering workflow succeeded
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name != 'workflow_run' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Generate sentence-level transcription
+        run: |
+          python3 << 'EOF'
+          import json
+          import os
+          import re
+          from datetime import datetime
+          from difflib import SequenceMatcher
+
+          def clean_word(word):
+              """Clean word by removing punctuation, converting to lowercase, and handling contractions"""
+              word = re.sub(r"[^\w\s']", '', word.lower()) # Keep apostrophes for contractions
+              word = word.replace("'s", "").replace("n't", "nt").replace("'re", "are").replace("'ll", "will").replace("'ve", "have").replace("'d", "would").replace("'m", "am")
+              return word
+
+          def is_similar(word1, word2, threshold=0.75): # Slightly lowered threshold
+              """Check if two words are similar using SequenceMatcher"""
+              return SequenceMatcher(None, word1, word2).ratio() >= threshold
+
+          def find_sentence_span_improved(sentence_words, word_segments, start_idx, max_gap=6.0): # Increased max_gap
+              """
+              Improved sentence matching with better validation and fuzzy word matching
+              """
+              current_idx = start_idx
+              matched_indices = []
+              
+              print(f'\n[IMPROVED] Trying to match: {" ".join(sentence_words)}\n')
+              
+              for word in sentence_words:
+                  target = clean_word(word)
+                  if not target:
+                      continue
+                      
+                  found = False
+                  search_end = min(current_idx + 50, len(word_segments)) # Increased search window
+                  
+                  for idx in range(current_idx, search_end):
+                      seg_word = clean_word(word_segments[idx]["word"])
+                      if seg_word == target or is_similar(seg_word, target):
+                          matched_indices.append(idx)
+                          current_idx = idx + 1
+                          found = True
+                          break
+                  
+                  if not found:
+                      if len(matched_indices) >= len(sentence_words) * 0.3: # Lowered threshold for partial match
+                          print(f'⚠️ Partial match ({len(matched_indices)}/{len(sentence_words)}) for \'{target}\'\n')
+                          break
+                      else:
+                          print(f'❌ Failed to find \'{target}\' after {len(matched_indices)} matches\n')
+                          return None, None, start_idx + 1 # Still conservative, but will be handled by main loop
+              
+              if not matched_indices:
+                  return None, None, start_idx + 1
+              
+              first_idx = matched_indices[0]
+              last_idx = matched_indices[-1]
+              
+              start_time = word_segments[first_idx]["start"]
+              end_time = word_segments[last_idx]["end"]
+              duration = end_time - start_time
+              
+              if duration > max_gap:
+                  print(f'⚠️ Span too long ({duration}s) for sentence with {len(sentence_words)} words\n')
+                  reasonable_end_idx = first_idx
+                  for idx in matched_indices:
+                      if word_segments[idx]["end"] - start_time <= max_gap:
+                          reasonable_end_idx = idx
+                      else:
+                          break
+                  end_time = word_segments[reasonable_end_idx]["end"]
+                  last_idx = reasonable_end_idx
+              
+              if len(matched_indices) > 1:
+                  max_word_gap = 0
+                  for i in range(len(matched_indices) - 1):
+                      gap = word_segments[matched_indices[i+1]]["start"] - word_segments[matched_indices[i]]["end"]
+                      max_word_gap = max(max_word_gap, gap)
+                  
+                  if max_word_gap > 4.0: # Increased suspicious gap
+                      print(f'⚠️ Large gap ({max_word_gap}s) between words in sentence\n')
+              
+              next_idx = last_idx + 1
+              return start_time, end_time, next_idx
+
+          def find_sentence_span_fuzzy(sentence_words, word_segments, start_idx, max_gap=6.0): # Increased max_gap
+              """
+              Alternative fuzzy matching approach with improved scoring
+              """
+              best_match = None
+              best_score = 0
+              
+              print(f'\n[FUZZY] Trying to match: {" ".join(sentence_words)}\n')
+              
+              search_range = range(max(0, start_idx - 20), min(len(word_segments) - len(sentence_words), start_idx + 30)) # Increased search range
+              
+              for window_start in search_range:
+                  window_end = min(window_start + len(sentence_words) * 5, len(word_segments)) # Increased window size
+                  window_words = [clean_word(word_segments[i]["word"]) for i in range(window_start, window_end)]
+                  
+                  sentence_clean = [clean_word(w) for w in sentence_words if clean_word(w)]
+                  
+                  total_similarity = 0
+                  for sent_word in sentence_clean:
+                      max_sim = 0
+                      for win_word in window_words:
+                          sim = SequenceMatcher(None, sent_word, win_word).ratio()
+                          if sim > max_sim:
+                              max_sim = sim
+                      total_similarity += max_sim
+                  
+                  score = total_similarity / len(sentence_clean) if sentence_clean else 0
+                  
+                  if score > best_score and score >= 0.4: # Lowered threshold
+                      start_time = word_segments[window_start]["start"]
+                      end_time = word_segments[min(window_end - 1, len(word_segments) - 1)]["end"]
+                      
+                      if end_time - start_time <= max_gap:
+                          best_match = (window_start, window_end - 1, score)
+                          best_score = score
+              
+              if best_match:
+                  start_idx_match, end_idx_match, score = best_match
+                  start_time = word_segments[start_idx_match]["start"]
+                  end_time = word_segments[end_idx_match]["end"]
+                  next_idx = end_idx_match + 1
+                  print(f'✅ Fuzzy match found with {score:.2%} accuracy\n')
+                  return start_time, end_time, next_idx
+              
+              return None, None, start_idx + 1
+
+          def debug_sentence_context(sentence_words, word_segments, start_idx, context_size=20): # Increased context size
+              """Debug function to show context around matching attempts"""
+              print(f'\n🔍 DEBUG: Looking for sentence starting around index {start_idx}\n')
+              print(f'Target sentence words: {sentence_words}\n')
+              
+              context_start = max(0, start_idx - context_size)
+              context_end = min(len(word_segments), start_idx + context_size * 2)
+              
+              print(f'Context words ({context_start}-{context_end}):\n')
+              for i in range(context_start, context_end):
+                  marker = " >>> " if i == start_idx else "     "
+                  word_info = word_segments[i]
+                  print(f'{marker}{i}: \'{word_info["word"]}\' ({word_info["start"]:.2f}s)\n')
+
+          def main():
+              try:
+                  with open("Visuals/visuals.json", "r", encoding="utf-8") as f:
+                      visuals = json.load(f)
+                  print(f'Loaded {len(visuals)} sentences.\n')
+              except Exception as e:
+                  print(f'Error loading visuals.json: {e}\n')
+                  return
+
+              try:
+                  with open("Trans/transcription.json", "r", encoding="utf-8") as f:
+                      transcription = json.load(f)
+                  word_segments = transcription.get("word_segments", [])
+                  print(f'Loaded {len(word_segments)} word segments.\n')
+              except Exception as e:
+                  print(f'Error loading transcription.json: {e}\n')
+                  return
+
+              results = []
+              start_idx = 0
+
+              for item in visuals:
+                  sentence = item["sentence"]
+                  num = item["number"]
+                  words = sentence.split()
+                  print(f'\n➡️ Processing sentence {num}: \'{sentence}\'\n')
+                  print(f'   Words: {words}\n')
+
+                  debug_sentence_context(words, word_segments, start_idx)
+
+                  start, end, next_idx = find_sentence_span_improved(words, word_segments, start_idx)
+                  
+                  if start is None:
+                      print("   Trying fuzzy matching...\n")
+                      start, end, next_idx = find_sentence_span_fuzzy(words, word_segments, start_idx)
+
+                  if start is not None and end is not None:
+                      result = {
+                          "id": f'i{num}',
+                          "number": num,
+                          "sentence": sentence,
+                          "start": round(start, 3),
+                          "end": round(end, 3),
+                          "duration": round(end - start, 3)
+                      }
+                      results.append(result)
+                      print(f'✅ Found: {start}s to {end}s ({end-start:.2f}s duration)\n')
+                      
+                      matched_words = []
+                      for i, seg in enumerate(word_segments):
+                          if start <= seg["start"] <= end:
+                              matched_words.append(seg["word"])
+                      print(f'   Matched words: {" ".join(matched_words)}\n')
+                      
+                  else:
+                      print(f'❌ Could not match sentence {num}\n')
+                      # If a sentence is not matched, try to advance start_idx more aggressively
+                      # This prevents getting stuck on problematic sentences and allows the script to continue
+                      # looking for matches further down the transcription.
+                      start_idx = min(start_idx + len(words) + 5, len(word_segments) - 1) # Advance by sentence length + buffer
+                      continue # Skip to the next sentence in visuals.json
+
+                  start_idx = next_idx
+
+              os.makedirs("Edits", exist_ok=True)
+              output = {
+                  "metadata": {
+                      "created_at": datetime.utcnow().isoformat() + "Z",
+                      "total_sentences": len(results),
+                      "source_files": {
+                          "visuals": "Visuals/visuals.json",
+                          "transcription": "Trans/transcription.json"
+                      }
+                  },
+                  "sentence_transcriptions": results
+              }
+
+              with open("Edits/edit.json", "w", encoding="utf-8") as f:
+                  json.dump(output, f, indent=2, ensure_ascii=False)
+
+              print(f'\n🎉 Saved Edits/edit.json with {len(results)} sentences.\n')
+
+          if __name__ == "__main__":
+              main()
+          EOF
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "intellectra9"
+          git config --global user.email "intellectra9@outlook.com"
+
+      - name: Commit and push transcription file
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git stash --include-untracked
+          git pull origin main --rebase || echo "No rebase needed"
+          git stash pop || true
+
+          git add Edits/edit.json
+          timestamp=$(TZ="Asia/Kolkata" date +"%Y-%m-%d %H:%M:%S IST")
+          git commit -m "🔄 Generated sentence transcription: ${timestamp}" || echo "No changes to commit"
+          git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:main
+
+
