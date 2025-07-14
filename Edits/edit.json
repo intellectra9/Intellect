@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "created_at": "2025-07-13T06:36:39.050660Z",
-    "total_sentences": 187,
+    "created_at": "2025-07-14T07:20:06.006269Z",
+    "total_sentences": 166,
     "source_files": {
       "visuals": "Visuals/visuals.json",
       "transcription": "Trans/transcription.json"
@@ -37,8 +37,8 @@
       "number": 4,
       "sentence": "has more power than the guy spending $300 on dinner dates.",
       "start": 7.44,
-      "end": 10.364,
-      "duration": 2.924
+      "end": 10.945,
+      "duration": 3.505
     },
     {
       "id": "i5",
@@ -101,16 +101,16 @@
       "number": 12,
       "sentence": "how YOU can rewire your brain to become that level of magnetically attractive through your phone.",
       "start": 27.065,
-      "end": 29.95,
-      "duration": 2.885
+      "end": 32.234,
+      "duration": 5.169
     },
     {
       "id": "i13",
       "number": 13,
       "sentence": "Most guys are unconsciously repelling women with every message they send,",
       "start": 32.695,
-      "end": 35.58,
-      "duration": 2.885
+      "end": 36.542,
+      "duration": 3.847
     },
     {
       "id": "i14",
@@ -125,8 +125,8 @@
       "number": 15,
       "sentence": "I'm about to completely transform how you think about digital communication forever.",
       "start": 38.666,
-      "end": 41.27,
-      "duration": 2.604
+      "end": 42.973,
+      "duration": 4.307
     },
     {
       "id": "i16",
@@ -165,8 +165,8 @@
       "number": 20,
       "sentence": "Your ancestors had to rely on body language, voice tonality, and physical presence",
       "start": 51.348,
-      "end": 53.953,
-      "duration": 2.605
+      "end": 56.477,
+      "duration": 5.129
     },
     {
       "id": "i21",
@@ -197,16 +197,16 @@
       "number": 24,
       "sentence": "we've completely revolutionized human courtship.",
       "start": 60.906,
-      "end": 63.009,
-      "duration": 2.103
+      "end": 63.931,
+      "duration": 3.025
     },
     {
       "id": "i25",
       "number": 25,
       "sentence": "Today, 90% of romantic connections begin with digital communication.",
       "start": 63.951,
-      "end": 66.496,
-      "duration": 2.545
+      "end": 68.8,
+      "duration": 4.849
     },
     {
       "id": "i26",
@@ -221,16 +221,16 @@
       "number": 27,
       "sentence": "The skill that determined whether your great-grandfather got the girl",
       "start": 69.942,
-      "end": 71.504,
-      "duration": 1.562
+      "end": 73.007,
+      "duration": 3.065
     },
     {
       "id": "i28",
       "number": 28,
       "sentence": "was completely different from what determines whether YOU get the girl.",
       "start": 73.067,
-      "end": 75.851,
-      "duration": 2.784
+      "end": 76.112,
+      "duration": 3.045
     },
     {
       "id": "i29",
@@ -247,6 +247,14 @@
       "start": 77.754,
       "end": 80.178,
       "duration": 2.424
+    },
+    {
+      "id": "i31",
+      "number": 31,
+      "sentence": "You're trying to use stone-age programming in a digital world,",
+      "start": 80.619,
+      "end": 83.624,
+      "duration": 3.005
     },
     {
       "id": "i32",
@@ -277,8 +285,8 @@
       "number": 35,
       "sentence": "Women are receiving an average of 50+ messages per day from men.",
       "start": 90.835,
-      "end": 93.699,
-      "duration": 2.864
+      "end": 94.48,
+      "duration": 3.645
     },
     {
       "id": "i36",
@@ -301,8 +309,8 @@
       "number": 38,
       "sentence": "Texting has become the ultimate cheat code for social power,",
       "start": 100.288,
-      "end": 102.952,
-      "duration": 2.664
+      "end": 103.353,
+      "duration": 3.065
     },
     {
       "id": "i39",
@@ -333,8 +341,8 @@
       "number": 42,
       "sentence": "Every text message you send creates one of two outcomes in a woman's brain:",
       "start": 110.363,
-      "end": 113.187,
-      "duration": 2.824
+      "end": 114.168,
+      "duration": 3.805
     },
     {
       "id": "i43",
@@ -349,24 +357,24 @@
       "number": 44,
       "sentence": "It either triggers a dopamine release that makes her crave more interaction with you,",
       "start": 116.131,
-      "end": 119.054,
-      "duration": 2.923
+      "end": 120.336,
+      "duration": 4.205
     },
     {
       "id": "i45",
       "number": 45,
       "sentence": "or it triggers a cortisol response that makes her want to avoid you.",
       "start": 120.816,
-      "end": 123.779,
-      "duration": 2.963
+      "end": 123.959,
+      "duration": 3.143
     },
     {
       "id": "i46",
       "number": 46,
       "sentence": "The real reason most guys fail at texting has nothing to do with what they're saying -",
       "start": 124.4,
-      "end": 127.303,
-      "duration": 2.903
+      "end": 128.464,
+      "duration": 4.064
     },
     {
       "id": "i47",
@@ -381,8 +389,8 @@
       "number": 48,
       "sentence": "Your texts are unconsciously broadcasting your emotional state,",
       "start": 130.486,
-      "end": 133.129,
-      "duration": 2.643
+      "end": 134.05,
+      "duration": 3.564
     },
     {
       "id": "i49",
@@ -429,8 +437,8 @@
       "number": 54,
       "sentence": "It's the same biological mechanism that protected our ancestors from diseased or weak potential mates.",
       "start": 143.941,
-      "end": 146.645,
-      "duration": 2.704
+      "end": 149.628,
+      "duration": 5.687
     },
     {
       "id": "i55",
@@ -461,16 +469,16 @@
       "number": 58,
       "sentence": "so that every text you send triggers attraction instead of repulsion.",
       "start": 157.999,
-      "end": 160.563,
-      "duration": 2.564
+      "end": 161.684,
+      "duration": 3.685
     },
     {
       "id": "i59",
       "number": 59,
       "sentence": "We're going to turn you into a texting machine that women can't resist engaging with.",
       "start": 162.105,
-      "end": 165.049,
-      "duration": 2.944
+      "end": 166.911,
+      "duration": 4.806
     },
     {
       "id": "i60",
@@ -493,16 +501,16 @@
       "number": 62,
       "sentence": "it's about a chemical cocktail of cortisol and adrenaline flooding your system",
       "start": 172.743,
-      "end": 175.388,
-      "duration": 2.645
+      "end": 176.992,
+      "duration": 4.249
     },
     {
       "id": "i63",
       "number": 63,
       "sentence": "because your brain thinks you're about to be rejected by the tribe.",
       "start": 177.312,
-      "end": 180.018,
-      "duration": 2.706
+      "end": 180.379,
+      "duration": 3.067
     },
     {
       "id": "i64",
@@ -556,9 +564,9 @@
       "id": "i70",
       "number": 70,
       "sentence": "Here's a mind-blowing reframe:",
-      "start": 193.261,
+      "start": 194.343,
       "end": 195.966,
-      "duration": 2.705
+      "duration": 1.623
     },
     {
       "id": "i71",
@@ -581,16 +589,16 @@
       "number": 73,
       "sentence": "it's because you're subconsciously treating every text like a job interview",
       "start": 201.134,
-      "end": 203.958,
-      "duration": 2.824
+      "end": 204.98,
+      "duration": 3.846
     },
     {
       "id": "i74",
       "number": 74,
       "sentence": "where she's the employer and you're desperately trying to prove you're worthy of her time.",
       "start": 205.02,
-      "end": 207.864,
-      "duration": 2.844
+      "end": 209.487,
+      "duration": 4.467
     },
     {
       "id": "i75",
@@ -629,8 +637,8 @@
       "number": 79,
       "sentence": "scrolling through the same boring \"hey beautiful\" messages",
       "start": 218.157,
-      "end": 220.7,
-      "duration": 2.543
+      "end": 221.241,
+      "duration": 3.084
     },
     {
       "id": "i80",
@@ -661,16 +669,16 @@
       "number": 83,
       "sentence": "and you spend 20 minutes crafting the \"perfect\" response?",
       "start": 228.729,
-      "end": 230.912,
-      "duration": 2.183
+      "end": 231.913,
+      "duration": 3.184
     },
     {
       "id": "i84",
       "number": 84,
       "sentence": "That's your nervous system treating her like she's a wild animal that might attack you.",
       "start": 231.893,
-      "end": 234.779,
-      "duration": 2.886
+      "end": 236.121,
+      "duration": 4.228
     },
     {
       "id": "i85",
@@ -725,8 +733,8 @@
       "number": 91,
       "sentence": "you need to get into what I call the \"outcome independence\" state.",
       "start": 250.81,
-      "end": 253.616,
-      "duration": 2.806
+      "end": 254.357,
+      "duration": 3.547
     },
     {
       "id": "i92",
@@ -745,764 +753,588 @@
       "duration": 1.042
     },
     {
-      "id": "i99",
-      "number": 99,
-      "sentence": "Person A is seeking validation.",
+      "id": "i94",
+      "number": 94,
+      "sentence": "Person A sends: \"Hey, how was your day? Hope you had a good one!\"",
+      "start": 258.302,
+      "end": 261.807,
+      "duration": 3.505
+    },
+    {
+      "id": "i95",
+      "number": 95,
+      "sentence": "Person B sends: \"Just saw a guy try to impress a girl by doing pushups at Starbucks. The secondhand embarrassment was real 😬\"",
+      "start": 262.267,
+      "end": 268.075,
+      "duration": 5.808
+    },
+    {
+      "id": "i96",
+      "number": 96,
+      "sentence": "Person A is seeking validation",
       "start": 271.519,
       "end": 273.422,
       "duration": 1.903
     },
     {
-      "id": "i100",
-      "number": 100,
-      "sentence": "Person B is sharing an experience.",
-      "start": 273.862,
-      "end": 276.326,
-      "duration": 2.464
-    },
-    {
-      "id": "i101",
-      "number": 101,
-      "sentence": "Guess which one gets the response?",
-      "start": 276.346,
-      "end": 278.168,
-      "duration": 1.822
-    },
-    {
       "id": "i102",
       "number": 102,
       "sentence": "The technique is this:",
-      "start": 278.148,
-      "end": 279.349,
-      "duration": 1.201
-    },
-    {
-      "id": "i103",
-      "number": 103,
-      "sentence": "Every text should either make her laugh,",
-      "start": 279.97,
-      "end": 281.892,
-      "duration": 1.922
+      "start": 302.631,
+      "end": 308.577,
+      "duration": 5.946
     },
     {
       "id": "i104",
       "number": 104,
       "sentence": "make her think,",
-      "start": 282.312,
-      "end": 282.933,
-      "duration": 0.621
-    },
-    {
-      "id": "i105",
-      "number": 105,
-      "sentence": "or make her feel something.",
-      "start": 283.373,
-      "end": 284.374,
-      "duration": 1.001
-    },
-    {
-      "id": "i106",
-      "number": 106,
-      "sentence": "Never send a text that requires her to carry the conversational weight.",
-      "start": 284.814,
-      "end": 287.197,
-      "duration": 2.383
+      "start": 308.477,
+      "end": 313.345,
+      "duration": 4.868
     },
     {
       "id": "i108",
       "number": 108,
       "sentence": "not burdens.",
-      "start": 290.34,
-      "end": 291.421,
-      "duration": 1.081
+      "start": 328.71,
+      "end": 332.018,
+      "duration": 3.308
     },
     {
       "id": "i109",
       "number": 109,
       "sentence": "Here's your body language through text:",
-      "start": 291.441,
-      "end": 293.262,
-      "duration": 1.821
+      "start": 342.283,
+      "end": 342.423,
+      "duration": 0.14
     },
     {
       "id": "i110",
       "number": 110,
       "sentence": "Use periods sparingly -",
-      "start": 293.843,
-      "end": 295.064,
-      "duration": 1.221
+      "start": 349.454,
+      "end": 354.821,
+      "duration": 5.367
     },
     {
       "id": "i111",
       "number": 111,
       "sentence": "they create harsh energy.",
-      "start": 295.404,
-      "end": 296.565,
-      "duration": 1.161
-    },
-    {
-      "id": "i112",
-      "number": 112,
-      "sentence": "Use lowercase for casual confidence.",
-      "start": 297.086,
-      "end": 298.888,
-      "duration": 1.802
-    },
-    {
-      "id": "i113",
-      "number": 113,
-      "sentence": "Never double text unless you're genuinely adding value,",
-      "start": 299.448,
-      "end": 302.231,
-      "duration": 2.783
+      "start": 349.454,
+      "end": 354.821,
+      "duration": 5.367
     },
     {
       "id": "i114",
       "number": 114,
       "sentence": "not seeking attention.",
-      "start": 302.631,
-      "end": 303.572,
-      "duration": 0.941
-    },
-    {
-      "id": "i115",
-      "number": 115,
-      "sentence": "And for the love of God,",
-      "start": 303.992,
-      "end": 304.993,
-      "duration": 1.001
-    },
-    {
-      "id": "i116",
-      "number": 116,
-      "sentence": "stop asking \"what are you up to?\" -",
-      "start": 305.394,
-      "end": 307.716,
-      "duration": 2.322
-    },
-    {
-      "id": "i117",
-      "number": 117,
-      "sentence": "it screams that you have nothing interesting happening in your own life.",
-      "start": 307.696,
-      "end": 310.661,
-      "duration": 2.965
-    },
-    {
-      "id": "i118",
-      "number": 118,
-      "sentence": "Connect your internal state to her external perception:",
-      "start": 311.502,
-      "end": 313.906,
-      "duration": 2.404
-    },
-    {
-      "id": "i119",
-      "number": 119,
-      "sentence": "When you text from a place of abundance and genuine amusement,",
-      "start": 314.967,
-      "end": 317.471,
-      "duration": 2.504
+      "start": 371.962,
+      "end": 376.306,
+      "duration": 4.344
     },
     {
       "id": "i120",
       "number": 120,
       "sentence": "she feels that energy.",
-      "start": 318.453,
-      "end": 319.635,
-      "duration": 1.182
-    },
-    {
-      "id": "i121",
-      "number": 121,
-      "sentence": "When you text from neediness and insecurity,",
-      "start": 320.075,
-      "end": 322.319,
-      "duration": 2.244
+      "start": 399.706,
+      "end": 405.356,
+      "duration": 5.65
     },
     {
       "id": "i122",
       "number": 122,
       "sentence": "she feels that too.",
-      "start": 322.74,
-      "end": 323.641,
-      "duration": 0.901
-    },
-    {
-      "id": "i123",
-      "number": 123,
-      "sentence": "The words matter less than the energy behind them.",
-      "start": 324.102,
-      "end": 326.886,
-      "duration": 2.784
-    },
-    {
-      "id": "i124",
-      "number": 124,
-      "sentence": "The mindset you need is to see most people as NPCs in a video game,",
-      "start": 326.866,
-      "end": 329.532,
-      "duration": 2.666
+      "start": 415.417,
+      "end": 421.25,
+      "duration": 5.833
     },
     {
       "id": "i125",
       "number": 125,
       "sentence": "and you're the main character creating the interesting storylines.",
-      "start": 331.798,
-      "end": 334.604,
-      "duration": 2.806
-    },
-    {
-      "id": "i126",
-      "number": 126,
-      "sentence": "This is going to be controversial,",
-      "start": 335.186,
-      "end": 336.549,
-      "duration": 1.363
-    },
-    {
-      "id": "i127",
-      "number": 127,
-      "sentence": "but I need you to understand this:",
-      "start": 336.89,
-      "end": 338.373,
-      "duration": 1.483
-    },
-    {
-      "id": "i128",
-      "number": 128,
-      "sentence": "95% of people, including most of the guys texting her,",
-      "start": 338.955,
-      "end": 341.801,
-      "duration": 2.846
+      "start": 436.452,
+      "end": 436.532,
+      "duration": 0.08
     },
     {
       "id": "i129",
       "number": 129,
       "sentence": "are operating on autopilot.",
-      "start": 342.864,
-      "end": 344.588,
-      "duration": 1.724
-    },
-    {
-      "id": "i130",
-      "number": 130,
-      "sentence": "They're sending the same predictable responses,",
-      "start": 344.568,
-      "end": 346.911,
-      "duration": 2.343
-    },
-    {
-      "id": "i131",
-      "number": 131,
-      "sentence": "asking the same boring questions,",
-      "start": 347.472,
-      "end": 349.074,
-      "duration": 1.602
-    },
-    {
-      "id": "i132",
-      "number": 132,
-      "sentence": "playing the same desperate game.",
-      "start": 349.454,
-      "end": 350.876,
-      "duration": 1.422
-    },
-    {
-      "id": "i133",
-      "number": 133,
-      "sentence": "You need to break out of the conventional social programming",
-      "start": 351.316,
-      "end": 354.0,
-      "duration": 2.684
-    },
-    {
-      "id": "i134",
-      "number": 134,
-      "sentence": "that says you should be \"nice\" and \"respectful\"",
-      "start": 354.04,
-      "end": 356.483,
-      "duration": 2.443
-    },
-    {
-      "id": "i135",
-      "number": 135,
-      "sentence": "in a way that makes you invisible.",
-      "start": 356.944,
-      "end": 358.425,
-      "duration": 1.481
-    },
-    {
-      "id": "i136",
-      "number": 136,
-      "sentence": "Nice guys finish last in texting",
-      "start": 358.926,
-      "end": 360.108,
-      "duration": 1.182
+      "start": 452.866,
+      "end": 458.3,
+      "duration": 5.434
     },
     {
       "id": "i137",
       "number": 137,
       "sentence": "because nice is predictable,",
-      "start": 360.788,
-      "end": 362.21,
-      "duration": 1.422
+      "start": 482.945,
+      "end": 488.331,
+      "duration": 5.386
     },
     {
       "id": "i138",
       "number": 138,
       "sentence": "and predictable is boring.",
-      "start": 362.631,
-      "end": 363.952,
-      "duration": 1.321
+      "start": 483.806,
+      "end": 488.471,
+      "duration": 4.665
     },
     {
       "id": "i139",
       "number": 139,
       "sentence": "Modern dating is like a video game",
-      "start": 364.413,
-      "end": 366.195,
-      "duration": 1.782
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i140",
       "number": 140,
       "sentence": "where everyone else is playing on easy mode,",
-      "start": 366.235,
-      "end": 368.979,
-      "duration": 2.744
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i141",
       "number": 141,
       "sentence": "following the same basic strategies.",
-      "start": 369.419,
-      "end": 371.622,
-      "duration": 2.203
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i142",
       "number": 142,
       "sentence": "But you're about to start playing on expert mode",
-      "start": 371.602,
-      "end": 373.744,
-      "duration": 2.142
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i143",
       "number": 143,
       "sentence": "with cheat codes.",
-      "start": 373.784,
-      "end": 375.125,
-      "duration": 1.341
+      "start": 497.04,
+      "end": 503.006,
+      "duration": 5.966
     },
     {
       "id": "i144",
       "number": 144,
       "sentence": "While other guys are sending paragraph-long confessions about their feelings,",
-      "start": 375.145,
-      "end": 377.968,
-      "duration": 2.823
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i145",
       "number": 145,
       "sentence": "you're sending one-liners that make her screenshot",
-      "start": 379.008,
-      "end": 381.25,
-      "duration": 2.242
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i146",
       "number": 146,
       "sentence": "and send to her friends.",
-      "start": 381.531,
-      "end": 382.471,
-      "duration": 0.94
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i147",
       "number": 147,
       "sentence": "The uncomfortable truth is that attention is the new currency,",
-      "start": 383.032,
-      "end": 385.794,
-      "duration": 2.762
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i148",
       "number": 148,
       "sentence": "and most guys are broke.",
-      "start": 386.795,
-      "end": 387.836,
-      "duration": 1.041
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i149",
       "number": 149,
       "sentence": "You're about to become wealthy.",
-      "start": 388.316,
-      "end": 389.518,
-      "duration": 1.202
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i150",
       "number": 150,
       "sentence": "You don't become a texting master by playing it safe",
-      "start": 389.958,
-      "end": 392.46,
-      "duration": 2.502
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i151",
       "number": 151,
       "sentence": "and sending boring messages.",
-      "start": 392.72,
-      "end": 394.021,
-      "duration": 1.301
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i151",
       "number": 151,
       "sentence": "and sending boring messages.",
-      "start": 392.18,
-      "end": 395.082,
-      "duration": 2.902
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
+    },
+    {
+      "id": "i152",
+      "number": 152,
+      "sentence": "You become a texting master by embracing the risk",
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i153",
       "number": 153,
       "sentence": "of being polarizing, interesting, and unapologetically yourself.",
-      "start": 397.344,
-      "end": 399.786,
-      "duration": 2.442
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i154",
       "number": 154,
       "sentence": "I want you to remember this for the rest of your life:",
-      "start": 401.588,
-      "end": 403.793,
-      "duration": 2.205
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i155",
       "number": 155,
       "sentence": "Every time you reach for your phone to text her,",
-      "start": 404.434,
-      "end": 406.378,
-      "duration": 1.944
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i156",
       "number": 156,
       "sentence": "you have a choice.",
-      "start": 406.819,
-      "end": 407.601,
-      "duration": 0.782
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i157",
       "number": 157,
       "sentence": "You can either be another forgettable guy in her DMs,",
-      "start": 408.202,
-      "end": 410.948,
-      "duration": 2.746
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i158",
       "number": 158,
       "sentence": "or you can be the guy who makes her day more interesting.",
-      "start": 411.449,
-      "end": 413.774,
-      "duration": 2.325
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i159",
       "number": 159,
       "sentence": "Starting today,",
-      "start": 414.235,
-      "end": 414.836,
-      "duration": 0.601
+      "start": 495.979,
+      "end": 499.463,
+      "duration": 3.484
     },
     {
       "id": "i160",
       "number": 160,
       "sentence": "I want you to adopt the identity of someone whose texts are so engaging",
-      "start": 414.856,
-      "end": 417.622,
-      "duration": 2.766
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i161",
       "number": 161,
       "sentence": "that women look forward to hearing from you.",
-      "start": 419.486,
-      "end": 421.791,
-      "duration": 2.305
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i162",
       "number": 162,
       "sentence": "Not because you're desperate for their attention,",
-      "start": 421.771,
-      "end": 423.714,
-      "duration": 1.943
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i163",
       "number": 163,
       "sentence": "but because you're genuinely entertaining and unpredictable.",
-      "start": 424.154,
-      "end": 426.518,
-      "duration": 2.364
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i164",
       "number": 164,
       "sentence": "Here's your challenge:",
-      "start": 427.8,
-      "end": 428.621,
-      "duration": 0.821
+      "start": 497.04,
+      "end": 503.006,
+      "duration": 5.966
     },
     {
       "id": "i165",
       "number": 165,
       "sentence": "For the next 7 days,",
-      "start": 429.041,
-      "end": 429.462,
-      "duration": 0.421
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i166",
       "number": 166,
       "sentence": "every text you send must pass the \"screenshot test\" -",
-      "start": 430.603,
-      "end": 432.326,
-      "duration": 1.723
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i167",
       "number": 167,
       "sentence": "would this be interesting enough for her to screenshot and show her friends?",
-      "start": 433.948,
-      "end": 436.872,
-      "duration": 2.924
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i168",
       "number": 168,
       "sentence": "If not, rewrite it.",
-      "start": 437.774,
-      "end": 438.815,
-      "duration": 1.041
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i169",
       "number": 169,
       "sentence": "You become dangerous when you realize",
-      "start": 439.276,
-      "end": 441.198,
-      "duration": 1.922
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i170",
       "number": 170,
       "sentence": "that the power was always in your hands.",
-      "start": 441.238,
-      "end": 443.762,
-      "duration": 2.524
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i171",
       "number": 171,
       "sentence": "The moment you stop needing her validation through text,",
-      "start": 443.742,
-      "end": 446.609,
-      "duration": 2.867
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i172",
       "number": 172,
       "sentence": "you become the kind of man she can't stop thinking about.",
-      "start": 447.031,
-      "end": 449.938,
-      "duration": 2.907
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i173",
       "number": 173,
       "sentence": "The world feels this energy shift,",
-      "start": 450.459,
-      "end": 452.846,
-      "duration": 2.387
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i174",
       "number": 174,
       "sentence": "and women are naturally drawn to it.",
-      "start": 452.866,
-      "end": 454.731,
-      "duration": 1.865
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i175",
       "number": 175,
       "sentence": "If you're still here watching this,",
-      "start": 455.212,
-      "end": 456.355,
-      "duration": 1.143
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i176",
       "number": 176,
       "sentence": "I genuinely love you for taking your growth seriously.",
-      "start": 456.756,
-      "end": 459.523,
-      "duration": 2.767
-    },
-    {
-      "id": "i177",
-      "number": 177,
-      "sentence": "Look, I know this isn't easy.",
-      "start": 459.503,
-      "end": 460.926,
-      "duration": 1.423
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i178",
       "number": 178,
       "sentence": "I know it feels uncomfortable to challenge everything you've been taught",
-      "start": 461.407,
-      "end": 464.273,
-      "duration": 2.866
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i179",
       "number": 179,
       "sentence": "about how to communicate with women.",
-      "start": 464.614,
-      "end": 466.077,
-      "duration": 1.463
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i180",
       "number": 180,
       "sentence": "But that discomfort is your old identity dying",
-      "start": 466.498,
-      "end": 469.263,
-      "duration": 2.765
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i181",
       "number": 181,
       "sentence": "so your new one can be born.",
-      "start": 469.324,
-      "end": 470.747,
-      "duration": 1.423
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i182",
       "number": 182,
       "sentence": "You now have the blueprint.",
-      "start": 471.187,
-      "end": 472.21,
-      "duration": 1.023
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i183",
       "number": 183,
       "sentence": "You understand the psychology.",
-      "start": 472.691,
-      "end": 474.013,
-      "duration": 1.322
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i184",
       "number": 184,
       "sentence": "You know the techniques.",
-      "start": 474.454,
-      "end": 475.757,
-      "duration": 1.303
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i185",
       "number": 185,
       "sentence": "The only question left is:",
-      "start": 475.737,
-      "end": 477.118,
-      "duration": 1.381
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i186",
       "number": 186,
       "sentence": "Are you going to use this knowledge,",
-      "start": 477.679,
-      "end": 478.96,
-      "duration": 1.281
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i187",
       "number": 187,
       "sentence": "or are you going to go back to sending the same boring texts",
-      "start": 479.341,
-      "end": 481.523,
-      "duration": 2.182
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i188",
       "number": 188,
       "sentence": "that every other guy sends?",
-      "start": 481.964,
-      "end": 483.205,
-      "duration": 1.241
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
+    },
+    {
+      "id": "i189",
+      "number": 189,
+      "sentence": "This was your wake-up call about texting mastery,",
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i190",
       "number": 190,
       "sentence": "and I'll see you in the next video",
-      "start": 486.629,
-      "end": 488.03,
-      "duration": 1.401
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i191",
       "number": 191,
       "sentence": "where we're going to dive even deeper into the psychology of attraction.",
-      "start": 488.07,
-      "end": 491.034,
-      "duration": 2.964
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i192",
       "number": 192,
       "sentence": "Remember - you're not just learning to text better.",
-      "start": 492.015,
-      "end": 494.297,
-      "duration": 2.282
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i193",
       "number": 193,
       "sentence": "You're learning to become the kind of man who naturally attracts high-quality women",
-      "start": 494.798,
-      "end": 497.541,
-      "duration": 2.743
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i194",
       "number": 194,
       "sentence": "through authentic confidence and genuine charisma.",
-      "start": 499.262,
-      "end": 501.525,
-      "duration": 2.263
+      "start": 497.621,
+      "end": 503.567,
+      "duration": 5.946
     },
     {
       "id": "i195",
       "number": 195,
       "sentence": "I'll see you next time.",
-      "start": 502.466,
+      "start": 497.621,
       "end": 503.567,
-      "duration": 1.101
+      "duration": 5.946
     }
   ]
 }
